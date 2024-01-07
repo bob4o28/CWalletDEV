@@ -70,7 +70,8 @@
 
         </Grid>
         <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1"/>
-        <Button Grid.Column="1" Content="Button" HorizontalAlignment="Left" Margin="311,172,0,0" VerticalAlignment="Top" Height="156" Width="325"/>
+        <Button Grid.Column="1" Content="Button" HorizontalAlignment="Left" Margin="311,172,0,0" VerticalAlignment="Top" Height="156" Width="259"/>
+        <Button Grid.Column="1" Content="Button" HorizontalAlignment="Left" Margin="479,379,0,0" VerticalAlignment="Top" Height="156" Width="259"/>
 
     </Grid>
 </Window>
