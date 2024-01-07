@@ -140,5 +140,10 @@
   <ItemGroup>
     <Resource Include="Settings.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UI\CashValue\" />
+    <Folder Include="Win\CashValue\" />
+    <Folder Include="Win\MainWin\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

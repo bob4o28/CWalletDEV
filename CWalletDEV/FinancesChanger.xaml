@@ -5,19 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CWalletDEV"
         mc:Ignorable="d"
-        Title="FinancesChanger" Height="575" Width="725">
-    <Grid>
+        Title="FinancesChanger" Height="725" Width="525">
+    <Grid Background="#FFDFD7CB" RenderTransformOrigin="0.302,0.531">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Rectangle x:Name="rectangle" HorizontalAlignment="Left" Height="92" Margin="10,10,0,0" Stroke="#FF8AC97E" VerticalAlignment="Top" Width="305" RadiusX="25" RadiusY="25" Fill="#FF8AC97E"/>
-        <Label Content="Cash Value&#xD;&#xA;" HorizontalAlignment="Left" Height="47" Margin="39,33,0,0" VerticalAlignment="Top" Width="207" FontFamily="Lucida Bright" FontSize="36"/>
-        <Label Content="Value:" HorizontalAlignment="Left" Height="55" Margin="36,306,0,0" VerticalAlignment="Top" Width="122" FontSize="36" FontFamily="Lucida Bright"/>
-        <ListBox HorizontalAlignment="Left" Height="4" Margin="36,386,0,0" VerticalAlignment="Top" Width="6" d:ItemsSource="{d:SampleData ItemCount=5}"/>
-        <ComboBox HorizontalAlignment="Left" Height="60" Margin="42,361,0,0" VerticalAlignment="Top" Width="218"/>
-        <Button Content="+" HorizontalAlignment="Left" Height="60" Margin="284,361,0,0" VerticalAlignment="Top" Width="62" FontSize="36"/>
-        <Label Content="Currency" HorizontalAlignment="Left" Height="55" Margin="46,434,0,0" VerticalAlignment="Top" Width="174" FontSize="36" FontFamily="Lucida Bright"/>
-        <ListBox HorizontalAlignment="Left" Height="4" Margin="46,514,0,0" VerticalAlignment="Top" Width="8" d:ItemsSource="{d:SampleData ItemCount=5}"/>
-        <ComboBox HorizontalAlignment="Left" Height="60" Margin="54,489,0,0" VerticalAlignment="Top" Width="218"/>
+
+        <Rectangle x:Name="rectangle" HorizontalAlignment="Left" Height="92" Margin="46,39,0,0" Stroke="#FF8AC97E" VerticalAlignment="Top" Width="305" RadiusX="25" RadiusY="25" Fill="#FF8AC97E">
+            <Rectangle.Effect>
+                <DropShadowEffect/>
+            </Rectangle.Effect>
+        </Rectangle>
+
+        <Label x:Name="LblCashValue" Content="Cash Value&#xD;&#xA;" HorizontalAlignment="Left" Height="47" Margin="75,62,0,0" VerticalAlignment="Top" Width="207" FontFamily="Lucida Bright" FontSize="36"/>
+
+        <Label x:Name="LblValue" Content="Value:" HorizontalAlignment="Left" Height="46" Margin="42,301,0,0" VerticalAlignment="Top" Width="130" FontSize="36" FontFamily="Lucida Bright"/>
+
+        <ComboBox x:Name="ListBoxValue" HorizontalAlignment="Left" Height="51" Margin="42,352,0,0" VerticalAlignment="Top" Width="233"/>
+
+        <Button HorizontalAlignment="Left" Height="60" Margin="289,343,0,0" VerticalAlignment="Top" Width="62" FontSize="36" Background="{x:Null}"/>
+
+        <Label x:Name="LblCurrency" Content="Currency:" HorizontalAlignment="Left" Height="53" Margin="42,409,0,0" VerticalAlignment="Top" Width="185" FontSize="36" FontFamily="Lucida Bright"/>
+
+        <ComboBox HorizontalAlignment="Left" Height="51" Margin="42,467,0,0" VerticalAlignment="Top" Width="233"/>
+
     </Grid>
 </Window>
