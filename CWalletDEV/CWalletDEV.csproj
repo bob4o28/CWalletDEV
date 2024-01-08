@@ -161,21 +161,6 @@
     <None Include="UI\MainWindow\Stats.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Menu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Category.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Stats.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Pay.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Settings.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="UI\CashValue\" />
     <Folder Include="Win\CashValue\" />
     <Folder Include="Win\MainWin\" />

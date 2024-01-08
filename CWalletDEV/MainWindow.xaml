@@ -36,6 +36,18 @@
                                     </BeginStoryboard>
                                 </Trigger.EnterActions>
                             </Trigger>
+
+                            <Trigger Property="IsMouseOver" Value="False">
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <ColorAnimation Storyboard.TargetProperty="Background.(SolidColorBrush.Color)"
+                                                                                        To="#FFC2AD86"
+                                                                                        Duration="0:0:0.3"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                            </Trigger>
                         </Style.Triggers>
                     </Style>
                 </StackPanel.Resources>
