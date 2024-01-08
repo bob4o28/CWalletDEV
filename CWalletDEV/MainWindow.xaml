@@ -6,17 +6,36 @@
         xmlns:local="clr-namespace:CWalletDEV"
         mc:Ignorable="d"
         Title="MainWindow" Height="672" Width="1245">
+    <Window.Resources>
+
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1245"/>
+            <ColumnDefinition Width="1246"/>
         </Grid.ColumnDefinitions>
         <!-- Add your side bar and main content here -->
-        <Frame x:Name="MainFrame" Margin="231,0,0,0" />
-        <WrapPanel x:Name="SideBar" Grid.Column="0" Background="#FFE6D2AD" MaxWidth="231" MinWidth="98" Margin="0,0,1014,0">
-            <WrapPanel.Effect>
+        <Frame x:Name="MainFrame" Margin="233,0,0,0" />
+        <StackPanel x:Name="SideBar" Grid.Column="0" Background="#FFE6D2AD" MaxWidth="231" MinWidth="98" RenderTransformOrigin="0.5,0.5" Margin="0,0,1014,0">
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
+            <StackPanel.Effect>
                 <DropShadowEffect Direction="0" Opacity="0.6"/>
-            </WrapPanel.Effect>
-            <StackPanel x:Name="StackSideBar" Orientation="Vertical" Height="656" Width="231">
+            </StackPanel.Effect>
+            <StackPanel x:Name="StackSideBar" Orientation="Vertical" Height="656" Width="231" RenderTransformOrigin="0.5,0.5">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
 
                 <!--MouseOver settings for buttons-->
                 <!--Menu-->
@@ -28,7 +47,16 @@
                     <!--Images and text-->
                     <StackPanel Orientation="Horizontal" Width="221">
                         <Label Content="&#xA;" Width="18"/>
-                        <Image Source="/Menu.png" Stretch="Fill" Height="59" Width="59"/>
+                        <Image x:Name="image" Source="/Menu.png" Stretch="Fill" Height="59" Width="59" RenderTransformOrigin="0.5,0.5">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
                         <Label Content="&#xA;" Width="32"/>
                         <Label Padding="0" Content="Menu" Height="32" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontSize="24" Width="62"/>
                     </StackPanel>
@@ -95,6 +123,6 @@
                 </Button>
             </StackPanel>
 
-        </WrapPanel>
+        </StackPanel>
     </Grid>
 </Window>
