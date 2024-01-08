@@ -8,50 +8,17 @@
         Title="MainWindow" Height="672" Width="1245">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="231"/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="1245"/>
         </Grid.ColumnDefinitions>
         <!-- Add your side bar and main content here -->
-        <Frame x:Name="MainFrame" Grid.Column="1" />
-        <Grid x:Name="SideBar" Grid.Column="0" Background="#FFE6D2AD" MaxWidth="231" MinWidth="98">
-            <Grid.Effect>
+        <Frame x:Name="MainFrame" Margin="231,0,0,0" />
+        <WrapPanel x:Name="SideBar" Grid.Column="0" Background="#FFE6D2AD" MaxWidth="231" MinWidth="98" Margin="0,0,1014,0">
+            <WrapPanel.Effect>
                 <DropShadowEffect Direction="0" Opacity="0.6"/>
-            </Grid.Effect>
-            <StackPanel x:Name="StackSideBar" Orientation="Vertical">
-                
-                <!--MouseOver settings for buttons-->
-                <StackPanel.Resources>
-                    <Style TargetType="Button">
-                        <Setter Property="Padding" Value="0 0"/>
-                        <Setter Property="Background" Value="Transparent"/>
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Trigger.EnterActions>
-                                    <BeginStoryboard>
-                                        <Storyboard>
-                                            <ColorAnimation Storyboard.TargetProperty="Background.(SolidColorBrush.Color)"
-                                                            To="#FF9A8051"
-                                                            Duration="0:0:0.3"/>
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </Trigger.EnterActions>
-                            </Trigger>
+            </WrapPanel.Effect>
+            <StackPanel x:Name="StackSideBar" Orientation="Vertical" Height="656" Width="231">
 
-                            <Trigger Property="IsMouseOver" Value="False">
-                                <Trigger.EnterActions>
-                                    <BeginStoryboard>
-                                        <Storyboard>
-                                            <ColorAnimation Storyboard.TargetProperty="Background.(SolidColorBrush.Color)"
-                                                                                        To="#FFC2AD86"
-                                                                                        Duration="0:0:0.3"/>
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </Trigger.EnterActions>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </StackPanel.Resources>
-                
+                <!--MouseOver settings for buttons-->
                 <!--Menu-->
                 <Rectangle Height="42" Stroke="Black" Visibility="Hidden"/>
                 <Button Height="69" x:Name="btnMenu" Background="#FFC2AD86">
@@ -62,11 +29,11 @@
                     <StackPanel Orientation="Horizontal" Width="221">
                         <Label Content="&#xA;" Width="18"/>
                         <Image Source="/Menu.png" Stretch="Fill" Height="59" Width="59"/>
-                        <Label Content="&#xD;&#xA;" Width="32"/>
+                        <Label Content="&#xA;" Width="32"/>
                         <Label Padding="0" Content="Menu" Height="32" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontSize="24" Width="62"/>
                     </StackPanel>
                 </Button>
-                
+
                 <!--Categories-->
                 <Rectangle Height="42" Stroke="Black" Visibility="Hidden"/>
                 <Button Height="69" x:Name="btnCategories" Background="#FFC2AD86">
@@ -81,7 +48,7 @@
                         <Label Padding="0" Content="Category" Height="32" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontSize="24" Width="104"/>
                     </StackPanel>
                 </Button>
-                
+
                 <!--Statistics-->
                 <Rectangle Height="42" Stroke="Black" Visibility="Hidden"/>
                 <Button Height="69" x:Name="btnStatistic" Background="#FFC2AD86">
@@ -96,7 +63,7 @@
                         <Label Padding="0" Content="Statistics" Height="32" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontSize="24" Width="96"/>
                     </StackPanel>
                 </Button>
-                
+
                 <!--Payment-->
                 <Rectangle Height="42" Stroke="Black" Visibility="Hidden"/>
                 <Button Height="69" x:Name="btnPlanPay" Background="#FFC2AD86" Click="btnPlanPay_Click">
@@ -108,10 +75,10 @@
                         <Label Content="&#xA;" Width="18"/>
                         <Image Source="/Pay.png" Stretch="Fill" Height="59" Width="59"/>
                         <Label Content="&#xA;" Width="23"/>
-                        <Label Padding="0" Content=" Planned&#xD;&#xA;Payments" Height="62" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontSize="24" Width="108"/>
+                        <Label Padding="0" Content=" Planned&#xA;Payments" Height="62" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontSize="24" Width="108"/>
                     </StackPanel>
                 </Button>
-                
+
                 <!--Settings-->
                 <Rectangle Height="42" Stroke="Black" Visibility="Hidden"/>
                 <Button Height="69" x:Name="btnSettings" Background="#FFC2AD86">
@@ -128,10 +95,6 @@
                 </Button>
             </StackPanel>
 
-        </Grid>
-        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1">
-        
-        </Border>
-
+        </WrapPanel>
     </Grid>
 </Window>
