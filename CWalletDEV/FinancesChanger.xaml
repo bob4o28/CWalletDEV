@@ -5,29 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CWalletDEV"
         mc:Ignorable="d"
-        Title="FinancesChanger" Height="725" Width="525">
+        Title="FinancesChanger" Height="725" Width="575">
     <Grid Background="#FFDFD7CB" RenderTransformOrigin="0.302,0.531">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Rectangle x:Name="rectangle" HorizontalAlignment="Left" Height="92" Margin="46,39,0,0" Stroke="#FF8AC97E" VerticalAlignment="Top" Width="305" RadiusX="25" RadiusY="25" Fill="#FF8AC97E">
+        <Rectangle x:Name="rectangle" HorizontalAlignment="Left" Height="92" Margin="46,39,0,0" Stroke="#FF8AC97E" VerticalAlignment="Top" Width="305" RadiusX="25" RadiusY="25" Fill="#FF8AC97E" OpacityMask="#FFDFD7CB">
             <Rectangle.Effect>
                 <DropShadowEffect/>
             </Rectangle.Effect>
         </Rectangle>
 
-        <Label x:Name="LblCashValue" Content="Cash Value&#xD;&#xA;" HorizontalAlignment="Left" Height="47" Margin="75,62,0,0" VerticalAlignment="Top" Width="207" FontFamily="Lucida Bright" FontSize="36"/>
+        <Label x:Name="LblCashValue" Content="Cash Value&#xD;&#xA;" HorizontalAlignment="Left" Height="47" Margin="75,62,0,0" VerticalAlignment="Top" Width="207" FontFamily="Lucida Bright" FontSize="36" OpacityMask="#FFDFD7CB"/>
 
-        <Label x:Name="LblValue" Content="Value:" HorizontalAlignment="Left" Height="46" Margin="42,301,0,0" VerticalAlignment="Top" Width="130" FontSize="36" FontFamily="Lucida Bright"/>
+        <Label x:Name="LblValue" Content="Value:" HorizontalAlignment="Left" Height="46" Margin="42,301,0,0" VerticalAlignment="Top" Width="130" FontSize="36" FontFamily="Lucida Bright" OpacityMask="#FFDFD7CB"/>
 
-        <ComboBox x:Name="ListBoxValue" HorizontalAlignment="Left" Height="51" Margin="42,352,0,0" VerticalAlignment="Top" Width="233"/>
+        <Button HorizontalAlignment="Left" Height="60" Margin="289,343,0,0" VerticalAlignment="Top" Width="62" FontSize="36" Background="{x:Null}" OpacityMask="#FFDFD7CB" BorderBrush="Transparent">
+            <Image Source="/Group 2.png" Stretch="Fill"/>
+        </Button>
 
-        <Button HorizontalAlignment="Left" Height="60" Margin="289,343,0,0" VerticalAlignment="Top" Width="62" FontSize="36" Background="{x:Null}"/>
+        <Label x:Name="LblCurrency" Content="Currency:" HorizontalAlignment="Left" Height="53" Margin="42,409,0,0" VerticalAlignment="Top" Width="185" FontSize="36" FontFamily="Lucida Bright" OpacityMask="#FFDFD7CB"/>
 
-        <Label x:Name="LblCurrency" Content="Currency:" HorizontalAlignment="Left" Height="53" Margin="42,409,0,0" VerticalAlignment="Top" Width="185" FontSize="36" FontFamily="Lucida Bright"/>
-
-        <ComboBox HorizontalAlignment="Left" Height="51" Margin="42,467,0,0" VerticalAlignment="Top" Width="233"/>
+        <ComboBox HorizontalAlignment="Left" Height="51" Margin="42,467,0,0" VerticalAlignment="Top" Width="233" OpacityMask="#FFDFD7CB"/>
+        <TextBox HorizontalAlignment="Left" Height="50" Margin="42,352,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233"/>
 
     </Grid>
 </Window>
