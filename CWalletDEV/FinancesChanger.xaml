@@ -29,6 +29,8 @@
 
         <ComboBox HorizontalAlignment="Left" Height="51" Margin="42,467,0,0" VerticalAlignment="Top" Width="233" OpacityMask="#FFDFD7CB"/>
         <TextBox HorizontalAlignment="Left" Height="50" Margin="42,352,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233"/>
+        <Button Content="Save" HorizontalAlignment="Left" Height="40" Margin="336,659,0,0" VerticalAlignment="Top" Width="108"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Height="40" Margin="459,659,0,0" VerticalAlignment="Top" Width="108"/>
 
     </Grid>
 </Window>

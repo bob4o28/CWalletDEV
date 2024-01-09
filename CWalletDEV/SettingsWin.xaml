@@ -1,0 +1,17 @@
+﻿<Window x:Class="CWalletDEV.SettingsWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CWalletDEV"
+        mc:Ignorable="d"
+        Title="SettingsWin" Height="449" Width="754">
+    <Grid Background="#FFDFD7CB">
+        <Image Margin="10,10,431,315" Source="/LblSettings.png" Stretch="Fill"/>
+        <Label Content="Currency" HorizontalAlignment="Left" Height="53" Margin="41,157,0,0" VerticalAlignment="Top" Width="295" FontSize="36"/>
+        <ComboBox HorizontalAlignment="Left" Height="55" Margin="341,168,0,0" VerticalAlignment="Top" Width="321"/>
+        <Label Content="Language" HorizontalAlignment="Left" Height="66" Margin="41,286,0,0" VerticalAlignment="Top" Width="295" FontSize="36"/>
+        <ComboBox HorizontalAlignment="Left" Height="55" Margin="341,297,0,0" VerticalAlignment="Top" Width="321"/>
+
+    </Grid>
+</Window>

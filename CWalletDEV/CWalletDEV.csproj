@@ -72,8 +72,17 @@
     <Compile Include="DebitCardChanger.xaml.cs">
       <DependentUpon>DebitCardChanger.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LogInWin.xaml.cs">
+      <DependentUpon>LogInWin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SavingsChanger.xaml.cs">
       <DependentUpon>SavingsChanger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsWin.xaml.cs">
+      <DependentUpon>SettingsWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpWin.xaml.cs">
+      <DependentUpon>SignUpWin.xaml</DependentUpon>
     </Compile>
     <Page Include="BankChanger.xaml">
       <SubType>Designer</SubType>
@@ -92,6 +101,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="FinancesChanger.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LogInWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -114,6 +127,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="SavingsChanger.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SettingsWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SignUpWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -182,6 +203,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LblSignUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LblLogIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LblSettings.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
