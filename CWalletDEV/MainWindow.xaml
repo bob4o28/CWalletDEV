@@ -7,27 +7,101 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="672" Width="1245">
     <Window.Resources>
+        
+
+        <Storyboard x:Key="MenuEnter">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="TxtMenu" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame KeyTime="00:00:00" Value="#FFC2AD86"/>
+                <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF94825F"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="MenuLeave">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="TxtMenu" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame KeyTime="00:00:00" Value="#FFC2AD86"/>
+                <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF94825F"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="CategoryEnter">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="TxtCategory" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame KeyTime="00:00:00" Value="#FFC2AD86"/>
+                <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF94825F"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="CategoryLeave">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="TxtCategory" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame KeyTime="00:00:00" Value="#FF94825F"/>
+                <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FFC2AD86"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="StatsEnter">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="TxtStats" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame KeyTime="00:00:00" Value="#FFC2AD86"/>
+                <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF94825F"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="StatsLeave">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="TxtStats" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame KeyTime="00:00:00" Value="#FF94825F"/>
+                <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FFC2AD86"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="PayEnter">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="TxtPlannedPay" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame KeyTime="00:00:00" Value="#FFC2AD86"/>
+                <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF94825F"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="PayLeave">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="TxtPlannedPay" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame KeyTime="00:00:00" Value="#FF94825F"/>
+                <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FFC2AD86"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="SettingsEnter">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="TxtSettings" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame KeyTime="00:00:00" Value="#FFC2AD86"/>
+                <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF94825F"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="SettingsLeave">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="TxtSettings" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame KeyTime="00:00:00" Value="#FF94825F"/>
+                <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FFC2AD86"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
 
     </Window.Resources>
+    <Window.Triggers>
+        <!-- This one triggers after Window appears -->
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{DynamicResource MenuEnter}"/>
+        </EventTrigger>
+    </Window.Triggers>
     <Grid>
         <!-- Add your side bar and main content here -->
-        <Rectangle Height="656" Stroke="Black" VerticalAlignment="Center" Width="232" Fill="#FFE6D2AD" Margin="0,0,1013,0"/>
 
-        <TextBlock x:Name="TxtMenu" HorizontalAlignment="Left" Height="70" Margin="1,47,0,0" TextWrapping="Wrap" Text="Menu" VerticalAlignment="Top" Width="231" FontSize="24" Padding="109,17,0,0" FontFamily="Comic Sans MS" Background="#FFC2AD86"><InlineUIContainer>
-            <Image Height="59" VerticalAlignment="Top" Width="59" Source="/Menu.png" HorizontalAlignment="Center" Margin="-120,-13,0,-20"/>
+        <Grid HorizontalAlignment="Left" Height="656" VerticalAlignment="Center" Width="231" Background="#FFE6D2AD">
+            <TextBlock x:Name="TxtMenu" HorizontalAlignment="Center" Height="70" Margin="0,93,0,0" TextWrapping="Wrap" Text="Menu" VerticalAlignment="Top" Width="231" FontSize="24" Padding="109,17,0,0" FontFamily="Comic Sans MS" Background="#FFC2AD86"><InlineUIContainer>
         </InlineUIContainer></TextBlock>
-        <TextBlock x:Name="TxtCategory" HorizontalAlignment="Left" Height="70" Margin="1,159,0,0" TextWrapping="Wrap" Text="Category" VerticalAlignment="Top" Width="231" FontSize="24" Padding="108,17,0,0" FontFamily="Comic Sans MS" Background="#FFC2AD86"><InlineUIContainer>
-            <Image Height="59" VerticalAlignment="Top" Width="59" Source="/Category.png" HorizontalAlignment="Center" Margin="-120,-13,0,-20"/>
+            <Image Height="60" VerticalAlignment="Top" Width="59" Source="/Menu.png" HorizontalAlignment="Left" Margin="26,98,0,0"/>
+
+            <TextBlock x:Name="TxtCategory" HorizontalAlignment="Center" Height="70" Margin="0,168,0,0" TextWrapping="Wrap" Text="Category" VerticalAlignment="Top" Width="231" FontSize="24" Padding="108,17,0,0" FontFamily="Comic Sans MS" Background="#FFC2AD86"><InlineUIContainer>
         </InlineUIContainer></TextBlock>
-        <TextBlock x:Name="TxtStats" HorizontalAlignment="Left" Height="70" Margin="1,270,0,0" TextWrapping="Wrap" Text="Statistics" VerticalAlignment="Top" Width="231" FontSize="24" Padding="109,17,0,0" FontFamily="Comic Sans MS" Background="#FFC2AD86"><InlineUIContainer>
-            <Image Height="59" VerticalAlignment="Top" Width="59" Source="/Stats.png" HorizontalAlignment="Center" Margin="-120,-13,0,-20"/>
+            <Image Height="58" VerticalAlignment="Top" Width="59" Source="/Category.png" HorizontalAlignment="Left" Margin="26,174,0,0"/>
+
+            <TextBlock x:Name="TxtStats" HorizontalAlignment="Center" Height="70" Margin="0,243,0,0" TextWrapping="Wrap" Text="Statistics" VerticalAlignment="Top" Width="231" FontSize="24" Padding="109,17,0,0" FontFamily="Comic Sans MS" Background="#FFC2AD86"><InlineUIContainer>
         </InlineUIContainer></TextBlock>
-        <TextBlock x:Name="TxtPlannedPay" HorizontalAlignment="Left" Height="70" Margin="1,383,0,0" TextWrapping="Wrap" Text="  Planned Payments" VerticalAlignment="Top" Width="231" FontSize="24" Padding="109,1,0,0" FontFamily="Comic Sans MS" Background="#FFC2AD86"><InlineUIContainer>
-            <Image Height="59" VerticalAlignment="Top" Width="59" Source="/Pay.png" HorizontalAlignment="Center" Margin="-120,-11,0,-38"/>
+            <Image Height="59" VerticalAlignment="Top" Width="59" Source="/Stats.png" HorizontalAlignment="Left" Margin="26,249,0,0"/>
+
+            <TextBlock x:Name="TxtPlannedPay" HorizontalAlignment="Center" Height="70" TextWrapping="Wrap" Text="  Planned Payments" VerticalAlignment="Top" Width="231" FontSize="24" Padding="109,1,0,0" FontFamily="Comic Sans MS" Background="#FFC2AD86" Margin="0,318,0,0"><InlineUIContainer>
         </InlineUIContainer></TextBlock>
-        <TextBlock x:Name="TxtSettings" HorizontalAlignment="Left" Height="70" Margin="1,492,0,0" TextWrapping="Wrap" Text="Settings" VerticalAlignment="Top" Width="231" FontSize="24" Padding="109,17,0,0" FontFamily="Comic Sans MS" Background="#FFC2AD86"><InlineUIContainer>
-            <Image Height="59" VerticalAlignment="Top" Width="59" Source="/Settings.png" HorizontalAlignment="Center" Margin="-120,-13,0,-20"/>
+            <Image Height="58" VerticalAlignment="Top" Width="59" Source="/Pay.png" HorizontalAlignment="Left" Margin="26,324,0,0"/>
+
+            <TextBlock x:Name="TxtSettings" HorizontalAlignment="Center" Height="70" Margin="0,393,0,0" TextWrapping="Wrap" Text="Settings" VerticalAlignment="Top" Width="231" FontSize="24" Padding="109,17,0,0" FontFamily="Comic Sans MS" Background="#FFC2AD86"><InlineUIContainer>
         </InlineUIContainer></TextBlock>
+            <Image Height="59" VerticalAlignment="Top" Width="59" Source="/Settings.png" HorizontalAlignment="Left" Margin="26,400,0,0"/>
+
+        </Grid>
         <!-- Add your side bar and main content here -->
         <StackPanel x:Name="SideBar" Grid.Column="0" Background="#FFE6D2AD" MaxWidth="231" MinWidth="98" RenderTransformOrigin="0.5,0.5" Margin="-290,0,1303,0">
             <StackPanel.RenderTransform>
