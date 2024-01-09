@@ -10,12 +10,26 @@
 
     </Window.Resources>
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1246"/>
-        </Grid.ColumnDefinitions>
         <!-- Add your side bar and main content here -->
-        <Frame x:Name="MainFrame" Margin="233,0,0,0" />
-        <StackPanel x:Name="SideBar" Grid.Column="0" Background="#FFE6D2AD" MaxWidth="231" MinWidth="98" RenderTransformOrigin="0.5,0.5" Margin="0,0,1014,0">
+        <Rectangle Height="656" Stroke="Black" VerticalAlignment="Center" Width="232" Fill="#FFE6D2AD" Margin="0,0,1013,0"/>
+
+        <TextBlock x:Name="TxtMenu" HorizontalAlignment="Left" Height="70" Margin="1,47,0,0" TextWrapping="Wrap" Text="Menu" VerticalAlignment="Top" Width="231" FontSize="24" Padding="109,17,0,0" FontFamily="Comic Sans MS" Background="#FFC2AD86"><InlineUIContainer>
+            <Image Height="59" VerticalAlignment="Top" Width="59" Source="/Menu.png" HorizontalAlignment="Center" Margin="-120,-13,0,-20"/>
+        </InlineUIContainer></TextBlock>
+        <TextBlock x:Name="TxtCategory" HorizontalAlignment="Left" Height="70" Margin="1,159,0,0" TextWrapping="Wrap" Text="Category" VerticalAlignment="Top" Width="231" FontSize="24" Padding="108,17,0,0" FontFamily="Comic Sans MS" Background="#FFC2AD86"><InlineUIContainer>
+            <Image Height="59" VerticalAlignment="Top" Width="59" Source="/Category.png" HorizontalAlignment="Center" Margin="-120,-13,0,-20"/>
+        </InlineUIContainer></TextBlock>
+        <TextBlock x:Name="TxtStats" HorizontalAlignment="Left" Height="70" Margin="1,270,0,0" TextWrapping="Wrap" Text="Statistics" VerticalAlignment="Top" Width="231" FontSize="24" Padding="109,17,0,0" FontFamily="Comic Sans MS" Background="#FFC2AD86"><InlineUIContainer>
+            <Image Height="59" VerticalAlignment="Top" Width="59" Source="/Stats.png" HorizontalAlignment="Center" Margin="-120,-13,0,-20"/>
+        </InlineUIContainer></TextBlock>
+        <TextBlock x:Name="TxtPlannedPay" HorizontalAlignment="Left" Height="70" Margin="1,383,0,0" TextWrapping="Wrap" Text="  Planned Payments" VerticalAlignment="Top" Width="231" FontSize="24" Padding="109,1,0,0" FontFamily="Comic Sans MS" Background="#FFC2AD86"><InlineUIContainer>
+            <Image Height="59" VerticalAlignment="Top" Width="59" Source="/Pay.png" HorizontalAlignment="Center" Margin="-120,-11,0,-38"/>
+        </InlineUIContainer></TextBlock>
+        <TextBlock x:Name="TxtSettings" HorizontalAlignment="Left" Height="70" Margin="1,492,0,0" TextWrapping="Wrap" Text="Settings" VerticalAlignment="Top" Width="231" FontSize="24" Padding="109,17,0,0" FontFamily="Comic Sans MS" Background="#FFC2AD86"><InlineUIContainer>
+            <Image Height="59" VerticalAlignment="Top" Width="59" Source="/Settings.png" HorizontalAlignment="Center" Margin="-120,-13,0,-20"/>
+        </InlineUIContainer></TextBlock>
+        <!-- Add your side bar and main content here -->
+        <StackPanel x:Name="SideBar" Grid.Column="0" Background="#FFE6D2AD" MaxWidth="231" MinWidth="98" RenderTransformOrigin="0.5,0.5" Margin="-290,0,1303,0">
             <StackPanel.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -124,5 +138,6 @@
             </StackPanel>
 
         </StackPanel>
+
     </Grid>
 </Window>
