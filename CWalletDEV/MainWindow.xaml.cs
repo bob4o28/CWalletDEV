@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -25,19 +26,96 @@ namespace CWalletDEV
             InitializeComponent();
         }
 
-        private void btnPlanPay_Click(object sender, RoutedEventArgs e)
+        private void TxtMenu_MouseEnter(object sender, MouseEventArgs e)
         {
-
+            Storyboard storyboard = this.FindResource("MenuEnter") as Storyboard;
+            if (storyboard != null)
+            {
+                storyboard.Begin();
+            }
         }
 
-        private void btnMenu_Click(object sender, RoutedEventArgs e)
+        private void TxtMenu_MouseLeave(object sender, MouseEventArgs e)
         {
-            
+            Storyboard storyboard = this.FindResource("MenuLeave") as Storyboard;
+            if (storyboard != null)
+            {
+                storyboard.Begin();
+            }
         }
 
-        private void MainFrame_Navigated(object sender, NavigationEventArgs e)
+        private void TxtCategory_MouseEnter(object sender, MouseEventArgs e)
         {
-
+            Storyboard storyboard = this.FindResource("CategoryEnter") as Storyboard;
+            if (storyboard != null)
+            {
+                storyboard.Begin();
+            }
         }
+
+        private void TxtCategory_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Storyboard storyboard = this.FindResource("CategoryLeave") as Storyboard;
+            if (storyboard != null)
+            {
+                storyboard.Begin();
+            }
+        }
+
+        private void TxtStats_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Storyboard storyboard = this.FindResource("StatsEnter") as Storyboard;
+            if (storyboard != null)
+            {
+                storyboard.Begin();
+            }
+        }
+
+        private void TxtStats_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Storyboard storyboard = this.FindResource("StatsLeave") as Storyboard;
+            if (storyboard != null)
+            {
+                storyboard.Begin();
+            }
+        }
+
+        private void TxtPlannedPay_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Storyboard storyboard = this.FindResource("PayEnter") as Storyboard;
+            if (storyboard != null)
+            {
+                storyboard.Begin();
+            }
+        }
+
+        private void TxtPlannedPay_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Storyboard storyboard = this.FindResource("PayLeave") as Storyboard;
+            if (storyboard != null)
+            {
+                storyboard.Begin();
+            }
+        }
+
+        private void TxtSettings_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Storyboard storyboard = this.FindResource("SettingsEnter") as Storyboard;
+            if (storyboard != null)
+            {
+                storyboard.Begin();
+            }
+        }
+
+        private void TxtSettings_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Storyboard storyboard = this.FindResource("SettingsLeave") as Storyboard;
+            if (storyboard != null)
+            {
+                storyboard.Begin();
+            }
+        }
+
+
     }
 }

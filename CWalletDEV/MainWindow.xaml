@@ -11,96 +11,99 @@
 
 
         <Storyboard x:Key="MenuEnter">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetName="TxtMenu" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="rectangle" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
                 <EasingColorKeyFrame KeyTime="00:00:00" Value="#FFC2AD86"/>
                 <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF94825F"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="MenuLeave">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetName="TxtMenu" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)">
-                <EasingColorKeyFrame KeyTime="00:00:00" Value="#FFC2AD86"/>
-                <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF94825F"/>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="rectangle" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame KeyTime="00:00:00" Value="#FF94825F"/>
+                <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FFC2AD86"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="CategoryEnter">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetName="TxtCategory" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="rectangle1" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
                 <EasingColorKeyFrame KeyTime="00:00:00" Value="#FFC2AD86"/>
                 <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF94825F"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="CategoryLeave">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetName="TxtCategory" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="rectangle1" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
                 <EasingColorKeyFrame KeyTime="00:00:00" Value="#FF94825F"/>
                 <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FFC2AD86"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="StatsEnter">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetName="TxtStats" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="rectangle2" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
                 <EasingColorKeyFrame KeyTime="00:00:00" Value="#FFC2AD86"/>
                 <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF94825F"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="StatsLeave">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetName="TxtStats" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="rectangle2" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
                 <EasingColorKeyFrame KeyTime="00:00:00" Value="#FF94825F"/>
                 <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FFC2AD86"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="PayEnter">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetName="TxtPlannedPay" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="rectangle3" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
                 <EasingColorKeyFrame KeyTime="00:00:00" Value="#FFC2AD86"/>
                 <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF94825F"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="PayLeave">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetName="TxtPlannedPay" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="rectangle3" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
                 <EasingColorKeyFrame KeyTime="00:00:00" Value="#FF94825F"/>
                 <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FFC2AD86"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="SettingsEnter">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetName="TxtSettings" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="rectangle4" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
                 <EasingColorKeyFrame KeyTime="00:00:00" Value="#FFC2AD86"/>
                 <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF94825F"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="SettingsLeave">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetName="TxtSettings" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="rectangle4" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
                 <EasingColorKeyFrame KeyTime="00:00:00" Value="#FF94825F"/>
                 <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FFC2AD86"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
 
     </Window.Resources>
-    <Window.Triggers>
-        <!-- This one triggers after Window appears -->
-        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
-            <BeginStoryboard Storyboard="{DynamicResource MenuEnter}"/>
+
+    <!--<Window.Triggers>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="TxtMenu">
+            <BeginStoryboard Storyboard="{StaticResource MenuEnter}"/>
         </EventTrigger>
-    </Window.Triggers>
+    </Window.Triggers>-->
+
     <Grid>
         <!-- Add your side bar and main content here -->
 
         <Grid HorizontalAlignment="Left" Height="656" VerticalAlignment="Center" Width="231" Background="#FFE6D2AD">
-            <TextBlock x:Name="TxtMenu" HorizontalAlignment="Center" Height="70" Margin="0,28,0,0" TextWrapping="Wrap" Text="Menu" VerticalAlignment="Top" Width="231" FontSize="24" Padding="109,17,0,0" FontFamily="Comic Sans MS" Background="#FFC2AD86"><InlineUIContainer>
-        </InlineUIContainer></TextBlock>
+
+            <Rectangle x:Name="rectangle" HorizontalAlignment="Center" Height="70" Margin="0,28,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="231" Fill="#FFC2AD86"/>
             <Image Height="60" VerticalAlignment="Top" Width="59" Source="/Menu.png" HorizontalAlignment="Left" Margin="26,33,0,0"/>
+            <TextBlock x:Name="TxtMenu" HorizontalAlignment="Center" Height="70" Margin="0,28,0,0" TextWrapping="Wrap" Text="Menu" VerticalAlignment="Top" Width="231" FontSize="24" Padding="109,17,0,0" FontFamily="Comic Sans MS" Background="Transparent" MouseEnter="TxtMenu_MouseEnter" MouseLeave="TxtMenu_MouseLeave"><InlineUIContainer/></TextBlock>
 
-            <TextBlock x:Name="TxtCategory" HorizontalAlignment="Center" Height="70" Margin="0,145,0,0" TextWrapping="Wrap" Text="Category" VerticalAlignment="Top" Width="231" FontSize="24" Padding="108,17,0,0" FontFamily="Comic Sans MS" Background="#FFC2AD86"><InlineUIContainer>
-        </InlineUIContainer></TextBlock>
+            <Rectangle x:Name="rectangle1" HorizontalAlignment="Center" Height="70" Margin="0,145,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="231" Fill="#FFC2AD86"/>
             <Image Height="58" VerticalAlignment="Top" Width="59" Source="/Category.png" HorizontalAlignment="Left" Margin="27,151,0,0"/>
+            <TextBlock x:Name="TxtCategory" HorizontalAlignment="Center" Height="70" Margin="0,145,0,0" TextWrapping="Wrap" Text="Category" VerticalAlignment="Top" Width="231" FontSize="24" Padding="108,17,0,0" FontFamily="Comic Sans MS" Background="Transparent" MouseEnter="TxtCategory_MouseEnter" MouseLeave="TxtCategory_MouseLeave"><InlineUIContainer/></TextBlock>
 
-            <TextBlock x:Name="TxtStats" HorizontalAlignment="Center" Height="70" Margin="0,263,0,0" TextWrapping="Wrap" Text="Statistics" VerticalAlignment="Top" Width="231" FontSize="24" Padding="109,17,0,0" FontFamily="Comic Sans MS" Background="#FFC2AD86"><InlineUIContainer>
-        </InlineUIContainer></TextBlock>
+            <Rectangle x:Name="rectangle2" HorizontalAlignment="Center" Height="70" Margin="0,264,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="231" Fill="#FFC2AD86"/>
             <Image Height="59" VerticalAlignment="Top" Width="59" Source="/Stats.png" HorizontalAlignment="Left" Margin="27,269,0,0"/>
+            <TextBlock x:Name="TxtStats" HorizontalAlignment="Center" Height="70" Margin="0,264,0,0" TextWrapping="Wrap" Text="Statistics" VerticalAlignment="Top" Width="231" FontSize="24" Padding="109,17,0,0" FontFamily="Comic Sans MS" Background="Transparent" MouseEnter="TxtStats_MouseEnter" MouseLeave="TxtStats_MouseLeave"><InlineUIContainer/></TextBlock>
 
-            <TextBlock x:Name="TxtPlannedPay" HorizontalAlignment="Center" Height="70" TextWrapping="Wrap" Text="  Planned Payments" VerticalAlignment="Top" Width="231" FontSize="24" Padding="109,1,0,0" FontFamily="Comic Sans MS" Background="#FFC2AD86" Margin="0,367,0,0"><InlineUIContainer>
-        </InlineUIContainer></TextBlock>
+            <Rectangle x:Name="rectangle3" HorizontalAlignment="Center" Height="70" Margin="0,367,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="231" Fill="#FFC2AD86"/>
             <Image Height="58" VerticalAlignment="Top" Width="59" Source="/Pay.png" HorizontalAlignment="Left" Margin="26,373,0,0"/>
+            <TextBlock x:Name="TxtPlannedPay" HorizontalAlignment="Center" Height="70" TextWrapping="Wrap" Text="  Planned Payments" VerticalAlignment="Top" Width="231" FontSize="24" Padding="109,1,0,0" FontFamily="Comic Sans MS" Background="Transparent" Margin="0,367,0,0" MouseEnter="TxtPlannedPay_MouseEnter"><InlineUIContainer/></TextBlock>
 
-            <TextBlock x:Name="TxtSettings" HorizontalAlignment="Center" Height="70" Margin="0,483,0,0" TextWrapping="Wrap" Text="Settings" VerticalAlignment="Top" Width="231" FontSize="24" Padding="109,17,0,0" FontFamily="Comic Sans MS" Background="#FFC2AD86"><InlineUIContainer>
-        </InlineUIContainer></TextBlock>
+            <Rectangle x:Name="rectangle4" HorizontalAlignment="Center" Height="70" Margin="0,483,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="231" Fill="#FFC2AD86"/>
             <Image Height="59" VerticalAlignment="Top" Width="59" Source="/Settings.png" HorizontalAlignment="Left" Margin="26,490,0,0"/>
+            <TextBlock x:Name="TxtSettings" HorizontalAlignment="Center" Height="70" Margin="0,483,0,0" TextWrapping="Wrap" Text="Settings" VerticalAlignment="Top" Width="231" FontSize="24" Padding="109,17,0,0" FontFamily="Comic Sans MS" Background="Transparent" MouseEnter="TxtSettings_MouseEnter" MouseLeave="TxtSettings_MouseLeave"><InlineUIContainer/></TextBlock>
+
 
         </Grid>
         <!-- Add your side bar and main content here -->
@@ -183,7 +186,7 @@
 
                 <!--Payment-->
                 <Rectangle Height="42" Stroke="Black" Visibility="Hidden"/>
-                <Button Height="69" x:Name="btnPlanPay" Background="#FFC2AD86" Click="btnPlanPay_Click">
+                <Button Height="69" x:Name="btnPlanPay" Background="#FFC2AD86">
                     <Button.Effect>
                         <DropShadowEffect Direction="270" Opacity="0.6"/>
                     </Button.Effect>
@@ -213,7 +216,7 @@
             </StackPanel>
 
         </StackPanel>
-        <lvc:PieChart Name="PieChart" Margin="458,10,459,335" InnerRadius="90">
+        <lvc:PieChart x:Name="PieChart" Margin="458,10,459,335" InnerRadius="90">
             <lvc:PieChart.Series>
                 <lvc:PieSeries Title="Section 1" Values="2" />
                 <lvc:PieSeries Title="Section 2" Values="4" />
