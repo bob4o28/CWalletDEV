@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ScottPlot.DataStructures;
 
 namespace CWalletDEV
 {
@@ -23,6 +24,7 @@ namespace CWalletDEV
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void btnPlanPay_Click(object sender, RoutedEventArgs e)
@@ -36,6 +38,11 @@ namespace CWalletDEV
         }
 
         private void MainFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
 
         }
