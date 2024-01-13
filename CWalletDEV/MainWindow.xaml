@@ -73,12 +73,6 @@
 
     </Window.Resources>
 
-    <!--<Window.Triggers>
-        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="TxtMenu">
-            <BeginStoryboard Storyboard="{StaticResource MenuEnter}"/>
-        </EventTrigger>
-    </Window.Triggers>-->
-
     <Grid>
         <!-- Add your side bar and main content here -->
 
