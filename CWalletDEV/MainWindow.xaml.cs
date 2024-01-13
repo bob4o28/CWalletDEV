@@ -13,6 +13,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ScottPlot.DataStructures;
 
 namespace CWalletDEV
 {
@@ -24,6 +25,7 @@ namespace CWalletDEV
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void TxtMenu_MouseEnter(object sender, MouseEventArgs e)
