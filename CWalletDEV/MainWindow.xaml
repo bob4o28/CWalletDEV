@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="672" Width="1245">
     <Window.Resources>
-        
+
 
         <Storyboard x:Key="MenuEnter">
             <ColorAnimationUsingKeyFrames Storyboard.TargetName="rectangle" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
@@ -70,36 +70,241 @@
                 <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FFC2AD86"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Key="SidebarShrink">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Sidebar" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0.491"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Sidebar" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-58.762"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="rectangle" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0.986"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0.478"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="rectangle" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-1.896"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-60.269"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="TxtMenu" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0.986"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0.478"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="TxtMenu" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-1.896"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-60.269"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="rectangle1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0.986"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0.478"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="rectangle1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-1.896"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-60.269"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="TxtCategory" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0.986"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0.478"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="TxtCategory" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-1.896"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-60.269"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="rectangle2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0.986"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0.478"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="rectangle2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-1.896"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-60.269"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="TxtStats" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0.986"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0.478"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="TxtStats" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-1.896"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-60.269"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="rectangle3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0.986"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0.478"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="rectangle3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-1.896"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-60.269"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="TxtPlannedPay" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0.986"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0.478"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="TxtPlannedPay" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-1.896"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-60.269"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="rectangle4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0.986"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0.478"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="rectangle4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-1.896"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-60.269"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="TxtSettings" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0.986"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0.478"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="TxtSettings" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-1.896"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-60.269"/>
+            </DoubleAnimationUsingKeyFrames>
+            <StringAnimationUsingKeyFrames Storyboard.TargetName="TxtMenu" Storyboard.TargetProperty="(TextBlock.Text)">
+                <DiscreteStringKeyFrame KeyTime="00:00:00" Value="Menu"/>
+                <DiscreteStringKeyFrame KeyTime="00:00:00.1000000" Value=""/>
+            </StringAnimationUsingKeyFrames>
+            <StringAnimationUsingKeyFrames Storyboard.TargetName="TxtCategory" Storyboard.TargetProperty="(TextBlock.Text)">
+                <DiscreteStringKeyFrame KeyTime="00:00:00" Value="Category"/>
+                <DiscreteStringKeyFrame KeyTime="00:00:00.1000000" Value=""/>
+            </StringAnimationUsingKeyFrames>
+            <StringAnimationUsingKeyFrames Storyboard.TargetName="TxtStats" Storyboard.TargetProperty="(TextBlock.Text)">
+                <DiscreteStringKeyFrame KeyTime="00:00:00" Value="Statistics"/>
+                <DiscreteStringKeyFrame KeyTime="00:00:00.1000000" Value=""/>
+            </StringAnimationUsingKeyFrames>
+            <StringAnimationUsingKeyFrames Storyboard.TargetName="TxtPlannedPay" Storyboard.TargetProperty="(TextBlock.Text)">
+                <DiscreteStringKeyFrame KeyTime="00:00:00" Value="Planned Paymends"/>
+                <DiscreteStringKeyFrame KeyTime="00:00:00.1000000" Value=""/>
+            </StringAnimationUsingKeyFrames>
+            <StringAnimationUsingKeyFrames Storyboard.TargetName="TxtSettings" Storyboard.TargetProperty="(TextBlock.Text)">
+                <DiscreteStringKeyFrame KeyTime="00:00:00" Value="Settings"/>
+                <DiscreteStringKeyFrame KeyTime="00:00:00.1000000" Value=""/>
+            </StringAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="SidebarOpen"/>
 
     </Window.Resources>
     <Grid>
-        <Grid HorizontalAlignment="Left" Height="656" VerticalAlignment="Center" Width="231" Background="#FFE6D2AD">
 
-            <Rectangle x:Name="rectangle" HorizontalAlignment="Center" Height="70" Margin="0,28,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="231" Fill="#FFC2AD86"/>
-            <Image Height="60" VerticalAlignment="Top" Width="59" Source="/Menu.png" HorizontalAlignment="Left" Margin="26,33,0,0"/>
-            <TextBlock x:Name="TxtMenu" HorizontalAlignment="Center" Height="70" Margin="0,28,0,0" TextWrapping="Wrap" Text="Menu" VerticalAlignment="Top" Width="231" FontSize="24" Padding="109,17,0,0" FontFamily="Comic Sans MS" Background="Transparent" MouseEnter="TxtMenu_MouseEnter" MouseLeave="TxtMenu_MouseLeave"><InlineUIContainer/></TextBlock>
+        <Rectangle x:Name="Sidebar" HorizontalAlignment="Left" Height="656" VerticalAlignment="Center" Width="231" Fill="#FFE6D2AD" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
 
-            <Rectangle x:Name="rectangle1" HorizontalAlignment="Center" Height="70" Margin="0,145,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="231" Fill="#FFC2AD86"/>
-            <Image Height="58" VerticalAlignment="Top" Width="59" Source="/Category.png" HorizontalAlignment="Left" Margin="27,151,0,0"/>
-            <TextBlock x:Name="TxtCategory" HorizontalAlignment="Center" Height="70" Margin="0,145,0,0" TextWrapping="Wrap" Text="Category" VerticalAlignment="Top" Width="231" FontSize="24" Padding="108,17,0,0" FontFamily="Comic Sans MS" Background="Transparent" MouseEnter="TxtCategory_MouseEnter" MouseLeave="TxtCategory_MouseLeave"><InlineUIContainer/></TextBlock>
+        <Rectangle x:Name="rectangle" HorizontalAlignment="Left" Height="70" Margin="-2,58,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="237" Fill="#FFC2AD86" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Image Height="60" VerticalAlignment="Top" Width="59" Source="/Menu.png" HorizontalAlignment="Left" Margin="26,62,0,0"/>
+        <TextBlock x:Name="TxtMenu" HorizontalAlignment="Left" Height="70" Margin="-2,58,0,0" TextWrapping="Wrap" Text="Menu" VerticalAlignment="Top" Width="237" FontSize="24" Padding="109,17,0,0" FontFamily="Comic Sans MS" Background="Transparent" MouseEnter="TxtMenu_MouseEnter" MouseLeave="TxtMenu_MouseLeave" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform></TextBlock>
 
-            <Rectangle x:Name="rectangle2" HorizontalAlignment="Center" Height="70" Margin="0,264,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="231" Fill="#FFC2AD86"/>
-            <Image Height="59" VerticalAlignment="Top" Width="59" Source="/Stats.png" HorizontalAlignment="Left" Margin="27,269,0,0"/>
-            <TextBlock x:Name="TxtStats" HorizontalAlignment="Center" Height="70" Margin="0,264,0,0" TextWrapping="Wrap" Text="Statistics" VerticalAlignment="Top" Width="231" FontSize="24" Padding="109,17,0,0" FontFamily="Comic Sans MS" Background="Transparent" MouseEnter="TxtStats_MouseEnter" MouseLeave="TxtStats_MouseLeave"><InlineUIContainer/></TextBlock>
+        <Rectangle x:Name="rectangle1" HorizontalAlignment="Left" Height="70" Margin="-2,174,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="237" Fill="#FFC2AD86" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Image Height="58" VerticalAlignment="Top" Width="59" Source="/Category.png" HorizontalAlignment="Left" Margin="27,180,0,0"/>
+        <TextBlock x:Name="TxtCategory" HorizontalAlignment="Left" Height="70" Margin="-2,174,0,0" TextWrapping="Wrap" Text="Category" VerticalAlignment="Top" Width="237" FontSize="24" Padding="108,17,0,0" FontFamily="Comic Sans MS" Background="Transparent" MouseEnter="TxtCategory_MouseEnter" MouseLeave="TxtCategory_MouseLeave" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform></TextBlock>
 
-            <Rectangle x:Name="rectangle3" HorizontalAlignment="Center" Height="70" Margin="0,367,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="231" Fill="#FFC2AD86"/>
-            <Image Height="58" VerticalAlignment="Top" Width="59" Source="/Pay.png" HorizontalAlignment="Left" Margin="26,373,0,0"/>
-            <TextBlock x:Name="TxtPlannedPay" HorizontalAlignment="Center" Height="70" TextWrapping="Wrap" Text="  Planned Payments" VerticalAlignment="Top" Width="231" FontSize="24" Padding="109,1,0,0" FontFamily="Comic Sans MS" Background="Transparent" Margin="0,367,0,0" MouseEnter="TxtPlannedPay_MouseEnter"><InlineUIContainer/></TextBlock>
+        <Rectangle x:Name="rectangle2" HorizontalAlignment="Left" Height="70" Stroke="Transparent" VerticalAlignment="Center" Width="237" Fill="#FFC2AD86" RenderTransformOrigin="0.5,0.5" Margin="-2,0,0,0">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Image Height="59" VerticalAlignment="Center" Width="59" Source="/Stats.png" HorizontalAlignment="Left" Margin="26,0,0,0"/>
+        <TextBlock x:Name="TxtStats" HorizontalAlignment="Left" Height="70" TextWrapping="Wrap" Text="Statistics" VerticalAlignment="Center" Width="237" FontSize="24" Padding="109,17,0,0" FontFamily="Comic Sans MS" Background="Transparent" MouseEnter="TxtStats_MouseEnter" MouseLeave="TxtStats_MouseLeave" RenderTransformOrigin="0.5,0.5" Margin="-2,0,0,0">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform></TextBlock>
 
-            <Rectangle x:Name="rectangle4" HorizontalAlignment="Center" Height="70" Margin="0,483,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="231" Fill="#FFC2AD86"/>
-            <Image Height="59" VerticalAlignment="Top" Width="59" Source="/Settings.png" HorizontalAlignment="Left" Margin="26,490,0,0"/>
-            <TextBlock x:Name="TxtSettings" HorizontalAlignment="Center" Height="70" Margin="0,483,0,0" TextWrapping="Wrap" Text="Settings" VerticalAlignment="Top" Width="231" FontSize="24" Padding="109,17,0,0" FontFamily="Comic Sans MS" Background="Transparent" MouseEnter="TxtSettings_MouseEnter" MouseLeave="TxtSettings_MouseLeave"><InlineUIContainer/></TextBlock>
+        <Rectangle x:Name="rectangle3" HorizontalAlignment="Left" Height="70" Margin="-2,396,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="237" Fill="#FFC2AD86" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Image Height="58" VerticalAlignment="Top" Width="59" Source="/Pay.png" HorizontalAlignment="Left" Margin="26,402,0,0"/>
+        <TextBlock x:Name="TxtPlannedPay" HorizontalAlignment="Left" Height="70" TextWrapping="Wrap" Text="  Planned Payments" VerticalAlignment="Top" Width="237" FontSize="24" Padding="109,1,0,0" FontFamily="Comic Sans MS" Background="Transparent" Margin="-2,396,0,0" MouseEnter="TxtPlannedPay_MouseEnter" MouseLeave="TxtPlannedPay_MouseLeave_1" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform></TextBlock>
+
+        <Rectangle x:Name="rectangle4" HorizontalAlignment="Left" Height="70" Margin="-2,512,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="237" Fill="#FFC2AD86" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Image Height="59" VerticalAlignment="Top" Width="59" Source="/Settings.png" HorizontalAlignment="Left" Margin="26,520,0,0"/>
+        <TextBlock x:Name="TxtSettings" HorizontalAlignment="Left" Height="70" Margin="-2,512,0,0" TextWrapping="Wrap" Text="Settings" VerticalAlignment="Top" Width="237" FontSize="24" Padding="109,17,0,0" FontFamily="Comic Sans MS" Background="Transparent" MouseEnter="TxtSettings_MouseEnter" MouseLeave="TxtSettings_MouseLeave" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform></TextBlock>
 
 
-        </Grid>
         <!-- Add your side bar and main content here -->
-        
-        <lvc:PieChart x:Name="PieChart" Margin="458,10,459,335" InnerRadius="90">
+
+        <lvc:PieChart x:Name="PieChart" Margin="458,28,458,317" InnerRadius="90">
             <lvc:PieChart.Series>
                 <lvc:PieSeries Title="Section 1" Values="2" />
                 <lvc:PieSeries Title="Section 2" Values="4" />

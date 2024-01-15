@@ -91,7 +91,7 @@ namespace CWalletDEV
             }
         }
 
-        private void TxtPlannedPay_MouseLeave(object sender, MouseEventArgs e)
+        private void TxtPlannedPay_MouseLeave_1(object sender, MouseEventArgs e)
         {
             Storyboard storyboard = this.FindResource("PayLeave") as Storyboard;
             if (storyboard != null)
@@ -118,6 +118,6 @@ namespace CWalletDEV
             }
         }
 
-
+        
     }
 }
