@@ -7,6 +7,10 @@
         xmlns:local="clr-namespace:CWalletDEV"
         mc:Ignorable="d"
         Title="MainWindow" Height="672" Width="1245">
+    <!--<Window.DataContext>
+        <local:MainWindow/>
+    </Window.DataContext>-->
+    
     <Window.Resources>
 
 
@@ -439,6 +443,7 @@
                 <lvc:Axis Title="Days" LabelFormatter="{Binding Formatter}" Labels="string" />
             </lvc:CartesianChart.AxisY>
         </lvc:CartesianChart>
+        
         <lvc:PieChart x:Name="PieChart" Margin="365,7,519,412" InnerRadius="70">
             <lvc:PieChart.Series>
                 <lvc:PieSeries Title="Section 1" Values="2" />
