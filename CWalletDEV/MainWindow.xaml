@@ -183,7 +183,7 @@
         <Storyboard x:Key="SidebarOpen"/>
 
     </Window.Resources>
-    <Grid>
+    <Grid Background="#FFDFD7CB" RenderTransformOrigin="0.5,0.5">
 
         <Rectangle x:Name="Sidebar" HorizontalAlignment="Left" Height="656" VerticalAlignment="Center" Width="231" Fill="#FFE6D2AD" RenderTransformOrigin="0.5,0.5">
             <Rectangle.RenderTransform>
@@ -304,7 +304,7 @@
 
         <!-- Add your side bar and main content here -->
 
-        <lvc:PieChart x:Name="PieChart" Margin="458,28,458,317" InnerRadius="90">
+        <lvc:PieChart x:Name="PieChart" Margin="365,7,488,293" InnerRadius="98" Height="355.86" Width="392">
             <lvc:PieChart.Series>
                 <lvc:PieSeries Title="Section 1" Values="2" />
                 <lvc:PieSeries Title="Section 2" Values="4" />
@@ -313,6 +313,15 @@
                 <lvc:PieSeries Title="Section 5" Values="9" />
             </lvc:PieChart.Series>
         </lvc:PieChart>
+
+        <lvc:CartesianChart Name="areaChart" Margin="257,431,204,0" Width="784" Foreground="#1E1E1E1E" OpacityMask="Black">
+            <lvc:CartesianChart.AxisX>
+                <lvc:Axis Title="Money" Labels="{Binding Labels}" />
+            </lvc:CartesianChart.AxisX>
+            <lvc:CartesianChart.AxisY>
+                <lvc:Axis Title="Days" LabelFormatter="{Binding Formatter}" />
+            </lvc:CartesianChart.AxisY>
+        </lvc:CartesianChart>
     </Grid>
 </Window>
             

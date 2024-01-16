@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LiveCharts;
+using LiveCharts.Wpf;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +15,6 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using ScottPlot.DataStructures;
 
 namespace CWalletDEV
 {
@@ -22,10 +23,30 @@ namespace CWalletDEV
     /// </summary>
     public partial class MainWindow : Window
     {
+        public SeriesCollection DataPoints { get; set; }
+        public List<string> Labels { get; set; }
+
+        public Func<double, string> Formatter { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
-            
+            //AREA CHART
+
+            //data changer
+            List<double> values = new List<double> { 10, 25, 15, 30, 20, 35, 25 };
+            Labels = new List<string> { "Monday", "Tuesday", "Wednsday", "Thursday", "Friday", "Saturday", "Sunday" };
+
+            // Binder
+            DataPoints = new SeriesCollection
+            {
+                new LineSeries { Title = "Data Series", Values = new ChartValues<double>(values) }
+            };
+
+            Formatter = value => value.ToString(); // Format Y-axis labels
+
+            DataContext = this;
+
         }
 
         private void TxtMenu_MouseEnter(object sender, MouseEventArgs e)
@@ -117,7 +138,5 @@ namespace CWalletDEV
                 storyboard.Begin();
             }
         }
-
-        
     }
 }
