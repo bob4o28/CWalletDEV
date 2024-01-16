@@ -28,6 +28,11 @@ namespace CWalletDEV
 
         public Func<double, string> Formatter { get; set; }
 
+        //Event Var
+        public string SidebarPos = "Open";
+
+
+
         public MainWindow()
         {
             InitializeComponent();
@@ -47,8 +52,35 @@ namespace CWalletDEV
 
             DataContext = this;
 
+
+        }
+        //Menu button events
+        private void TxtMenu_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            if(SidebarPos=="Open")
+            {
+                Storyboard storyboard = this.FindResource("SidebarShrink") as Storyboard;
+                if (storyboard != null)
+                {
+                    storyboard.Begin();
+                }
+                SidebarPos = "Close";
+            }
+            else
+            {
+                Storyboard storyboard = this.FindResource("SidebarOpen") as Storyboard;
+                if (storyboard != null)
+                {
+                    storyboard.Begin();
+                }
+                SidebarPos = "Open";
+            }
+
         }
 
+
+
+        //Sidebar Buttons Cosmetic mouse ove effects
         private void TxtMenu_MouseEnter(object sender, MouseEventArgs e)
         {
             Storyboard storyboard = this.FindResource("MenuEnter") as Storyboard;
@@ -138,5 +170,7 @@ namespace CWalletDEV
                 storyboard.Begin();
             }
         }
+
+        
     }
 }
