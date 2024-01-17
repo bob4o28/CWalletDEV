@@ -315,6 +315,66 @@
                 <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF8AC97E"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Key="btnSavingsEnter">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="SavingRec" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame KeyTime="00:00:00" Value="#FFF9EFA3"/>
+                <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FFC3BA76"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="btnSavingsLeave">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="SavingRec" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame KeyTime="00:00:00" Value="#FFC3BA76"/>
+                <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FFF9EFA3"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="btnDebitEnter">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="DebitRec" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame KeyTime="00:00:00" Value="#FF90E0EF"/>
+                <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF548A94"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="btnDebitLeave">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="DebitRec" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame KeyTime="00:00:00" Value="#FF548A94"/>
+                <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF90E0EF"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="btnCreditEnter">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="CreditRec" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame KeyTime="00:00:00" Value="#FFF0AA78"/>
+                <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FFA2785A"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="btnCreditLeave">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="CreditRec" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame KeyTime="00:00:00" Value="#FFA2785A"/>
+                <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FFF0AA78"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="btnBankEnter">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="BankRec" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame KeyTime="00:00:00" Value="#FFA4B8FA"/>
+                <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF62709E"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="btnBankLeave">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="BankRec" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame KeyTime="00:00:00" Value="#FF62709E"/>
+                <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FFA4B8FA"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="btnCryptoEnter">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="CryptoRec" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame KeyTime="00:00:00" Value="#FFD17957"/>
+                <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF8E5A46"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="btnCryptoLeave">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="CryptoRec" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame KeyTime="00:00:00" Value="#FF8E5A46"/>
+                <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FFD17957"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
 
     </Window.Resources>
     <Grid Background="#FFDFD7CB" RenderTransformOrigin="0.5,0.5">
@@ -462,19 +522,19 @@
 
 
         <Rectangle x:Name="SavingRec" HorizontalAlignment="Left" Height="76" Margin="1034,92,0,0" VerticalAlignment="Top" Width="150" Fill="#FFF9EFA3" RadiusX="15" RadiusY="15"/>
-        <TextBlock x:Name="btnSavings" HorizontalAlignment="Left" Margin="1034,93,0,0" Text="Savings" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Comic Sans MS" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0"/>
+        <TextBlock x:Name="btnSavings" HorizontalAlignment="Left" Margin="1034,93,0,0" Text="Savings" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Comic Sans MS" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnSavings_MouseEnter" MouseLeave="btnSavings_MouseLeave"/>
         
         <Rectangle x:Name="DebitRec" HorizontalAlignment="Left" Height="76" Margin="860,185,0,0" VerticalAlignment="Top" Width="150" Fill="#FF90E0EF" RadiusX="15" RadiusY="15"/>
-        <TextBlock x:Name="btnDebit" HorizontalAlignment="Left" Margin="860,186,0,0" Text="Debit" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Comic Sans MS" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0"/>
+        <TextBlock x:Name="btnDebit" HorizontalAlignment="Left" Margin="860,186,0,0" Text="Debit" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Comic Sans MS" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnDebit_MouseEnter" MouseLeave="btnDebit_MouseLeave"/>
         
         <Rectangle x:Name="CreditRec" HorizontalAlignment="Left" Height="76" Margin="1034,185,0,0" VerticalAlignment="Top" Width="150" Fill="#FFF0AA78" RadiusX="15" RadiusY="15"/>
-        <TextBlock x:Name="btnCredit" HorizontalAlignment="Left" Margin="1034,186,0,0" Text="Credit" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Comic Sans MS" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0"/>
+        <TextBlock x:Name="btnCredit" HorizontalAlignment="Left" Margin="1034,186,0,0" Text="Credit" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Comic Sans MS" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnCredit_MouseEnter" MouseLeave="btnCredit_MouseLeave"/>
         
         <Rectangle x:Name="BankRec" HorizontalAlignment="Left" Height="76" Margin="860,279,0,0" VerticalAlignment="Top" Width="150" Fill="#FFA4B8FA" RadiusX="15" RadiusY="15"/>
-        <TextBlock x:Name="btnBank" HorizontalAlignment="Left" Margin="860,280,0,0" Text="Bank" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Comic Sans MS" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0"/>
+        <TextBlock x:Name="btnBank" HorizontalAlignment="Left" Margin="860,280,0,0" Text="Bank" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Comic Sans MS" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnBank_MouseEnter" MouseLeave="btnBank_MouseLeave"/>
         
         <Rectangle x:Name="CryptoRec" HorizontalAlignment="Left" Height="76" Margin="1034,279,0,0" VerticalAlignment="Top" Width="150" Fill="#FFD17957" RadiusX="15" RadiusY="15"/>
-        <TextBlock x:Name="btnCrypto" HorizontalAlignment="Left" Margin="1034,280,0,0" Text="Crypto" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Comic Sans MS" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0"/>
+        <TextBlock x:Name="btnCrypto" HorizontalAlignment="Left" Margin="1034,280,0,0" Text="Crypto" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Comic Sans MS" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnCrypto_MouseEnter" MouseLeave="btnCrypto_MouseLeave"/>
 
     </Grid>
 </Window>

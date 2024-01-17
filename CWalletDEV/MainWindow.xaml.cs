@@ -186,6 +186,96 @@ namespace CWalletDEV
             }
         }
 
+        private void btnSavings_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Storyboard storyboard = this.FindResource("btnSavingsEnter") as Storyboard;
+            if (storyboard != null)
+            {
+                storyboard.Begin();
+            }
+        }
+
+        private void btnSavings_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Storyboard storyboard = this.FindResource("btnSavingsLeave") as Storyboard;
+            if (storyboard != null)
+            {
+                storyboard.Begin();
+            }
+        }
+
+        private void btnDebit_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Storyboard storyboard = this.FindResource("btnDebitEnter") as Storyboard;
+            if (storyboard != null)
+            {
+                storyboard.Begin();
+            }
+        }
+
+        private void btnDebit_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Storyboard storyboard = this.FindResource("btnDebitLeave") as Storyboard;
+            if (storyboard != null)
+            {
+                storyboard.Begin();
+            }
+        }
+
+        private void btnCredit_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Storyboard storyboard = this.FindResource("btnCreditEnter") as Storyboard;
+            if (storyboard != null)
+            {
+                storyboard.Begin();
+            }
+        }
+
+        private void btnCredit_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Storyboard storyboard = this.FindResource("btnCreditLeave") as Storyboard;
+            if (storyboard != null)
+            {
+                storyboard.Begin();
+            }
+        }
+
+        private void btnBank_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Storyboard storyboard = this.FindResource("btnBankEnter") as Storyboard;
+            if (storyboard != null)
+            {
+                storyboard.Begin();
+            }
+        }
+
+        private void btnBank_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Storyboard storyboard = this.FindResource("btnBankLeave") as Storyboard;
+            if (storyboard != null)
+            {
+                storyboard.Begin();
+            }
+        }
+
+        private void btnCrypto_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Storyboard storyboard = this.FindResource("btnCryptoEnter") as Storyboard;
+            if (storyboard != null)
+            {
+                storyboard.Begin();
+            }
+        }
+
+        private void btnCrypto_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Storyboard storyboard = this.FindResource("btnCryptoLeave") as Storyboard;
+            if (storyboard != null)
+            {
+                storyboard.Begin();
+            }
+        }
+
         //Binding AreaChartValues = new Binding("AreaChartValues");
 
 
