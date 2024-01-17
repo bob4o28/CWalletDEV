@@ -1,43 +1,40 @@
 ﻿using LiveCharts;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CWalletDEV
+public class MainViewModel : INotifyPropertyChanged
 {
-    public class MainViewModel : INotifyPropertyChanged
+    private ChartValues<double> _chartValues;
+    public ChartValues<double> ChartValues
     {
-        private ChartValues<double> _areaChartValues;
-        public ChartValues<double> AreaChartValues
+        get { return _chartValues; }
+        set
         {
-            get { return _areaChartValues; }
-            set
-            {
-                _areaChartValues = value;
-                OnPropertyChanged("AreaChartValues");
-            }
-        }
-
-        private string[] _daysOfWeel;
-        public string[] DaysOfWeel
-        {
-            get { return _daysOfWeel; }
-            set
-            {
-                _daysOfWeel = value;
-                OnPropertyChanged("DaysOfWeel");
-            }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            _chartValues = value;
+            OnPropertyChanged("ChartValues");
         }
     }
 
+    private string[] _labels;
+    public string[] Labels
+    {
+        get { return _labels; }
+        set
+        {
+            _labels = value;
+            OnPropertyChanged("Labels");
+        }
+    }
+
+    public MainViewModel()
+    {
+        ChartValues = new ChartValues<double> { 5, 3, 2, 7, 4 };
+        Labels = new[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
+    }
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    protected virtual void OnPropertyChanged(string propertyName = null)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
 }

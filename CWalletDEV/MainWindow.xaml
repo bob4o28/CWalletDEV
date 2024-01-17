@@ -536,6 +536,25 @@
         <Rectangle x:Name="CryptoRec" HorizontalAlignment="Left" Height="76" Margin="1034,279,0,0" VerticalAlignment="Top" Width="150" Fill="#FFD17957" RadiusX="15" RadiusY="15"/>
         <TextBlock x:Name="btnCrypto" HorizontalAlignment="Left" Margin="1034,280,0,0" Text="Crypto" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Comic Sans MS" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnCrypto_MouseEnter" MouseLeave="btnCrypto_MouseLeave"/>
 
+
+
+
+
+        <lvc:CartesianChart Margin="342,402,397,29">
+            <lvc:CartesianChart.Series>
+                <lvc:LineSeries Title="Week Data" Values="{Binding ChartValues}" PointGeometrySize="0" Fill="#F0F8FF" StrokeThickness="1">
+                </lvc:LineSeries>
+            </lvc:CartesianChart.Series>
+            <lvc:CartesianChart.AxisX>
+                <lvc:Axis Title="Days of Week" Labels="{Binding Labels}"/>
+            </lvc:CartesianChart.AxisX>
+        </lvc:CartesianChart>
+
+
+
+
+
+
     </Grid>
 </Window>
             

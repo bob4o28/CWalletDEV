@@ -33,10 +33,10 @@ namespace CWalletDEV
         {
             InitializeComponent();
 
-           // _viewModel = new MainViewModel();
-           // MainAreaChart.DataContext = _viewModel;
+            // _viewModel = new MainViewModel();
+            // MainAreaChart.DataContext = _viewModel;
+            DataContext = new MainViewModel();
 
-           
         }
 
         //Menu button events
