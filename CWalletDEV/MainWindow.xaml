@@ -433,15 +433,6 @@
             </TextBlock.RenderTransform></TextBlock>
 
 
-
-
-        <lvc:CartesianChart Name="MainAreaChart" Margin="293,382,77,10" AxisX="{Binding DaysOfWeel}">
-            <lvc:CartesianChart.Series>
-                <lvc:LineSeries Values="{Binding AreaChartValues}" StrokeThickness="1"/>
-            </lvc:CartesianChart.Series>
-        </lvc:CartesianChart>
-
-
         <lvc:PieChart x:Name="PieChart" Margin="365,7,367,337" InnerRadius="86">
             <lvc:PieChart.Series>
                 <lvc:PieSeries Title="Cash" Values="25" Fill="#FF8AC97E"/>
