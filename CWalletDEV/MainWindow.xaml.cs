@@ -23,37 +23,22 @@ namespace CWalletDEV
     /// </summary>
     public partial class MainWindow : Window
     {
-        public SeriesCollection DataPoints { get; set; }
-        public List<string> Labels { get; set; }
-
-        public Func<double, string> Formatter { get; set; }
-
         //Event Var
         public string SidebarPos = "Open";
 
 
+        //private MainViewModel _viewModel;
 
         public MainWindow()
         {
             InitializeComponent();
-            //AREA CHART
 
-            //data changer
-            List<double> values = new List<double> { 10, 25, 15, 30, 20, 35, 25 };
-            Labels = new List<string> { "Monday", "Tuesday", "Wednsday", "Thursday", "Friday", "Saturday", "Sunday" };
+           // _viewModel = new MainViewModel();
+           // MainAreaChart.DataContext = _viewModel;
 
-            // Binder
-            DataPoints = new SeriesCollection
-            {
-                new LineSeries { Title = "Data Series", Values = new ChartValues<double>(values) }
-            };
-
-            Formatter = value => value.ToString(); // Format Y-axis labels
-
-            DataContext = this;
-
-
+           
         }
+
         //Menu button events
         private void TxtMenu_MouseUp(object sender, MouseButtonEventArgs e)
         {
@@ -171,6 +156,17 @@ namespace CWalletDEV
             }
         }
 
-        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //// Assign values to the properties
+            //_viewModel.AreaChartValues = new ChartValues<double> { 15, 15, 20, 47, 8, 78, 6 };
+            //_viewModel.DaysOfWeel = new[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
+        }
+
+        //Binding AreaChartValues = new Binding("AreaChartValues");
+
+
+
+
     }
 }

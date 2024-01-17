@@ -3,14 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
-        xmlns:local="clr-namespace:CWalletDEV"
+        xmlns:local="clr-namespace:CWalletDEV" 
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" d:DataContext="{d:DesignInstance Type=local:MainViewModel}"
         mc:Ignorable="d"
         Title="MainWindow" Height="672" Width="1245">
     <!--<Window.DataContext>
         <local:MainWindow/>
     </Window.DataContext>-->
-    
+
     <Window.Resources>
 
 
@@ -433,26 +433,26 @@
             </TextBlock.RenderTransform></TextBlock>
 
 
-        <!-- Add your side bar and main content here -->
-
-        <lvc:CartesianChart Name="areaChart" Margin="280,402,181,10" Width="784" Foreground="#1E1E1E1E" OpacityMask="Black">
-            <lvc:CartesianChart.AxisX>
-                <lvc:Axis Title="Money" Labels="{Binding Labels}" />
-            </lvc:CartesianChart.AxisX>
-            <lvc:CartesianChart.AxisY>
-                <lvc:Axis Title="Days" LabelFormatter="{Binding Formatter}" Labels="string" />
-            </lvc:CartesianChart.AxisY>
-        </lvc:CartesianChart>
         
+
+        <lvc:CartesianChart Name="MainAreaChart" Margin="293,382,77,10" AxisX="{Binding DaysOfWeel}">
+            <lvc:CartesianChart.Series>
+                <lvc:LineSeries Values="{Binding AreaChartValues}" StrokeThickness="1"/>
+            </lvc:CartesianChart.Series>
+        </lvc:CartesianChart>
+
+
         <lvc:PieChart x:Name="PieChart" Margin="365,7,519,412" InnerRadius="70">
             <lvc:PieChart.Series>
-                <lvc:PieSeries Title="Section 1" Values="2" />
-                <lvc:PieSeries Title="Section 2" Values="4" />
-                <lvc:PieSeries Title="Section 3" Values="6" />
-                <lvc:PieSeries Title="Section 4" Values="7" />
-                <lvc:PieSeries Title="Section 5" Values="9" />
+                <lvc:PieSeries Title="Section 1" Values="25" />
+                <lvc:PieSeries Title="Section 2" Values="41" />
+                <lvc:PieSeries Title="Section 3" Values="64" />
+                <lvc:PieSeries Title="Section 4" Values="73" />
+                <lvc:PieSeries Title="Section 5" Values="91" />
+                <lvc:PieSeries Title="Section 6" Values="30" />
             </lvc:PieChart.Series>
         </lvc:PieChart>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="1006,174,0,0" VerticalAlignment="Top" Click="Button_Click"/>
     </Grid>
 </Window>
             

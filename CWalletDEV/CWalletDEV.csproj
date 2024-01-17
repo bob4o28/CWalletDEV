@@ -120,6 +120,7 @@
     <Compile Include="LogInWin.xaml.cs">
       <DependentUpon>LogInWin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MainViewModel.cs" />
     <Compile Include="SavingsChanger.xaml.cs">
       <DependentUpon>SavingsChanger.xaml</DependentUpon>
     </Compile>
