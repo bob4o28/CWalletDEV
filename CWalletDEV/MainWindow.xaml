@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CWalletDEV" 
-        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" d:DataContext="{d:DesignInstance Type=local:MainViewModel}"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" 
         mc:Ignorable="d"
         Title="MainWindow" Height="672" Width="1245">
     <!--<Window.DataContext>
@@ -433,7 +433,7 @@
             </TextBlock.RenderTransform></TextBlock>
 
 
-        
+
 
         <lvc:CartesianChart Name="MainAreaChart" Margin="293,382,77,10" AxisX="{Binding DaysOfWeel}">
             <lvc:CartesianChart.Series>
@@ -442,17 +442,49 @@
         </lvc:CartesianChart>
 
 
-        <lvc:PieChart x:Name="PieChart" Margin="365,7,519,412" InnerRadius="70">
+        <lvc:PieChart x:Name="PieChart" Margin="365,7,367,337" InnerRadius="86">
             <lvc:PieChart.Series>
-                <lvc:PieSeries Title="Section 1" Values="25" />
-                <lvc:PieSeries Title="Section 2" Values="41" />
-                <lvc:PieSeries Title="Section 3" Values="64" />
-                <lvc:PieSeries Title="Section 4" Values="73" />
-                <lvc:PieSeries Title="Section 5" Values="91" />
-                <lvc:PieSeries Title="Section 6" Values="30" />
+                <lvc:PieSeries Title="Cash" Values="25" Fill="#FF8AC97E"/>
+                <lvc:PieSeries Title="Savings" Values="41" Fill="#FFF9EFA3"/>
+                <lvc:PieSeries Title="DebitCard" Values="64" Fill="#FF90E0EF" />
+                <lvc:PieSeries Title="CreditCard" Values="73" Fill="#FFF0AA78" />
+                <lvc:PieSeries Title="Bank" Values="91" Fill="#A4B8FA" />
+                <lvc:PieSeries Title="Crypto" Values="30" Fill="#D17957"/>
             </lvc:PieChart.Series>
         </lvc:PieChart>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="1006,174,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+
+        <Button x:Name="CashButton" Content="Button" HorizontalAlignment="Left" Height="77" Margin="908,58,0,0" VerticalAlignment="Top" Width="149" Background="#FF8AC97E">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="SavingsButton" Content="Button" HorizontalAlignment="Left" Height="78" Margin="1086,280,0,0" VerticalAlignment="Top" Width="149" Background="#FFD17957">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="DebitCardButton" Content="Button" HorizontalAlignment="Left" Height="77" Margin="908,281,0,0" VerticalAlignment="Top" Width="149" Background="#FFA4B8FA">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="CreditCardButton" Content="Button" HorizontalAlignment="Left" Height="77" Margin="1086,166,0,0" VerticalAlignment="Top" Width="149" Background="#FFF0AA78">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="BankButton" Content="Button" HorizontalAlignment="Left" Height="77" Margin="908,161,0,0" VerticalAlignment="Top" Width="149" Background="#FF90E0EF">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="CryptoButton" Content="Button" HorizontalAlignment="Left" Height="77" Margin="1086,58,0,0" VerticalAlignment="Top" Width="149" Background="#FFF9EFA3">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
+
     </Grid>
 </Window>
             
