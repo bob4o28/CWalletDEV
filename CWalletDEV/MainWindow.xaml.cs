@@ -163,6 +163,29 @@ namespace CWalletDEV
             //_viewModel.DaysOfWeel = new[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
         }
 
+        private void btnCash_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void btnCash_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Storyboard storyboard = this.FindResource("btnCashEnter") as Storyboard;
+            if (storyboard != null)
+            {
+                storyboard.Begin();
+            }
+        }
+
+        private void btnCash_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Storyboard storyboard = this.FindResource("btnCashLeave") as Storyboard;
+            if (storyboard != null)
+            {
+                storyboard.Begin();
+            }
+        }
+
         //Binding AreaChartValues = new Binding("AreaChartValues");
 
 

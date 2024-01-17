@@ -303,6 +303,18 @@
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="SideBarOpended"/>
+        <Storyboard x:Key="btnCashEnter">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="CashRec" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame KeyTime="00:00:00" Value="#FF8AC97E"/>
+                <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF618C59"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="btnCashLeave">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="CashRec" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame KeyTime="00:00:00" Value="#FF618C59"/>
+                <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF8AC97E"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
 
     </Window.Resources>
     <Grid Background="#FFDFD7CB" RenderTransformOrigin="0.5,0.5">
@@ -433,7 +445,7 @@
             </TextBlock.RenderTransform></TextBlock>
 
 
-        <lvc:PieChart x:Name="PieChart" Margin="365,7,367,337" InnerRadius="86">
+        <lvc:PieChart x:Name="PieChart" Margin="342,16,533,328" InnerRadius="86">
             <lvc:PieChart.Series>
                 <lvc:PieSeries Title="Cash" Values="25" Fill="#FF8AC97E"/>
                 <lvc:PieSeries Title="Savings" Values="41" Fill="#FFF9EFA3"/>
@@ -444,37 +456,25 @@
             </lvc:PieChart.Series>
         </lvc:PieChart>
 
-        <Button x:Name="CashButton" Content="Button" HorizontalAlignment="Left" Height="77" Margin="908,58,0,0" VerticalAlignment="Top" Width="149" Background="#FF8AC97E">
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-        </Button>
-        <Button x:Name="SavingsButton" Content="Button" HorizontalAlignment="Left" Height="78" Margin="1086,280,0,0" VerticalAlignment="Top" Width="149" Background="#FFD17957">
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-        </Button>
-        <Button x:Name="DebitCardButton" Content="Button" HorizontalAlignment="Left" Height="77" Margin="908,281,0,0" VerticalAlignment="Top" Width="149" Background="#FFA4B8FA">
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-        </Button>
-        <Button x:Name="CreditCardButton" Content="Button" HorizontalAlignment="Left" Height="77" Margin="1086,166,0,0" VerticalAlignment="Top" Width="149" Background="#FFF0AA78">
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-        </Button>
-        <Button x:Name="BankButton" Content="Button" HorizontalAlignment="Left" Height="77" Margin="908,161,0,0" VerticalAlignment="Top" Width="149" Background="#FF90E0EF">
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-        </Button>
-        <Button x:Name="CryptoButton" Content="Button" HorizontalAlignment="Left" Height="77" Margin="1086,58,0,0" VerticalAlignment="Top" Width="149" Background="#FFF9EFA3">
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-        </Button>
+        <!--Buttons-->
+        <Rectangle x:Name="CashRec" HorizontalAlignment="Left" Height="76" Margin="860,92,0,0" VerticalAlignment="Top" Width="150" Fill="#FF8AC97E" RadiusX="15" RadiusY="15"/>
+        <TextBlock x:Name="btnCash" HorizontalAlignment="Left" Margin="860,93,0,0" Text="Cash" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Comic Sans MS" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseUp="btnCash_MouseUp" MouseEnter="btnCash_MouseEnter" MouseLeave="btnCash_MouseLeave"/>
 
+
+        <Rectangle x:Name="SavingRec" HorizontalAlignment="Left" Height="76" Margin="1034,92,0,0" VerticalAlignment="Top" Width="150" Fill="#FFF9EFA3" RadiusX="15" RadiusY="15"/>
+        <TextBlock x:Name="btnSavings" HorizontalAlignment="Left" Margin="1034,93,0,0" Text="Savings" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Comic Sans MS" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0"/>
+        
+        <Rectangle x:Name="DebitRec" HorizontalAlignment="Left" Height="76" Margin="860,185,0,0" VerticalAlignment="Top" Width="150" Fill="#FFF9EFA3" RadiusX="15" RadiusY="15"/>
+        <TextBlock x:Name="btnDebit" HorizontalAlignment="Left" Margin="860,186,0,0" Text="Debit" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Comic Sans MS" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0"/>
+        
+        <Rectangle x:Name="CreditRec" HorizontalAlignment="Left" Height="76" Margin="1034,185,0,0" VerticalAlignment="Top" Width="150" Fill="#FFF9EFA3" RadiusX="15" RadiusY="15"/>
+        <TextBlock x:Name="btnCredit" HorizontalAlignment="Left" Margin="1034,186,0,0" Text="Credit" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Comic Sans MS" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0"/>
+        
+        <Rectangle x:Name="BankRec" HorizontalAlignment="Left" Height="76" Margin="860,279,0,0" VerticalAlignment="Top" Width="150" Fill="#FFF9EFA3" RadiusX="15" RadiusY="15"/>
+        <TextBlock x:Name="btnBank" HorizontalAlignment="Left" Margin="860,280,0,0" Text="Bank" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Comic Sans MS" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0"/>
+        
+        <Rectangle x:Name="CryptoRec" HorizontalAlignment="Left" Height="76" Margin="1034,279,0,0" VerticalAlignment="Top" Width="150" Fill="#FFF9EFA3" RadiusX="15" RadiusY="15"/>
+        <TextBlock x:Name="btnCrypto" HorizontalAlignment="Left" Margin="1034,280,0,0" Text="Crypto" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Comic Sans MS" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0"/>
 
     </Grid>
 </Window>
