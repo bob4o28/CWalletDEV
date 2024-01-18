@@ -27,8 +27,8 @@ public class MainViewModel : INotifyPropertyChanged
 
     public MainViewModel()
     {
-        ChartValues = new ChartValues<double> { 5, 3, 2, 7, 4 };
-        Labels = new[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
+        ChartValues = new ChartValues<double> { 5, 3, 2, 7, 4, 78, 4 };
+        Labels = new[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" , "Saturday", "Sunday"};
     }
 
     public event PropertyChangedEventHandler PropertyChanged;
