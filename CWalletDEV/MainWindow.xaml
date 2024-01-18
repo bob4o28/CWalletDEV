@@ -377,7 +377,7 @@
         </Storyboard>
 
     </Window.Resources>
-    <Grid Background="#FFDFD7CB" RenderTransformOrigin="0.5,0.5">
+    <Grid Background="#FFFFF6E4" RenderTransformOrigin="0.5,0.5">
 
         <Rectangle x:Name="Sidebar" HorizontalAlignment="Left" Height="656" VerticalAlignment="Center" Width="246" Fill="#FFE6D2AD" RenderTransformOrigin="0.5,0.5" Margin="-4,0,0,0">
             <Rectangle.RenderTransform>
