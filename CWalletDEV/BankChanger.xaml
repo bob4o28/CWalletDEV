@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CWalletDEV"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         mc:Ignorable="d"
         Title="BankChanger" Height="725" Width="575" Background="#FFDFD7CB">
     <Grid Background="#FFDFD7CB">
@@ -47,6 +48,22 @@
         <TextBox HorizontalAlignment="Left" Height="50" Margin="46,464,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233"/>
         <Button Content="Save" HorizontalAlignment="Left" Height="35" Margin="350,664,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click"/>
         <Button Content="Cancel" HorizontalAlignment="Left" Height="35" Margin="455,664,0,0" VerticalAlignment="Top" Width="100"/>
+
+        <lvc:CartesianChart Margin="36,158,125,273" Foreground="#FF676767">
+            <lvc:CartesianChart.Series>
+                <lvc:LineSeries Title="Week Data" Values="{Binding ChartValues}" PointGeometrySize="10" StrokeThickness="2" Stroke="#FF5E8257" Foreground="{x:Null}">
+                    <lvc:LineSeries.Fill>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF8AC97E"/>
+                            <GradientStop Color="#19C3C3C3" Offset="2"/>
+                        </LinearGradientBrush>
+                    </lvc:LineSeries.Fill>
+                </lvc:LineSeries>
+            </lvc:CartesianChart.Series>
+            <lvc:CartesianChart.AxisX>
+                <lvc:Axis Title="Days of Week" Labels="{Binding Labels}"/>
+            </lvc:CartesianChart.AxisX>
+        </lvc:CartesianChart>
 
     </Grid>
 </Window>
