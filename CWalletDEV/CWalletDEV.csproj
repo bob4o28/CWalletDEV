@@ -111,6 +111,9 @@
     <Compile Include="BankChanger.xaml.cs">
       <DependentUpon>BankChanger.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CashChanger.xaml.cs">
+      <DependentUpon>CashChanger.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CreditCardChanger.xaml.cs">
       <DependentUpon>CreditCardChanger.xaml</DependentUpon>
     </Compile>
@@ -134,6 +137,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CashChanger.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CreditCardChanger.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -143,10 +150,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DebitCardChanger.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="FinancesChanger.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -164,9 +167,6 @@
     </Compile>
     <Compile Include="CryptoChanger.xaml.cs">
       <DependentUpon>CryptoChanger.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="FinancesChanger.xaml.cs">
-      <DependentUpon>FinancesChanger.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
