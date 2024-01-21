@@ -32,7 +32,8 @@ namespace CWalletDEV
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new MainViewModel();
+            _viewModel = new MainViewModel();
+            this.DataContext = _viewModel;
 
         }
 
@@ -276,10 +277,9 @@ namespace CWalletDEV
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             // Assign values to the properties
-            //_viewModel.ChartValues = new ChartValues<double> { 15, 15, 20, 47, 8, 78, 6 };
-            //_viewModel.Labels = new[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
-            //_viewModel.PieValuesCash = new ChartValues<double> { 5.0 };
-
+            _viewModel.ChartValues = new ChartValues<double> { 15, 15, 20, 47, 8, 78, 6 };
+            _viewModel.Labels = new[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
+            _viewModel.PieValuesCash = new ChartValues<double> { 5.0 };
         }
 
         //Binding AreaChartValues = new Binding("AreaChartValues");
