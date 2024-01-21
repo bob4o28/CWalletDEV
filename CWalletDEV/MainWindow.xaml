@@ -379,8 +379,7 @@
     </Window.Resources>
     <Grid Background="#FFFFF6E4" RenderTransformOrigin="0.5,0.5">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="242*"/>
-            <ColumnDefinition Width="1003*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
         <Rectangle x:Name="Sidebar" HorizontalAlignment="Left" Height="656" VerticalAlignment="Center" Width="246" Fill="#FFE6D2AD" RenderTransformOrigin="0.5,0.5" Margin="-4,0,0,0">
@@ -509,9 +508,9 @@
             </TextBlock.RenderTransform></TextBlock>
 
         <!--Donut Chart-->
-        <lvc:PieChart x:Name="PieChart" Margin="100,16,533,328" InnerRadius="86" Grid.Column="1">
+        <lvc:PieChart x:Name="MainPieChart" Margin="342,16,533,328" InnerRadius="86">
             <lvc:PieChart.Series>
-                <lvc:PieSeries Title="Cash" Values="25" Fill="#FF8AC97E"/>
+                <lvc:PieSeries Title="Cash" Values="{Binding PieValuesCash}" Fill="#FF8AC97E"/>
                 <lvc:PieSeries Title="Savings" Values="41" Fill="#FFF9EFA3"/>
                 <lvc:PieSeries Title="DebitCard" Values="64" Fill="#FF90E0EF" />
                 <lvc:PieSeries Title="CreditCard" Values="73" Fill="#FFF0AA78" />
@@ -521,32 +520,32 @@
         </lvc:PieChart>
 
         <!--Buttons-->
-        <Rectangle x:Name="CashRec" HorizontalAlignment="Left" Height="76" Margin="618,92,0,0" VerticalAlignment="Top" Width="150" Fill="#FF8AC97E" RadiusX="15" RadiusY="15" Grid.Column="1"/>
-        <TextBlock x:Name="btnCash" HorizontalAlignment="Left" Margin="618,93,0,0" Text="Cash" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseUp="btnCash_MouseUp" MouseEnter="btnCash_MouseEnter" MouseLeave="btnCash_MouseLeave" Grid.Column="1"/>
+        <Rectangle x:Name="CashRec" HorizontalAlignment="Left" Height="76" Margin="860,92,0,0" VerticalAlignment="Top" Width="150" Fill="#FF8AC97E" RadiusX="15" RadiusY="15"/>
+        <TextBlock x:Name="btnCash" HorizontalAlignment="Left" Margin="860,93,0,0" Text="Cash" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseUp="btnCash_MouseUp" MouseEnter="btnCash_MouseEnter" MouseLeave="btnCash_MouseLeave"/>
 
 
-        <Rectangle x:Name="SavingRec" HorizontalAlignment="Left" Height="76" Margin="792,92,0,0" VerticalAlignment="Top" Width="150" Fill="#FFF9EFA3" RadiusX="15" RadiusY="15" Grid.Column="1"/>
-        <TextBlock x:Name="btnSavings" HorizontalAlignment="Left" Margin="792,93,0,0" Text="Savings" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnSavings_MouseEnter" MouseLeave="btnSavings_MouseLeave" Grid.Column="1"/>
+        <Rectangle x:Name="SavingRec" HorizontalAlignment="Left" Height="76" Margin="1034,92,0,0" VerticalAlignment="Top" Width="150" Fill="#FFF9EFA3" RadiusX="15" RadiusY="15"/>
+        <TextBlock x:Name="btnSavings" HorizontalAlignment="Left" Margin="1034,93,0,0" Text="Savings" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnSavings_MouseEnter" MouseLeave="btnSavings_MouseLeave"/>
 
-        <Rectangle x:Name="DebitRec" HorizontalAlignment="Left" Height="76" Margin="618,185,0,0" VerticalAlignment="Top" Width="150" Fill="#FF90E0EF" RadiusX="15" RadiusY="15" Grid.Column="1"/>
-        <TextBlock x:Name="btnDebit" HorizontalAlignment="Left" Margin="618,186,0,0" Text="Debit" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnDebit_MouseEnter" MouseLeave="btnDebit_MouseLeave" Grid.Column="1"/>
+        <Rectangle x:Name="DebitRec" HorizontalAlignment="Left" Height="76" Margin="860,185,0,0" VerticalAlignment="Top" Width="150" Fill="#FF90E0EF" RadiusX="15" RadiusY="15"/>
+        <TextBlock x:Name="btnDebit" HorizontalAlignment="Left" Margin="860,186,0,0" Text="Debit" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnDebit_MouseEnter" MouseLeave="btnDebit_MouseLeave"/>
 
-        <Rectangle x:Name="CreditRec" HorizontalAlignment="Left" Height="76" Margin="792,185,0,0" VerticalAlignment="Top" Width="150" Fill="#FFF0AA78" RadiusX="15" RadiusY="15" Grid.Column="1"/>
-        <TextBlock x:Name="btnCredit" HorizontalAlignment="Left" Margin="792,186,0,0" Text="Credit" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnCredit_MouseEnter" MouseLeave="btnCredit_MouseLeave" Grid.Column="1"/>
+        <Rectangle x:Name="CreditRec" HorizontalAlignment="Left" Height="76" Margin="1034,185,0,0" VerticalAlignment="Top" Width="150" Fill="#FFF0AA78" RadiusX="15" RadiusY="15"/>
+        <TextBlock x:Name="btnCredit" HorizontalAlignment="Left" Margin="1034,186,0,0" Text="Credit" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnCredit_MouseEnter" MouseLeave="btnCredit_MouseLeave"/>
 
-        <Rectangle x:Name="BankRec" HorizontalAlignment="Left" Height="76" Margin="618,279,0,0" VerticalAlignment="Top" Width="150" Fill="#FFA4B8FA" RadiusX="15" RadiusY="15" Grid.Column="1"/>
-        <TextBlock x:Name="btnBank" HorizontalAlignment="Left" Margin="618,280,0,0" Text="Bank" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnBank_MouseEnter" MouseLeave="btnBank_MouseLeave" Grid.Column="1"/>
+        <Rectangle x:Name="BankRec" HorizontalAlignment="Left" Height="76" Margin="860,279,0,0" VerticalAlignment="Top" Width="150" Fill="#FFA4B8FA" RadiusX="15" RadiusY="15"/>
+        <TextBlock x:Name="btnBank" HorizontalAlignment="Left" Margin="860,280,0,0" Text="Bank" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnBank_MouseEnter" MouseLeave="btnBank_MouseLeave"/>
 
-        <Rectangle x:Name="CryptoRec" HorizontalAlignment="Left" Height="76" Margin="792,279,0,0" VerticalAlignment="Top" Width="150" Fill="#FFD17957" RadiusX="15" RadiusY="15" Grid.Column="1"/>
-        <TextBlock x:Name="btnCrypto" HorizontalAlignment="Left" Margin="792,280,0,0" Text="Crypto" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnCrypto_MouseEnter" MouseLeave="btnCrypto_MouseLeave" Grid.Column="1"/>
-
-
+        <Rectangle x:Name="CryptoRec" HorizontalAlignment="Left" Height="76" Margin="1034,279,0,0" VerticalAlignment="Top" Width="150" Fill="#FFD17957" RadiusX="15" RadiusY="15"/>
+        <TextBlock x:Name="btnCrypto" HorizontalAlignment="Left" Margin="1034,280,0,0" Text="Crypto" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnCrypto_MouseEnter" MouseLeave="btnCrypto_MouseLeave"/>
 
 
 
-        <lvc:CartesianChart Margin="100,402,61,29" Foreground="#FF676767" Grid.Column="1">
+
+
+        <lvc:CartesianChart Margin="342,402,61,29" Foreground="#FF676767">
             <lvc:CartesianChart.Series>
-                <lvc:LineSeries Title="Week Data" Values="{Binding ChartValues}" PointGeometrySize="10" StrokeThickness="2" Stroke="#FF5E8257" Foreground="{x:Null}">
+                <lvc:LineSeries x:Name="MainAreaChart" Title="Week Data" Values="{Binding ChartValues}" PointGeometrySize="10" StrokeThickness="2" Stroke="#FF5E8257" Foreground="{x:Null}">
                     <lvc:LineSeries.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#FF8AC97E"/>
@@ -559,11 +558,9 @@
                 <lvc:Axis Title="Days of Week" Labels="{Binding Labels}"/>
             </lvc:CartesianChart.AxisX>
         </lvc:CartesianChart>
-
-
-
-
-
+        
+        
+        <Button Content="Button" HorizontalAlignment="Left" Margin="817,62,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
 
     </Grid>
 </Window>

@@ -1,4 +1,5 @@
 ﻿using LiveCharts;
+using System;
 using System.ComponentModel;
 
 public class MainViewModel : INotifyPropertyChanged
@@ -25,10 +26,25 @@ public class MainViewModel : INotifyPropertyChanged
         }
     }
 
+
+    //Pie chart DataBinding Values identify
+    private LiveCharts.ChartValues<double> _pieValuesCash;
+    public LiveCharts.ChartValues<double> PieValuesCash
+    {
+        get { return _pieValuesCash; }
+        set
+        {
+            _pieValuesCash = value;
+            OnPropertyChanged("PieValuesCash");
+        }
+    }
+
+
     public MainViewModel()
     {
-        ChartValues = new ChartValues<double> { 5, 3, 2, 7, 4, 78, 4 };
+        ChartValues = new ChartValues<double> { 5.0, 3.0, 2.0, 7.0, 4.0, 78.0, 4.0 };
         Labels = new[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" , "Saturday", "Sunday"};
+        PieValuesCash = new ChartValues<double> { 100.0 };
     }
 
     public event PropertyChangedEventHandler PropertyChanged;
@@ -37,4 +53,5 @@ public class MainViewModel : INotifyPropertyChanged
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
+
 }

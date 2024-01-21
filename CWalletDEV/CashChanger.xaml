@@ -46,7 +46,7 @@
             <ComboBox HorizontalAlignment="Left" Height="51" VerticalAlignment="Top" Width="233" OpacityMask="#FFDFD7CB"/>
         </ComboBox>
         <TextBox HorizontalAlignment="Left" Height="50" Margin="46,464,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233"/>
-        <Button Content="Save" HorizontalAlignment="Left" Height="35" Margin="350,664,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click"/>
+        <Button Content="Save" HorizontalAlignment="Left" Height="35" Margin="350,664,0,0" VerticalAlignment="Top" Width="100" />
         <Button Content="Cancel" HorizontalAlignment="Left" Height="35" Margin="455,664,0,0" VerticalAlignment="Top" Width="100"/>
 
         <lvc:CartesianChart Margin="10,180,39,273" Foreground="#FF676767">
