@@ -9,9 +9,15 @@
     <Grid Background="#FFDFD7CB">
         <Image Margin="10,10,431,315" Source="/LblSettings.png" Stretch="Fill"/>
         <Label Content="Currency" HorizontalAlignment="Left" Height="53" Margin="41,157,0,0" VerticalAlignment="Top" Width="295" FontSize="36"/>
-        <ComboBox HorizontalAlignment="Left" Height="55" Margin="341,168,0,0" VerticalAlignment="Top" Width="321"/>
+        <ComboBox HorizontalAlignment="Left" Height="55" Margin="341,168,0,0" VerticalAlignment="Top" Width="321" FontSize="36">
+            <ComboBoxItem Content="BGN"/>
+            <ComboBoxItem Content="EUR"/>
+        </ComboBox>
         <Label Content="Language" HorizontalAlignment="Left" Height="66" Margin="41,286,0,0" VerticalAlignment="Top" Width="295" FontSize="36"/>
-        <ComboBox HorizontalAlignment="Left" Height="55" Margin="341,297,0,0" VerticalAlignment="Top" Width="321"/>
+        <ComboBox HorizontalAlignment="Left" Height="55" Margin="341,297,0,0" VerticalAlignment="Top" Width="321" FontSize="36">
+            <ComboBoxItem Content="Български"/>
+            <ComboBoxItem Content="English"/>
+        </ComboBox>
 
     </Grid>
 </Window>

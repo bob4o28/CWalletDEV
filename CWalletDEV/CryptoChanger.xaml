@@ -19,36 +19,19 @@
 
         <Label x:Name="LblValue" Content="Value:" HorizontalAlignment="Left" Height="46" Margin="46,413,0,0" VerticalAlignment="Top" Width="130" FontSize="36" FontFamily="Lucida Bright"/>
 
-        <Button HorizontalAlignment="Left" Height="61" Margin="293,455,0,0" VerticalAlignment="Top" Width="62" FontSize="36" Background="{x:Null}">
+        <Button HorizontalAlignment="Left" Height="61" Margin="293,455,0,0" VerticalAlignment="Top" Width="62" FontSize="36" Background="{x:Null}" BorderBrush="{x:Null}">
             <Image Source="/Group 2.png" Stretch="Fill"/>
         </Button>
 
         <Label x:Name="LblCurrency" Content="Currency:" HorizontalAlignment="Left" Height="52" Margin="46,522,0,0" VerticalAlignment="Top" Width="185" FontSize="36" FontFamily="Lucida Bright"/>
 
         <ComboBox HorizontalAlignment="Left" Height="50" Margin="46,580,0,0" VerticalAlignment="Top" Width="233">
-            <Rectangle x:Name="rectangle_Copy" HorizontalAlignment="Left" Height="92" Stroke="#FF8AC97E" VerticalAlignment="Top" Width="305" RadiusX="25" RadiusY="25" Fill="#FF8AC97E" OpacityMask="#FFDFD7CB">
-                <Rectangle.Effect>
-                    <DropShadowEffect/>
-                </Rectangle.Effect>
-            </Rectangle>
-
-            <Label x:Name="LblCashValue_Copy" Content="Cash Value&#xA;" HorizontalAlignment="Left" Height="47" VerticalAlignment="Top" Width="207" FontFamily="Lucida Bright" FontSize="36" OpacityMask="#FFDFD7CB"/>
-
-            <Label x:Name="LblValue_Copy" Content="Value:" HorizontalAlignment="Left" Height="46" VerticalAlignment="Top" Width="130" FontSize="36" FontFamily="Lucida Bright" OpacityMask="#FFDFD7CB"/>
-
-            <ComboBox x:Name="ListBoxValue_Copy" HorizontalAlignment="Left" Height="51" VerticalAlignment="Top" Width="233" OpacityMask="#FFDFD7CB"/>
-
-            <Button HorizontalAlignment="Left" Height="60" VerticalAlignment="Top" Width="62" FontSize="36" Background="{x:Null}" OpacityMask="#FFDFD7CB" BorderBrush="Transparent">
-                <Image Source="/Group 2.png" Stretch="Fill"/>
-            </Button>
-
-            <Label x:Name="LblCurrency_Copy" Content="Currency:" HorizontalAlignment="Left" Height="53" VerticalAlignment="Top" Width="185" FontSize="36" FontFamily="Lucida Bright" OpacityMask="#FFDFD7CB"/>
-
-            <ComboBox HorizontalAlignment="Left" Height="51" VerticalAlignment="Top" Width="233" OpacityMask="#FFDFD7CB"/>
+            <ComboBoxItem Content="BGN"/>
+            <ComboBoxItem Content="EUR"/>
         </ComboBox>
         <TextBox HorizontalAlignment="Left" Height="50" Margin="46,464,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233"/>
-        <Button Content="Save" HorizontalAlignment="Left" Height="40" Margin="336,659,0,0" VerticalAlignment="Top" Width="108"/>
-        <Button Content="Cancel" HorizontalAlignment="Left" Height="40" Margin="459,659,0,0" VerticalAlignment="Top" Width="108"/>
+        <Button Content="Save" HorizontalAlignment="Left" Height="40" Margin="316,643,0,0" VerticalAlignment="Top" Width="108"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Height="40" Margin="439,643,0,0" VerticalAlignment="Top" Width="108"/>
 
 
         <lvc:CartesianChart Margin="10,180,39,273" Foreground="#FF676767">

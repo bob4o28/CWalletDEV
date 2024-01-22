@@ -19,7 +19,7 @@
 
         <Label x:Name="LblValue" Content="Value:" HorizontalAlignment="Left" Height="46" Margin="46,413,0,0" VerticalAlignment="Top" Width="130" FontSize="36" FontFamily="Lucida Bright"/>
 
-        <Button HorizontalAlignment="Left" Height="61" Margin="293,455,0,0" VerticalAlignment="Top" Width="62" FontSize="36" Background="{x:Null}">
+        <Button HorizontalAlignment="Left" Height="61" Margin="293,455,0,0" VerticalAlignment="Top" Width="62" FontSize="36" Background="{x:Null}" BorderBrush="{x:Null}">
             <Image Source="/Group 2.png" Stretch="Fill"/>
         </Button>
 
@@ -27,10 +27,11 @@
 
         <ComboBox HorizontalAlignment="Left" Height="50" Margin="46,580,0,0" VerticalAlignment="Top" Width="233">
             <ComboBoxItem Content="BGN"/>
+            <ComboBoxItem Content="EUR"/>
         </ComboBox>
         <TextBox HorizontalAlignment="Left" Height="50" Margin="46,464,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233"/>
-        <Button Content="Save" HorizontalAlignment="Left" Height="35" Margin="350,664,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click"/>
-        <Button Content="Cancel" HorizontalAlignment="Left" Height="35" Margin="455,664,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button Content="Save" HorizontalAlignment="Left" Height="40" Margin="316,643,0,0" VerticalAlignment="Top" Width="108"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Height="40" Margin="439,643,0,0" VerticalAlignment="Top" Width="108"/>
 
         <lvc:CartesianChart Margin="10,180,39,273" Foreground="#FF676767">
             <lvc:CartesianChart.Series>
