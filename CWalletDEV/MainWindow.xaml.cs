@@ -163,7 +163,8 @@ namespace CWalletDEV
 
         private void btnCash_MouseUp(object sender, MouseButtonEventArgs e)
         {
-
+            CashChanger CashChanger = new CashChanger();
+            CashChanger.ShowDialog();
         }
 
         private void btnCash_MouseEnter(object sender, MouseEventArgs e)
@@ -280,6 +281,42 @@ namespace CWalletDEV
             _viewModel.ChartValues = new ChartValues<double> { 15, 15, 20, 47, 8, 78, 6 };
             _viewModel.Labels = new[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
             _viewModel.PieValuesCash = new ChartValues<double> { 5.0 };
+        }
+
+        private void btnSavings_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            SavingsChanger SavingsChanger = new SavingsChanger();
+            SavingsChanger.ShowDialog();
+        }
+
+        private void btnDebit_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            DebitCardChanger DebitChanger = new DebitCardChanger();
+            DebitChanger.ShowDialog();
+        }
+
+        private void btnCredit_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            CreditCardChanger CreditCardChanger = new CreditCardChanger();
+            CreditCardChanger.ShowDialog();
+        }
+
+        private void btnBank_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            BankChanger BankChanger = new BankChanger();
+            BankChanger.ShowDialog();
+        }
+
+        private void btnCrypto_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            CryptoChanger CryptoChanger = new CryptoChanger();
+            CryptoChanger.ShowDialog();
+        }
+
+        private void TxtSettings_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            SettingsWin Setting = new SettingsWin();
+            Setting.ShowDialog();
         }
 
         //Binding AreaChartValues = new Binding("AreaChartValues");

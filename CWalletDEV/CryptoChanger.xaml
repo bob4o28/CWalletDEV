@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:CWalletDEV"
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         mc:Ignorable="d"
-        Title="CryptoChanger" Height="725" Width="575" Background="#FFDFD7CB">
+        Title="CryptoChanger" Height="725" Width="575" Background="#FFDFD7CB"
+        WindowStartupLocation="CenterScreen">
     <Grid Background="#FFDFD7CB">
         <Rectangle x:Name="rectangle" HorizontalAlignment="Left" Height="92" Margin="46,39,0,0" Stroke="Black" VerticalAlignment="Top" Width="305" RadiusX="25" RadiusY="25" Fill="#FFD17957">
             <Rectangle.Effect>
