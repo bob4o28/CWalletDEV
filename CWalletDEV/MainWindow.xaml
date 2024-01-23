@@ -414,7 +414,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <TextBlock x:Name="TxtMenu" HorizontalAlignment="Left" Height="70" Margin="-6,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" FontSize="24" Padding="109,17,0,0" FontFamily="Comic Sans MS" Background="Transparent" MouseEnter="TxtMenu_MouseEnter" MouseLeave="TxtMenu_MouseLeave" RenderTransformOrigin="0.5,0.5" Text="Menu" MouseUp="TxtMenu_MouseUp">
+        <TextBlock x:Name="TxtMenu" HorizontalAlignment="Left" Height="70" Margin="-6,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" FontSize="24" Padding="109,17,0,0" FontFamily="Cambria Math" Background="Transparent" MouseEnter="TxtMenu_MouseEnter" MouseLeave="TxtMenu_MouseLeave" RenderTransformOrigin="0.5,0.5" Text="Menu" MouseUp="TxtMenu_MouseUp" TextAlignment="Left" LineHeight="6" UseLayoutRounding="True">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -435,7 +435,7 @@
             </Rectangle.RenderTransform>
         </Rectangle>
         <Image Height="58" VerticalAlignment="Top" Width="59" Source="/Category.png" HorizontalAlignment="Left" Margin="27,180,0,0"/>
-        <TextBlock x:Name="TxtCategory" HorizontalAlignment="Left" Height="70" Margin="-6,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" FontSize="24" Padding="108,17,0,0" FontFamily="Comic Sans MS" Background="Transparent" MouseEnter="TxtCategory_MouseEnter" MouseLeave="TxtCategory_MouseLeave" RenderTransformOrigin="0.5,0.5" Text="Category">
+        <TextBlock x:Name="TxtCategory" HorizontalAlignment="Left" Height="70" Margin="-6,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" FontSize="24" Padding="108,17,0,0" FontFamily="Cambria Math" Background="Transparent" MouseEnter="TxtCategory_MouseEnter" MouseLeave="TxtCategory_MouseLeave" RenderTransformOrigin="0.5,0.5" Text="Category">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -456,7 +456,7 @@
             </Rectangle.RenderTransform>
         </Rectangle>
         <Image Height="59" VerticalAlignment="Center" Width="59" Source="/Stats.png" HorizontalAlignment="Left" Margin="26,0,0,0"/>
-        <TextBlock x:Name="TxtStats" HorizontalAlignment="Left" Height="70" TextWrapping="Wrap" VerticalAlignment="Center" Width="248" FontSize="24" Padding="109,17,0,0" FontFamily="Comic Sans MS" Background="Transparent" MouseEnter="TxtStats_MouseEnter" MouseLeave="TxtStats_MouseLeave" RenderTransformOrigin="0.5,0.5" Margin="-6,0,0,0" Text="Statistics">
+        <TextBlock x:Name="TxtStats" HorizontalAlignment="Left" Height="70" TextWrapping="Wrap" VerticalAlignment="Center" Width="248" FontSize="24" Padding="109,17,0,0" FontFamily="Cambria Math" Background="Transparent" MouseEnter="TxtStats_MouseEnter" MouseLeave="TxtStats_MouseLeave" RenderTransformOrigin="0.5,0.5" Margin="-6,0,0,0" Text="Statistics">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -477,7 +477,7 @@
             </Rectangle.RenderTransform>
         </Rectangle>
         <Image Height="58" VerticalAlignment="Top" Width="59" Source="/Pay.png" HorizontalAlignment="Left" Margin="26,402,0,0"/>
-        <TextBlock x:Name="TxtPlannedPay" HorizontalAlignment="Left" Height="70" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" FontSize="24" Padding="109,1,0,0" FontFamily="Comic Sans MS" Background="Transparent" Margin="-6,396,0,0" MouseEnter="TxtPlannedPay_MouseEnter" MouseLeave="TxtPlannedPay_MouseLeave_1" RenderTransformOrigin="0.5,0.5" Text="Planned Paymends">
+        <TextBlock x:Name="TxtPlannedPay" HorizontalAlignment="Left" Height="70" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" FontSize="24" Padding="109,1,0,0" FontFamily="Cambria Math" Background="Transparent" Margin="-6,396,0,0" MouseEnter="TxtPlannedPay_MouseEnter" MouseLeave="TxtPlannedPay_MouseLeave_1" RenderTransformOrigin="0.5,0.5" Text="Planned Paymends">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -498,7 +498,7 @@
             </Rectangle.RenderTransform>
         </Rectangle>
         <Image Height="59" VerticalAlignment="Top" Width="59" Source="/Settings.png" HorizontalAlignment="Left" Margin="26,520,0,0"/>
-        <TextBlock x:Name="TxtSettings" HorizontalAlignment="Left" Height="70" Margin="-6,512,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" FontSize="24" Padding="109,17,0,0" FontFamily="Comic Sans MS" Background="Transparent" MouseEnter="TxtSettings_MouseEnter" MouseLeave="TxtSettings_MouseLeave" RenderTransformOrigin="0.5,0.5" Text="Settings" MouseUp="TxtSettings_MouseUp">
+        <TextBlock x:Name="TxtSettings" HorizontalAlignment="Left" Height="70" Margin="-6,512,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" FontSize="24" Padding="109,17,0,0" FontFamily="Cambria Math" Background="Transparent" MouseEnter="TxtSettings_MouseEnter" MouseLeave="TxtSettings_MouseLeave" RenderTransformOrigin="0.5,0.5" Text="Settings" MouseUp="TxtSettings_MouseUp">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -559,8 +559,8 @@
                 <lvc:Axis Title="Days of Week" Labels="{Binding Labels}"/>
             </lvc:CartesianChart.AxisX>
         </lvc:CartesianChart>
-        
-        
+
+
         <Button Content="Button" HorizontalAlignment="Left" Margin="817,62,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
 
     </Grid>
