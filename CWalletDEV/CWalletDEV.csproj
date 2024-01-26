@@ -108,6 +108,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BankChanger.xaml.cs">
+      <DependentUpon>BankChanger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CryptoChanger.xaml.cs">
+      <DependentUpon>CryptoChanger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CreditCardChanger.xaml.cs">
+      <DependentUpon>CreditCardChanger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DebitCardChanger.xaml.cs">
+      <DependentUpon>DebitCardChanger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SavingsChanger.xaml.cs">
+      <DependentUpon>SavingsChanger.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CashChanger.xaml.cs">
       <DependentUpon>CashChanger.xaml</DependentUpon>
     </Compile>
@@ -121,6 +136,26 @@
     <Compile Include="SignUpWin.xaml.cs">
       <DependentUpon>SignUpWin.xaml</DependentUpon>
     </Compile>
+    <Page Include="BankChanger.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CryptoChanger.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CreditCardChanger.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DebitCardChanger.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SavingsChanger.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="CashChanger.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
