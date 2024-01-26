@@ -43,9 +43,6 @@
         </Storyboard>
     </Window.Resources>
     <Grid Background="#FFDFD7CB">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
         <Rectangle x:Name="rectangle" HorizontalAlignment="Left" Height="92" Margin="46,39,0,0" Stroke="Black" VerticalAlignment="Top" Width="278" RadiusX="25" RadiusY="25" Fill="#FF8AC97E">
             <Rectangle.Effect>
                 <DropShadowEffect/>
@@ -63,22 +60,10 @@
             <ComboBoxItem Content="EUR"/>
         </ComboBox>
         <TextBox HorizontalAlignment="Left" Height="50" Margin="46,464,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233"/>
-        <Button Content="Save" HorizontalAlignment="Left" Height="40" Margin="307,643,0,0" VerticalAlignment="Top" Width="108">
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="10"/>
-                </Style>
-            </Button.Resources>
-        </Button>
-        <Button Content="Cancel" HorizontalAlignment="Left" Height="40" Margin="428,643,0,0" VerticalAlignment="Top" Width="108">
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="10"/>
-                </Style>
-            </Button.Resources>
-        </Button>
+        <Button Content="Save" HorizontalAlignment="Left" Height="40" Margin="316,643,0,0" VerticalAlignment="Top" Width="108"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Height="40" Margin="439,643,0,0" VerticalAlignment="Top" Width="108"/>
 
-        <lvc:CartesianChart Margin="24,180,25,301" Foreground="#FF676767">
+        <lvc:CartesianChart Margin="10,180,39,273" Foreground="#FF676767">
             <lvc:CartesianChart.Series>
                 <lvc:LineSeries Title="Week Data" Values="{Binding ChartValues}" PointGeometrySize="10" StrokeThickness="2" Stroke="#FF5E8257" Foreground="{x:Null}">
                     <lvc:LineSeries.Fill>
