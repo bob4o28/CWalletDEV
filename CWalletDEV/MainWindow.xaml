@@ -7,11 +7,8 @@
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" 
         mc:Ignorable="d"
         Title="MainWindow" Height="672" Width="1245"
-        WindowStartupLocation="CenterScreen">
-    <!--<Window.DataContext>
-        <local:MainWindow/>
-    </Window.DataContext>-->
-
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
     <Window.Resources>
 
 
@@ -456,7 +453,7 @@
             </Rectangle.RenderTransform>
         </Rectangle>
         <Image Height="59" VerticalAlignment="Center" Width="59" Source="/Stats.png" HorizontalAlignment="Left" Margin="26,0,0,0"/>
-        <TextBlock x:Name="TxtStats" HorizontalAlignment="Left" Height="70" TextWrapping="Wrap" VerticalAlignment="Center" Width="248" FontSize="24" Padding="109,25,0,0" FontFamily="Cambria Math" Background="Transparent" MouseEnter="TxtStats_MouseEnter" MouseLeave="TxtStats_MouseLeave" RenderTransformOrigin="0.5,0.5" Margin="-6,0,0,0" Text="Statistics">
+        <TextBlock x:Name="TxtStats" HorizontalAlignment="Left" Height="70" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" FontSize="24" Padding="109,25,0,0" FontFamily="Cambria Math" Background="Transparent" MouseEnter="TxtStats_MouseEnter" MouseLeave="TxtStats_MouseLeave" RenderTransformOrigin="0.5,0.5" Margin="-6,0,0,0" Text="Statistics">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
