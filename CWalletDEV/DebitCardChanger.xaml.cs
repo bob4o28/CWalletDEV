@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace CWalletDEV
 {
     /// <summary>
-    /// Interaction logic for CashChanger.xaml
+    /// Interaction logic for DebitCardChanger.xaml
     /// </summary>
-    public partial class CashChanger : Window
+    public partial class DebitCardChanger : Window
     {
-        public CashChanger()
+        public DebitCardChanger()
         {
             InitializeComponent();
         }

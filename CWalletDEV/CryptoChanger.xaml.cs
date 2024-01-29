@@ -18,9 +18,9 @@ namespace CWalletDEV
     /// <summary>
     /// Interaction logic for CashChanger.xaml
     /// </summary>
-    public partial class CashChanger : Window
+    public partial class CryptoChanger : Window
     {
-        public CashChanger()
+        public CryptoChanger()
         {
             InitializeComponent();
         }

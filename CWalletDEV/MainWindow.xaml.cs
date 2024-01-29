@@ -294,7 +294,7 @@ namespace CWalletDEV
             DebitCardChanger DebitChanger = new DebitCardChanger();
             DebitChanger.ShowDialog();
         }
-
+        
         private void btnCredit_MouseUp(object sender, MouseButtonEventArgs e)
         {
             CreditCardChanger CreditCardChanger = new CreditCardChanger();
