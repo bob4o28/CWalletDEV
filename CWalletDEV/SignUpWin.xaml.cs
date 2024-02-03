@@ -28,5 +28,17 @@ namespace CWalletDEV
         {
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            LogInWin logInWin = new LogInWin();
+            logInWin.Show();
+            this.DialogResult = false;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.DialogResult=true;
+        }
     }
 }

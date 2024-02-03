@@ -23,5 +23,12 @@ namespace CWalletDEV
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            SignUpWin signUpWin = new SignUpWin();
+            signUpWin.Show();
+            this.DialogResult = false;
+        }
     }
 }

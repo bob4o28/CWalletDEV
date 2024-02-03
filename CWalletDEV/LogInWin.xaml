@@ -21,7 +21,7 @@
             </Label.RenderTransform>
         </Label>
         <Image Margin="46,34,46,441" Source="/LblLogIn.png" Stretch="Fill"/>
-        <Button Content="Don't have account? Sign up" HorizontalAlignment="Left" Height="28" Margin="106,545,0,0" VerticalAlignment="Top" Width="173"/>
+        <Button Content="Don't have account? Sign up" HorizontalAlignment="Left" Height="28" Margin="106,545,0,0" VerticalAlignment="Top" Width="173" Click="Button_Click"/>
 
     </Grid>
 </Window>
