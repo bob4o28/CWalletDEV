@@ -46,13 +46,13 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Rectangle x:Name="rectangle" HorizontalAlignment="Left" Height="92" Margin="46,39,0,0" Stroke="Black" VerticalAlignment="Top" Width="278" RadiusX="25" RadiusY="25" Fill="#FF8AC97E">
+        <Rectangle x:Name="rectangle" HorizontalAlignment="Left" Height="92" Margin="46,39,0,0" Stroke="Black" VerticalAlignment="Top" Width="278" RadiusX="25" RadiusY="25" Fill="#FFD17957">
             <Rectangle.Effect>
                 <DropShadowEffect/>
             </Rectangle.Effect>
         </Rectangle>
 
-        <Label x:Name="LblCashValue" Content="Cash Value" HorizontalAlignment="Left" Height="46" Margin="70,62,0,0" VerticalAlignment="Top" Width="218" FontFamily="Lucida Bright" FontSize="36"/>
+        <Label x:Name="LblCashValue" Content="Crypto" HorizontalAlignment="Left" Height="46" Margin="70,62,0,0" VerticalAlignment="Top" Width="218" FontFamily="Lucida Bright" FontSize="36"/>
 
         <Label x:Name="LblValue" Content="Value:" HorizontalAlignment="Left" Height="46" Margin="46,413,0,0" VerticalAlignment="Top" Width="130" FontSize="36" FontFamily="Lucida Bright"/>
 
@@ -83,7 +83,7 @@
                 <lvc:LineSeries Title="Week Data" Values="{Binding ChartValues}" PointGeometrySize="10" StrokeThickness="2" Stroke="#FF5E8257" Foreground="{x:Null}">
                     <lvc:LineSeries.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FF8AC97E"/>
+                            <GradientStop Color="#FFD17957"/>
                             <GradientStop Color="#19C3C3C3" Offset="2"/>
                         </LinearGradientBrush>
                     </lvc:LineSeries.Fill>
