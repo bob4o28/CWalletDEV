@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LiveCharts;
+using LiveCharts.Wpf;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +13,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
+
 
 namespace CWalletDEV
 {
@@ -20,9 +24,15 @@ namespace CWalletDEV
     /// </summary>
     public partial class BankChanger : Window
     {
+        private MainViewModel _viewModel;
         public BankChanger()
         {
             InitializeComponent();
+            _viewModel = new MainViewModel();
+            this.DataContext = _viewModel;
+            _viewModel.ChartValues = new ChartValues<double> { 15, 15, 20, 47, 8, 78, 6 };
+            _viewModel.Labels = new[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
+            _viewModel.PieValuesCash = new ChartValues<double> { 5.0 };
         }
 
         private void ellipseAdd_MouseEnter(object sender, MouseEventArgs e)
