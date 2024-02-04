@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 
 namespace CWalletDEV
 {
-    /// <summary>
+    // <summary>
     /// Interaction logic for BankChanger.xaml
     /// </summary>
     public partial class BankChanger : Window
