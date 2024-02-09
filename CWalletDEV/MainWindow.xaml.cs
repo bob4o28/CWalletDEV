@@ -319,10 +319,9 @@ namespace CWalletDEV
             Setting.ShowDialog();
         }
 
-        //Binding AreaChartValues = new Binding("AreaChartValues");
-
-
-        //The longes word: pneumonoultramicroscopicsilicovolcanoiosis
-        //WOWOW
+        SqlConnection connection = new SqlConnection
+        {
+            ConnectionString = ConfigurationManager.ConnectionStrings["Connection_String_Name"].ConnectionString
+        };
     }
 }
