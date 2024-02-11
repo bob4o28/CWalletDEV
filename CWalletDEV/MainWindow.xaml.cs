@@ -30,9 +30,7 @@ namespace CWalletDEV
         //Event Var
         public string SidebarPos = "Open";
 
-
         private MainViewModel _viewModel;
-        private DbConnector _dbConnector;
 
         public MainWindow()
         {
