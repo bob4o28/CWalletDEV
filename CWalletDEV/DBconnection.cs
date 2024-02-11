@@ -13,7 +13,7 @@ namespace CWalletDEV
             string sshPassword = "kamaCwallet!2023";
             int sshPort = 22;
 
-            // Database connection info
+            //// Database connection info
             string dbServer = "127.0.0.1";
             string dbUsername = "dev";
             string dbPassword = "Cwallet.dev.24";
