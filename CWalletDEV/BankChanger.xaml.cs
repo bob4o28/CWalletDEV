@@ -15,8 +15,6 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MySql.Data.MySqlClient;
-using Renci.Ssh.Net;
 
 
 namespace CWalletDEV
@@ -27,30 +25,7 @@ namespace CWalletDEV
     public partial class BankChanger : Window
     {
         private MainViewModel _viewModel;
-        static void Main(string[] args)
-        {
-             sshClient = new SshClient("83.229.87.97", "root", "kamaCwallet!2023");
-            sshClient.Connect();
-
-            var forwardedPort = new ForwardedPortLocal("127.0.0.1", 3306, "dev", 3306);
-            sshClient.AddForwardedPort(forwardedPort);
-            forwardedPort.Start();
-
-            var connectionString = $"server=127.0.0.1;user=dev;password=Cwallet.dev.24;database=cwallet;port=3306";
-            using (var connection = new MySqlConnection(connectionString))
-            {
-                connection.Open();
-                var command = new MySqlCommand("SELECT * FROM MoneyHolders", connection);
-                using (var reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        Console.WriteLine(string.Join(", ", reader.GetValues()));
-                    }
-                }
-            }
-            sshClient.Disconnect();
-        }
+        
         public BankChanger()
         {
             InitializeComponent();

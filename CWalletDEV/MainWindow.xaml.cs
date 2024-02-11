@@ -2,6 +2,8 @@
 using LiveCharts.Wpf;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -318,10 +320,5 @@ namespace CWalletDEV
             SettingsWin Setting = new SettingsWin();
             Setting.ShowDialog();
         }
-
-        SqlConnection connection = new SqlConnection
-        {
-            ConnectionString = ConfigurationManager.ConnectionStrings["Connection_String_Name"].ConnectionString
-        };
     }
 }
