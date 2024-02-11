@@ -24,6 +24,7 @@ namespace CWalletDEV
         private MainViewModel _viewModel;
         public CryptoChanger()
         {
+            //;
             InitializeComponent();
             _viewModel = new MainViewModel();
             this.DataContext = _viewModel;
