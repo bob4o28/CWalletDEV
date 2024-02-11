@@ -559,6 +559,8 @@
 
 
         <Button Content="Button" HorizontalAlignment="Left" Margin="817,62,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="1010,36,0,0" VerticalAlignment="Top" Click="Button_Click_2"/>
+        <TextBlock x:Name="statusTextBlock" HorizontalAlignment="Left" Margin="754,293,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

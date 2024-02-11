@@ -26,11 +26,11 @@ namespace CWalletDEV
 
                 if (client.IsConnected)
                 {
-                    var port = new ForwardedPortLocal("127.0.0.1", (uint)dbPort, dbServer, (uint)dbPort);
+                    var port = new ForwardedPortLocal(dbServer, (uint)dbPort, dbServer, (uint)dbPort);
                     client.AddForwardedPort(port);
                     port.Start();
-
-                    string connStr = $"Server=127.0.0.1;Port={port.BoundPort};Database={dbName};Uid={dbUsername};Pwd={dbPassword};";
+                    
+                    string connStr = $"Server={dbServer};Port={port.BoundPort};Database={dbName};Uid={dbUsername};Pwd={dbPassword};";
                     MySqlConnection conn = new MySqlConnection(connStr);
                     conn.Open();
 

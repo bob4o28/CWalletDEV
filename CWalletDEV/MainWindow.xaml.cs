@@ -1,8 +1,10 @@
 ﻿using LiveCharts;
 using LiveCharts.Wpf;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -30,6 +32,7 @@ namespace CWalletDEV
 
 
         private MainViewModel _viewModel;
+        private DbConnector _dbConnector;
 
         public MainWindow()
         {
@@ -319,6 +322,24 @@ namespace CWalletDEV
         {
             SettingsWin Setting = new SettingsWin();
             Setting.ShowDialog();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            // Call the database connection method from DbConnector class
+            DbConnector dbConnector = new DbConnector();
+            MySqlConnection connection = dbConnector.ConnectToDbWithSshTunnel();
+
+            if (connection != null && connection.State == ConnectionState.Open)
+            {
+                statusTextBlock.Text = "Connected to the database!";
+                // Perform database operations using 'connection' object
+                // For example: execute queries, fetch data, etc.
+            }
+            else
+            {
+                statusTextBlock.Text = "Failed to connect to the database!";
+            }
         }
     }
 }
