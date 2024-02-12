@@ -11,40 +11,41 @@ namespace CWalletDEV
         public MySqlConnection ConnectToDbWithSshTunnel()
         {
             // SSH connection info
-            string sshHost = "83.229.87.97";
-            string sshUsername = "root";
-            string sshPassword = "kamaCwallet!2023";
-            int sshPort = 22;
+            //string sshHost = "83.229.87.97";
+            //string sshUsername = "root";
+            //string sshPassword = "kamaCwallet!2023";
+            //int sshPort = 22;
 
             //// Database connection info
-            string dbServer = "127.0.0.1";
+            string dbServer = "83.229.87.97";
             string dbUsername = "dev";
             string dbPassword = "Cwallet.dev.24";
             string dbName = "cwallet";
             int dbPort = 3306;
 
-            using (var client = new SshClient(sshHost, sshPort, sshUsername, sshPassword))
-            {
-                client.Connect();
+            string connStr = $"Server={dbServer};Port={dbPort};Database={dbName};Uid={dbUsername};Pwd={dbPassword};";
+            MySqlConnection conn = new MySqlConnection(connStr);
+            conn.Open();
 
-                if (client.IsConnected)
-                {
-                    var port = new ForwardedPortLocal(dbServer, (uint)dbPort, dbServer, (uint)dbPort);
-                    client.AddForwardedPort(port);
-                    port.Start();
+            return conn;
+            //using (var client = new SshClient(sshHost, sshPort, sshUsername, sshPassword))
+            //{
+            //    client.Connect();
+
+            //    if (client.IsConnected)
+            //    {
+            //        var port = new ForwardedPortLocal(dbServer, (uint)dbPort, dbServer, (uint)dbPort);
+            //        client.AddForwardedPort(port);
+            //        port.Start();
                     
-                    string connStr = $"Server={dbServer};Port={port.BoundPort};Database={dbName};Uid={dbUsername};Pwd={dbPassword};";
-                    MySqlConnection conn = new MySqlConnection(connStr);
-                    conn.Open();
-
-                    return conn;
-                }
-                else
-                {
-                    // Handle SSH connection failure
-                    return null;
-                }
-            }
+                    
+            //    }
+            //    else
+            //    {
+            //        // Handle SSH connection failure
+            //        return null;
+            //    }
+            //}
         }
         public void AddUser(string userName, string password)
         {
@@ -52,7 +53,7 @@ namespace CWalletDEV
             {
                 if (conn != null && conn.State == ConnectionState.Open)
                 {
-                    string query = "INSERT INTO users (UserName, Password) VALUES (@UserName, @Password)";
+                    string query = "INSERT INTO Users (UserName, Password) VALUES (@UserName, @Password)";
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@UserName", userName);
