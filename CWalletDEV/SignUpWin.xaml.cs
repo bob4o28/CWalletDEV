@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,6 +41,9 @@ namespace CWalletDEV
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             this.DialogResult=true;
+            DbConnector dbConnector = new DbConnector();
+            dbConnector.CreateTable();
+            dbConnector.CreateUser(usernameTextBox.Text, passwordBox.Text);
         }
     }
 }

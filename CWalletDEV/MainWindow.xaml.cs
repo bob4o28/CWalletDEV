@@ -339,5 +339,11 @@ namespace CWalletDEV
                 statusTextBlock.Text = "Failed to connect to the database!";
             }
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            SignUpWin signUpWin = new SignUpWin();
+            signUpWin.ShowDialog();
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using Renci.SshNet;
+using System.Reflection.Emit;
 
 namespace CWalletDEV
 {
@@ -40,6 +41,40 @@ namespace CWalletDEV
                 {
                     // Handle SSH connection failure
                     return null;
+                }
+            }
+        }
+        public void CreateUser(string username, string password)
+        {
+            using (MySqlConnection conn = ConnectToDbWithSshTunnel())
+            {
+                if (conn != null)
+                {
+                    string sql = "INSERT INTO users (username, password) VALUES (@username, @password)";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.Parameters.AddWithValue("@password", password);
+                    cmd.ExecuteNonQuery();
+                }
+                else
+                {
+                    // Handle database connection failure
+                }
+            }
+        }
+        public void CreateTable()
+        {
+            using (MySqlConnection conn = ConnectToDbWithSshTunnel())
+            {
+                if (conn != null)
+                {
+                    string sql = "CREATE TABLE IF NOT EXISTS users (username VARCHAR(255), password VARCHAR(255))";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+                    cmd.ExecuteNonQuery();
+                }
+                else
+                {
+                    
                 }
             }
         }

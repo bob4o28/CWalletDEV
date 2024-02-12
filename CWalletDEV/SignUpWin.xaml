@@ -8,9 +8,9 @@
         Title="SignUpWin" Height="599" Width="404">
     <Grid Background="#FFDFD7CB">
         <Image Margin="46,34,46,441" Source="/LblSignUp.png" Stretch="Fill"/>
-        <TextBox HorizontalAlignment="Left" Height="57" Margin="66,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="usernameTextBox" HorizontalAlignment="Left" Height="57" Margin="66,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" TextChanged="TextBox_TextChanged"/>
         <Label Content="Username:" HorizontalAlignment="Left" Height="36" Margin="66,209,0,0" VerticalAlignment="Top" Width="213" FontSize="24"/>
-        <TextBox HorizontalAlignment="Left" Height="57" Margin="66,392,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="passwordBox" HorizontalAlignment="Left" Height="57" Margin="66,392,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" TextChanged="TextBox_TextChanged"/>
         <Label Content="Password:" HorizontalAlignment="Left" Height="36" Margin="66,351,0,0" VerticalAlignment="Top" Width="213" FontSize="24" RenderTransformOrigin="0.5,0.5">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -23,6 +23,9 @@
         </Label>
         <Button Content="Already have an account? Log in" HorizontalAlignment="Center" Height="28" Margin="0,545,0,0" VerticalAlignment="Top" Width="190" Click="Button_Click"/>
         <Button Content="Sign Up" Margin="131,473,131,57" Click="Button_Click_1" FontSize="20"/>
+        <Label Margin="0,0,0,-18">
+            <Label Content="&#xD;&#xA;" Height="43" Width="90" Margin="70, 160"/>
+        </Label>
 
     </Grid>
 </Window>
