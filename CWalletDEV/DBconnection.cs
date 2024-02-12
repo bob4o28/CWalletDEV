@@ -1,5 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using Renci.SshNet;
+using System.Data;
+using System;
 using System.Reflection.Emit;
 
 namespace CWalletDEV
@@ -44,39 +46,22 @@ namespace CWalletDEV
                 }
             }
         }
-        public void CreateUser(string username, string password)
+        public void AddUser(string userName, string password)
         {
             using (MySqlConnection conn = ConnectToDbWithSshTunnel())
             {
-                if (conn != null)
+                if (conn != null && conn.State == ConnectionState.Open)
                 {
-                    string sql = "INSERT INTO users (username, password) VALUES (@username, @password)";
-                    MySqlCommand cmd = new MySqlCommand(sql, conn);
-                    cmd.Parameters.AddWithValue("@username", username);
-                    cmd.Parameters.AddWithValue("@password", password);
-                    cmd.ExecuteNonQuery();
-                }
-                else
-                {
-                    // Handle database connection failure
+                    string query = "INSERT INTO users (UserName, Password) VALUES (@UserName, @Password)";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@UserName", userName);
+                        cmd.Parameters.AddWithValue("@Password", password);
+                        cmd.ExecuteNonQuery();
+                    }
                 }
             }
         }
-        public void CreateTable()
-        {
-            using (MySqlConnection conn = ConnectToDbWithSshTunnel())
-            {
-                if (conn != null)
-                {
-                    string sql = "CREATE TABLE IF NOT EXISTS users (username VARCHAR(255), password VARCHAR(255))";
-                    MySqlCommand cmd = new MySqlCommand(sql, conn);
-                    cmd.ExecuteNonQuery();
-                }
-                else
-                {
-                    
-                }
-            }
-        }
+
     }
 }

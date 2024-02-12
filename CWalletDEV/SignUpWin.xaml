@@ -23,9 +23,6 @@
         </Label>
         <Button Content="Already have an account? Log in" HorizontalAlignment="Center" Height="28" Margin="0,545,0,0" VerticalAlignment="Top" Width="190" Click="Button_Click"/>
         <Button Content="Sign Up" Margin="131,473,131,57" Click="Button_Click_1" FontSize="20"/>
-        <Label Margin="0,0,0,-18">
-            <Label Content="&#xD;&#xA;" Height="43" Width="90" Margin="70, 160"/>
-        </Label>
 
     </Grid>
 </Window>

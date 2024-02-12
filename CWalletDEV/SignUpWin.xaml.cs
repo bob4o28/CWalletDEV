@@ -42,8 +42,9 @@ namespace CWalletDEV
         {
             this.DialogResult=true;
             DbConnector dbConnector = new DbConnector();
-            dbConnector.CreateTable();
-            dbConnector.CreateUser(usernameTextBox.Text, passwordBox.Text);
+            dbConnector.AddUser(usernameTextBox.Text, passwordBox.Text);
+            //dbConnector.CreateTable();
+            //dbConnector.CreateUser(usernameTextBox.Text, passwordBox.Text);
         }
     }
 }
