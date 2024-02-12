@@ -10,12 +10,7 @@ namespace CWalletDEV
     {
         public MySqlConnection ConnectToDbWithSshTunnel()
         {
-            // SSH connection info
-            //string sshHost = "83.229.87.97";
-            //string sshUsername = "root";
-            //string sshPassword = "kamaCwallet!2023";
-            //int sshPort = 22;
-
+            
             //// Database connection info
             string dbServer = "83.229.87.97";
             string dbUsername = "dev";
@@ -28,24 +23,6 @@ namespace CWalletDEV
             conn.Open();
 
             return conn;
-            //using (var client = new SshClient(sshHost, sshPort, sshUsername, sshPassword))
-            //{
-            //    client.Connect();
-
-            //    if (client.IsConnected)
-            //    {
-            //        var port = new ForwardedPortLocal(dbServer, (uint)dbPort, dbServer, (uint)dbPort);
-            //        client.AddForwardedPort(port);
-            //        port.Start();
-                    
-                    
-            //    }
-            //    else
-            //    {
-            //        // Handle SSH connection failure
-            //        return null;
-            //    }
-            //}
         }
         public void AddUser(string userName, string password)
         {
