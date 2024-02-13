@@ -40,9 +40,12 @@ namespace CWalletDEV
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            this.DialogResult=true;
+            
             DbConnector dbConnector = new DbConnector();
-            dbConnector.AddUser(usernameTextBox.Text, passwordBox.Text);
+            dbConnector.AddUser(txtUserName.Text, txtUserLastName.Text, txtUserEmail.Text, txtPassword.Text);
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show(); 
+            this.Close(); // Close the login window
             //dbConnector.CreateTable();
             //dbConnector.CreateUser(usernameTextBox.Text, passwordBox.Text);
         }

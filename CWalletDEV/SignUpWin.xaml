@@ -5,24 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CWalletDEV"
         mc:Ignorable="d"
-        Title="SignUpWin" Height="599" Width="404">
-    <Grid Background="#FFDFD7CB" Height="589" VerticalAlignment="Top">
-        <Image Margin="46,34,46,441" Source="/LblSignUp.png" Stretch="Fill" VerticalAlignment="Top"/>
-        <TextBox x:Name="usernameTextBox" HorizontalAlignment="Center" Height="57" Margin="4,250,0,0" TextWrapping="Wrap" Width="258" TextChanged="TextBox_TextChanged" VerticalAlignment="Top"/>
-        <Label Content="Username:" HorizontalAlignment="Center" Height="36" Margin="4,209,0,0" Width="213" FontSize="24" VerticalAlignment="Top"/>
-        <TextBox x:Name="passwordBox" HorizontalAlignment="Center" Height="57" Margin="4,392,0,0" TextWrapping="Wrap" Width="258" TextChanged="TextBox_TextChanged" VerticalAlignment="Top"/>
-        <Label Content="Password:" HorizontalAlignment="Center" Height="36" Margin="4,351,0,0" Width="213" FontSize="24" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="2.411"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="0.758"/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
-        <Button Content="Sign Up" Margin="131,466,131,70" Click="Button_Click_1" FontSize="20" Width="142" Height="53"/>
-        <Button Content="Already have an account? Log in" Height="28" Margin="107,530,107,31" Width="190" Click="Button_Click"/>
+        Title="SignUpWin" Height="689" Width="526">
+    <Grid Background="#FFDFD7CB" Height="679" VerticalAlignment="Top">
+        <Image Margin="85,34,85,0" Source="/LblSignUp.png" Stretch="Fill" VerticalAlignment="Top" Height="126"/>
+        <TextBox x:Name="txtUserName" Margin="28,206,286,449" TextWrapping="Wrap" TextChanged="TextBox_TextChanged"/>
+        <Label x:Name="LblName" Content="Name:" Height="36" Margin="28,170,286,473" Width="212" FontSize="24"/>
+        <TextBox x:Name="txtPassword" Height="25" Margin="28,409,286,245" TextWrapping="Wrap" Width="212" TextChanged="TextBox_TextChanged"/>
+        <Label x:Name="lblPassword" Content="Password:" Height="36" Margin="28,368,286,275" Width="212" FontSize="24" RenderTransformOrigin="0.5,0.5"/>
+        <Button x:Name="btnSignUp" Content="Sign Up" Margin="126,512,126,114" Click="Button_Click_1" FontSize="20" Height="53"/>
+        <Button x:Name="btnAccYes" Content="Already have an account? Log in" Height="28" Margin="102,612,102,39" Click="Button_Click"/>
+        <Label Content="(Must be strong!)" HorizontalAlignment="Left" Margin="83,439,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtUserLastName" Margin="28,270,286,383" TextWrapping="Wrap" TextChanged="TextBox_TextChanged"/>
+        <Label x:Name="lblLastName" Content="Last name:" Height="36" Margin="28,234,286,409" Width="212" FontSize="24"/>
+        <TextBox x:Name="txtUserEmail" Margin="28,337,286,316" TextWrapping="Wrap" TextChanged="TextBox_TextChanged"/>
+        <Label x:Name="lblEmail" Content="Email:" Height="36" Margin="28,301,286,342" Width="212" FontSize="24"/>
+        <Label Content="Your own first name." HorizontalAlignment="Left" Margin="254,200,0,0" VerticalAlignment="Top"/>
+        <Label Content="Your own last name." HorizontalAlignment="Left" Margin="254,265,0,0" VerticalAlignment="Top"/>
+        <Label Content="Your active email. Used for feedback." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="254,332,0,0"/>
+        <Label Content="The password that you'll log in." HorizontalAlignment="Left" Margin="254,404,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

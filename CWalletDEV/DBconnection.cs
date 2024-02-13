@@ -25,34 +25,36 @@ namespace CWalletDEV
 
             return conn;
         }
-        public void AddUser(string userName, string password)
+        public void AddUser(string userName, string userLastname, string userEmail, string password)
         {
             using (MySqlConnection conn = ConnectToDbWithSshTunnel())
             {
                 if (conn == null || conn.State != ConnectionState.Open)
                     return;
 
-                string query = "INSERT INTO Users (UserName, Password) VALUES (@UserName, @Password)";
+                string query = "INSERT INTO Users (UserName, UserLastName, Email, Password) VALUES (@UserName, @UserLastName, @Email, @Password)";
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@UserName", userName);
+                    cmd.Parameters.AddWithValue("@UserLastName", userLastname);
+                    cmd.Parameters.AddWithValue("@Email", userEmail);
                     cmd.Parameters.AddWithValue("@Password", password);
                     cmd.ExecuteNonQuery();
                 }
             }
         }
 
-        public bool CheckLogin(string userName, string password)
+        public bool CheckLogin(string userEmail, string password)
         {
             using (MySqlConnection conn = ConnectToDbWithSshTunnel())
             {
                 if (conn == null || conn.State != ConnectionState.Open)
                     return false;
 
-                string query = "SELECT COUNT(*) FROM Users WHERE UserName = @UserName AND Password = @Password";
+                string query = "SELECT COUNT(*) FROM Users WHERE Email = @UserEmail AND Password = @Password";
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@UserName", userName);
+                    cmd.Parameters.AddWithValue("@UserEmail", userEmail);
                     cmd.Parameters.AddWithValue("@Password", password);
                     int count = Convert.ToInt32(cmd.ExecuteScalar());
                     return count > 0;  // Return true if there is a matching username and password
