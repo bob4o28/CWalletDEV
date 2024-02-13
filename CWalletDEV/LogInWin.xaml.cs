@@ -24,12 +24,19 @@ namespace CWalletDEV
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnNoAcc_Click(object sender, RoutedEventArgs e)
         {
-            this.DialogResult = false;
+            this.Close();
             SignUpWin signUpWin = new SignUpWin();
             signUpWin.Show();
             
+        }
+
+        private void btnLogIn_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow MainWindow = new MainWindow();
+            MainWindow.Show();
+            this.Close();
         }
     }
 }

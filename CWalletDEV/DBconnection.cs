@@ -3,6 +3,7 @@ using Renci.SshNet;
 using System.Data;
 using System;
 using System.Reflection.Emit;
+using System.Windows.Media.Animation;
 
 namespace CWalletDEV
 {
@@ -28,18 +29,36 @@ namespace CWalletDEV
         {
             using (MySqlConnection conn = ConnectToDbWithSshTunnel())
             {
-                if (conn != null && conn.State == ConnectionState.Open)
+                if (conn == null || conn.State != ConnectionState.Open)
+                    return;
+
+                string query = "INSERT INTO Users (UserName, Password) VALUES (@UserName, @Password)";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
-                    string query = "INSERT INTO Users (UserName, Password) VALUES (@UserName, @Password)";
-                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@UserName", userName);
-                        cmd.Parameters.AddWithValue("@Password", password);
-                        cmd.ExecuteNonQuery();
-                    }
+                    cmd.Parameters.AddWithValue("@UserName", userName);
+                    cmd.Parameters.AddWithValue("@Password", password);
+                    cmd.ExecuteNonQuery();
                 }
             }
         }
 
+        public void CheckLogin(string userName, string password)
+        {
+            using (MySqlConnection conn = ConnectToDbWithSshTunnel())
+            {
+                if (conn == null || conn.State != ConnectionState.Open)
+                    return;
+
+                string query = "SELECT  FROM Users WHERE UserName = @UserName AND Password = @Password";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@UserName", userName);
+                    cmd.Parameters.AddWithValue("@Password", password);
+                    int count = (int)cmd.ExecuteScalar();
+                    return;
+
+                }
+            }
+        }
     }
 }
