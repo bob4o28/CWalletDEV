@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,9 +35,25 @@ namespace CWalletDEV
 
         private void btnLogIn_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow MainWindow = new MainWindow();
-            MainWindow.Show();
-            this.Close();
+            DbConnector dbConnector = new DbConnector();
+            string userName = txtUserName.Text;
+            string password = txtPassword.Text;
+
+            if (dbConnector.CheckLogin(userName, password))
+            {
+                // Credentials are correct, allow the user to access the application
+                MessageBox.Show("Login successful. Welcome to the app!");
+                // Navigate to the main application window
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
+                this.Close(); // Close the login window
+            }
+            else
+            {
+                WrongCredentialsLabel = "Wrong username and password";
+                MessageBox.Show("Invalid username or password. Please try again.");
+            }
         }
+        
     }
 }
