@@ -134,6 +134,10 @@
     <Compile Include="BankChanger.xaml.cs">
       <DependentUpon>BankChanger.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BankModel.cs" />
+    <Compile Include="CashModel.cs" />
+    <Compile Include="CreditModel.cs" />
+    <Compile Include="CryptoModel.cs" />
     <Compile Include="CryptoChanger.xaml.cs">
       <DependentUpon>CryptoChanger.xaml</DependentUpon>
     </Compile>
@@ -144,6 +148,7 @@
     <Compile Include="DebitCardChanger.xaml.cs">
       <DependentUpon>DebitCardChanger.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DebitModel.cs" />
     <Compile Include="SavingsChanger.xaml.cs">
       <DependentUpon>SavingsChanger.xaml</DependentUpon>
     </Compile>
@@ -154,6 +159,7 @@
       <DependentUpon>LogInWin.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainViewModel.cs" />
+    <Compile Include="SavingsModel.cs" />
     <Compile Include="SettingsWin.xaml.cs">
       <DependentUpon>SettingsWin.xaml</DependentUpon>
     </Compile>
