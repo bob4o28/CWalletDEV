@@ -7,15 +7,15 @@
         mc:Ignorable="d"
         Title="LogInWin" Height="689" Width="526">
     <Grid Background="#FFDFD7CB">
-        <TextBox x:Name="txtLoginEmail" Margin="52,323,243,323" TextWrapping="Wrap" Height="27"/>
-        <Label x:Name="lblLoginEmail" Content="Email:" Height="36" Margin="52,282,260,355" Width="214" FontSize="24"/>
-        <TextBox x:Name="txtLoginPassword" Height="27" Margin="52,366,243,190" TextWrapping="Wrap"/>
-        <Label x:Name="lblLoginPassword" Content="Password:" Height="36" Margin="53,370,260,267" Width="213" FontSize="24" />
+        <TextBox x:Name="txtLoginEmail" TextWrapping="Wrap" Height="27" VerticalAlignment="Center" HorizontalAlignment="Left" Width="210" Margin="53,0,0,0"/>
+        <Label x:Name="lblLoginEmail" Content="Email:" Height="36" Width="214" FontSize="24" Margin="53,269,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <TextBox x:Name="txtLoginPassword" Height="27" TextWrapping="Wrap" Margin="53,402,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="210"/>
+        <Label x:Name="lblLoginPassword" Content="Password:" Height="36" Margin="53,361,0,0" Width="213" FontSize="24" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <Image x:Name="LogInLabel" Margin="84,41,84,510" Source="/LblLogIn.png" Stretch="Fill"/>
         <Button x:Name="btnNoAcc" Content="Don't have account? Sign up" Height="28" Width="172" Click="btnNoAcc_Click" Margin="157,528,157,27"/>
         <Button x:Name="btnLogIn" Content="Log In" Height="49" Width="106" Click="btnLogIn_Click" Margin="190,460,190,74"/>
-        <Label x:Name="WrongCredentialsLabel" Content="" Margin="116,195,116,407"/>
+        <Label x:Name="WrongCredentialsLabel" Content="" Margin="116,185,116,417"/>
         <Label x:Name="lblPassword" Content="" Height="36" Margin="357,402,22,235" FontSize="24"/>
-
     </Grid>
+
 </Window>
