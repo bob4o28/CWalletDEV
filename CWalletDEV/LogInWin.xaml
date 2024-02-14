@@ -7,15 +7,22 @@
         mc:Ignorable="d"
         Title="LogInWin" Height="689" Width="526">
     <Grid Background="#FFDFD7CB">
-        <TextBox x:Name="txtLoginEmail" Margin="52,323,243,323" TextWrapping="Wrap" Height="27"/>
-        <Label x:Name="lblLoginEmail" Content="Email:" Height="36" Margin="52,282,260,355" Width="214" FontSize="24"/>
-        <TextBox x:Name="txtLoginPassword" Height="27" Margin="52,366,243,190" TextWrapping="Wrap"/>
-        <Label x:Name="lblLoginPassword" Content="Password:" Height="36" Margin="53,370,260,267" Width="213" FontSize="24" />
-        <Image x:Name="LogInLabel" Margin="84,41,84,510" Source="/LblLogIn.png" Stretch="Fill"/>
-        <Button x:Name="btnNoAcc" Content="Don't have account? Sign up" Height="28" Width="172" Click="btnNoAcc_Click" Margin="157,528,157,27"/>
-        <Button x:Name="btnLogIn" Content="Log In" Height="49" Width="106" Click="btnLogIn_Click" Margin="190,460,190,74"/>
-        <Label x:Name="WrongCredentialsLabel" Content="" Margin="116,195,116,407"/>
-        <Label x:Name="lblPassword" Content="" Height="36" Margin="357,402,22,235" FontSize="24"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="173*"/>
+            <RowDefinition Height="118*"/>
+            <RowDefinition Height="86*"/>
+            <RowDefinition Height="85*"/>
+            <RowDefinition Height="131*"/>
+            <RowDefinition Height="81*"/>
+        </Grid.RowDefinitions>
+        <Image Margin="85,34,85,0" Source="/LblLogIn.png" Stretch="Fill" VerticalAlignment="Top" Height="126"/>
+        <TextBox x:Name="txtLoginPassword" Margin="28,47,286,11" TextWrapping="Wrap" Grid.Row="3"/>
+        <Label x:Name="lblPassword" Content="Password:" Margin="28,2,286,43" FontSize="24" RenderTransformOrigin="0.5,0.5" Grid.Row="3"/>
+        <Button x:Name="btnLogIn" Content="Log In" Margin="194,55,194,36" Click="btnLogIn_Click" FontSize="20" Grid.Row="4"/>
+        <Button x:Name="btnNoAcc" Content="Don't have an account? Sign up." Margin="102,18,102,33" Click="btnNoAcc_Click" Grid.Row="5"/>
+        <TextBox x:Name="txtLoginEmail" Margin="28,49,286,10" TextWrapping="Wrap" Grid.Row="2"/>
+        <Label x:Name="lblEmail" Content="Email:" Margin="28,5,286,41" FontSize="24" Grid.Row="2"/>
+        <Label x:Name="WrongCredentialsLabel" Content="" HorizontalAlignment="Left" Margin="194,9,0,0" VerticalAlignment="Top" Grid.Row="4" Height="26" Width="10"/>
 
     </Grid>
 </Window>

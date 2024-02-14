@@ -144,14 +144,14 @@
     <Compile Include="DebitCardChanger.xaml.cs">
       <DependentUpon>DebitCardChanger.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LogInWin.xaml.cs">
+      <DependentUpon>LogInWin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SavingsChanger.xaml.cs">
       <DependentUpon>SavingsChanger.xaml</DependentUpon>
     </Compile>
     <Compile Include="CashChanger.xaml.cs">
       <DependentUpon>CashChanger.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="LogInWin.xaml.cs">
-      <DependentUpon>LogInWin.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainViewModel.cs" />
     <Compile Include="SettingsWin.xaml.cs">
@@ -176,15 +176,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="LogInWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SavingsChanger.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="CashChanger.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="LogInWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
