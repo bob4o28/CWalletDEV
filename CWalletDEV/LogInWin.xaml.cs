@@ -49,10 +49,10 @@ namespace CWalletDEV
             }
             else
             {
-                WrongCredentialsLabel.Content = "Wrong username and password";
+                //WrongCredentialsLabel.Content = "Wrong username and password";
                 MessageBox.Show("Invalid username or password. Please try again.");
             }
         }
-        
+
     }
 }
