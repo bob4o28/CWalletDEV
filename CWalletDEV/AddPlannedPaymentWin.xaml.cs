@@ -30,9 +30,9 @@ namespace CWalletDEV
                 DbConnector dbConnector = new DbConnector();
                 string name = Name.Text;
                 decimal worth = decimal.Parse(Worth.Text);
-
+          
                 // Your DatePicker control is named 'DatePick'
-                if (Date_Pick.SelectedDate.HasValue)
+                if (Date_Pick.SelectedDate.HasValue && name != null && worth != null)
                 {
                     DateTime dueDate = Date_Pick.SelectedDate.Value;
                     dbConnector.AddPlannedPayment(name, worth, dueDate);
@@ -40,7 +40,7 @@ namespace CWalletDEV
                 }
                 else
                 {
-                    // Handle the case where no date is selected
+                    NoInputLabel.Content = "The name, the worth or the date are not set!";
                 }
         }
     }

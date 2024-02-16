@@ -101,7 +101,7 @@ namespace CWalletDEV
                 if (conn == null || conn.State != ConnectionState.Open)
                     return;
 
-                string query = "SELECT Id FROM Users WHERE Email = @UserEmail";
+                string query = "SELECT idUsers FROM Users WHERE Email = @UserEmail";
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@UserEmail", userEmail);
