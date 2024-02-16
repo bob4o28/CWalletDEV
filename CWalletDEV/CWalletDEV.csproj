@@ -131,6 +131,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddPlannedPaymentWin.xaml.cs">
+      <DependentUpon>AddPlannedPaymentWin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BankChanger.xaml.cs">
       <DependentUpon>BankChanger.xaml</DependentUpon>
     </Compile>
@@ -147,6 +150,9 @@
     <Compile Include="LogInWin.xaml.cs">
       <DependentUpon>LogInWin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PlannedPaymentsWindow.xaml.cs">
+      <DependentUpon>PlannedPaymentsWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SavingsChanger.xaml.cs">
       <DependentUpon>SavingsChanger.xaml</DependentUpon>
     </Compile>
@@ -160,6 +166,10 @@
     <Compile Include="SignUpWin.xaml.cs">
       <DependentUpon>SignUpWin.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddPlannedPaymentWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="BankChanger.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -177,6 +187,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="LogInWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PlannedPaymentsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -4,6 +4,8 @@ using System.Data;
 using System;
 using System.Reflection.Emit;
 using System.Windows.Media.Animation;
+using LiveCharts;
+using System.Collections.Generic;
 
 namespace CWalletDEV
 {
@@ -25,6 +27,7 @@ namespace CWalletDEV
 
             return conn;
         }
+
         public void AddUser(string userName, string userLastname, string userEmail, string password)
         {
             using (MySqlConnection conn = ConnectToDbWithSshTunnel())
@@ -60,6 +63,34 @@ namespace CWalletDEV
                     return count > 0;  // Return true if there is a matching username and password
                 }
             }
+        }
+        public int UserId { get; private set; }
+
+        public bool AddUserID(string userEmail, string password)
+        {
+            using (MySqlConnection conn = ConnectToDbWithSshTunnel())
+            {
+                if (conn == null || conn.State != ConnectionState.Open)
+                    return false;
+
+                string query = "SELECT idUsers FROM Users WHERE Email = @UserEmail AND Password = @Password";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@UserEmail", userEmail);
+                    cmd.Parameters.AddWithValue("@Password", password);
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                    {
+                        int id;
+                        if (Int32.TryParse(result.ToString(), out id))
+                        {
+                            UserId = id;
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;  // Return false if no matching user is found or conversion failed
         }
     }
 }

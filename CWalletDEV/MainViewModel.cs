@@ -4,7 +4,7 @@ using System.ComponentModel;
 
 public class MainViewModel : INotifyPropertyChanged
 {
-    private ChartValues<double> _chartValues;
+    private ChartValues<double> _chartValues { get; set; }
     public ChartValues<double> ChartValues
     {
         get { return _chartValues; }
@@ -53,5 +53,7 @@ public class MainViewModel : INotifyPropertyChanged
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
+
+
 
 }

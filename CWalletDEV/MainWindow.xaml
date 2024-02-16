@@ -474,7 +474,7 @@
             </Rectangle.RenderTransform>
         </Rectangle>
         <Image Height="58" VerticalAlignment="Top" Width="59" Source="/Pay.png" HorizontalAlignment="Left" Margin="26,402,0,0"/>
-        <TextBlock x:Name="TxtPlannedPay" HorizontalAlignment="Left" Height="70" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" FontSize="24" Padding="109,8,0,0" FontFamily="Cambria Math" Background="Transparent" Margin="-6,396,0,0" MouseEnter="TxtPlannedPay_MouseEnter" MouseLeave="TxtPlannedPay_MouseLeave_1" RenderTransformOrigin="0.5,0.5" Text="Planned Paymends">
+        <TextBlock x:Name="TxtPlannedPay" HorizontalAlignment="Left" Height="70" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" FontSize="24" Padding="109,8,0,0" FontFamily="Cambria Math" Background="Transparent" Margin="-6,396,0,0" MouseEnter="TxtPlannedPay_MouseEnter" MouseLeave="TxtPlannedPay_MouseLeave_1" RenderTransformOrigin="0.5,0.5" Text="Planned Paymends" MouseUp="TxtPlannedPay_MouseUp">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -562,6 +562,7 @@
         <Button Content="Button" HorizontalAlignment="Left" Margin="1010,36,0,0" VerticalAlignment="Top" Click="Button_Click_2"/>
         <TextBlock x:Name="statusTextBlock" HorizontalAlignment="Left" Margin="754,293,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
         <Button Content="Button" HorizontalAlignment="Left" Height="42" Margin="666,355,0,0" VerticalAlignment="Top" Width="68" Click="Button_Click_3"/>
+        <Label Content="{Binding UserId}" Margin="669,38,491,565"/>
 
     </Grid>
 </Window>

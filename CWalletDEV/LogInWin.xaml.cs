@@ -32,7 +32,7 @@ namespace CWalletDEV
             this.Close();
         }
 
-        private void btnLogIn_Click(object sender, RoutedEventArgs e)
+        public void btnLogIn_Click(object sender, RoutedEventArgs e)
         {
             DbConnector dbConnector = new DbConnector();
             string userEmail = txtLoginEmail.Text;
@@ -40,6 +40,7 @@ namespace CWalletDEV
 
             if (dbConnector.CheckLogin(userEmail, password))
             {
+                dbConnector.AddUserID(userEmail, password);
                 // Credentials are correct, allow the user to access the application
                 MessageBox.Show("Login successful. Welcome to the app!");
                 // Navigate to the main application window
@@ -49,7 +50,7 @@ namespace CWalletDEV
             }
             else
             {
-                //WrongCredentialsLabel.Content = "Wrong username and password";
+                WrongCredentialsLabel.Content = "Wrong username or password";
                 MessageBox.Show("Invalid username or password. Please try again.");
             }
         }

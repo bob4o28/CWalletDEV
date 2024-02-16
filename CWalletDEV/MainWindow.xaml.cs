@@ -31,7 +31,6 @@ namespace CWalletDEV
         public string SidebarPos = "Open";
 
         private MainViewModel _viewModel;
-
         public MainWindow()
         {
             InitializeComponent();
@@ -344,6 +343,13 @@ namespace CWalletDEV
         {
             SignUpWin signUpWin = new SignUpWin();
             signUpWin.ShowDialog();
+        }
+
+        private void TxtPlannedPay_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            PlannedPaymentsWindow plannedPaymentsWindow = new PlannedPaymentsWindow();
+            plannedPaymentsWindow.Show();
+            this.Close();
         }
     }
 }
