@@ -28,7 +28,7 @@ namespace CWalletDEV
             _viewModel = new MainViewModel();
             this.DataContext = _viewModel;
             _viewModel.ChartValues = new ChartValues<double> { 15, 15, 20, 47, 8, 78, 6 };
-            _viewModel.Labels = new[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
+            _viewModel.Labels = new List<string>{ "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
             _viewModel.PieValuesCash = new ChartValues<double> { 5.0 };
         }
 

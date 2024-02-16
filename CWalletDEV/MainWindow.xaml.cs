@@ -43,29 +43,56 @@ namespace CWalletDEV
             // Initialize your ChartValues and Labels
             _viewModel.PieValuesCash = new ChartValues<double> { 5.0 };
             _viewModel.ChartValues = new ChartValues<double>();
-            _viewModel.Labels = new string[7];  // Use a List instead of an array
+            _viewModel.Labels = new List<string>();  // Use a List instead of an array
 
+            //using (MySqlConnection conn = dbConnector.ConnectToDbWithSshTunnel())
+            //{
+            //    if (conn == null || conn.State != ConnectionState.Open)
+            //        return;
+
+            //    string query = "SELECT Sum, Date FROM MoneyHolders WHERE UserID = @UserID ORDER BY Date DESC LIMIT 7";
+            //    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+            //    {
+            //        cmd.Parameters.AddWithValue("@UserID", dbConnector.UserId);  // Use dbConnector instead of _dbConnector
+            //        using (MySqlDataReader reader = cmd.ExecuteReader())
+            //        {
+            //            int i = 0;
+            //            while (reader.Read())
+            //            {
+            //                _viewModel.ChartValues.Add(reader.GetDouble(0)); // Assuming Sum is at index 0
+            //                _viewModel.Labels[i] = (reader.GetString(1));
+            //                i++;
+            //            }
+            //        }
+            //    }
+            //}
             using (MySqlConnection conn = dbConnector.ConnectToDbWithSshTunnel())
             {
                 if (conn == null || conn.State != ConnectionState.Open)
                     return;
 
-                string query = "SELECT Sum, Date FROM MoneyHolders WHERE UserID = @UserID ORDER BY Date DESC LIMIT 7";
+                string query = "SELECT Sum, Date FROM MoneyHolders WHERE UserID = @MoneyUserID ORDER BY Date DESC LIMIT 7";
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@UserID", dbConnector.UserId);  // Use dbConnector instead of _dbConnector
+                    cmd.Parameters.AddWithValue("@MoneyUserID", dbConnector.UserId);
+
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
-                        int i = 0;
+                        _viewModel.ChartValues = new ChartValues<double>();
+                        _viewModel.Labels = new List<string>();
+
                         while (reader.Read())
                         {
                             _viewModel.ChartValues.Add(reader.GetDouble(0)); // Assuming Sum is at index 0
-                            _viewModel.Labels[i] = (reader.GetString(1));
-                            i++;
+                            _viewModel.Labels.Add(reader.GetString(1)); // Assuming Date is at index 1
                         }
+
+                        
+
                     }
                 }
             }
+
         }
 
         //Menu button events

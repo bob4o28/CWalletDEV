@@ -1,5 +1,6 @@
 ﻿using LiveCharts;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 
 public class MainViewModel : INotifyPropertyChanged
@@ -15,8 +16,7 @@ public class MainViewModel : INotifyPropertyChanged
         }
     }
 
-    private string[] _labels;
-    public string[] Labels
+    public List<string> Labels
     {
         get { return _labels; }
         set
@@ -29,6 +29,8 @@ public class MainViewModel : INotifyPropertyChanged
 
     //Pie chart DataBinding Values identify
     private ChartValues<double> _pieValuesCash;
+    private List<string> _labels;
+
     public ChartValues<double> PieValuesCash
     {
         get { return _pieValuesCash; }
