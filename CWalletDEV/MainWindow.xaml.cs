@@ -280,6 +280,7 @@ namespace CWalletDEV
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             // Assign values to the properties
+
             _viewModel.ChartValues = new ChartValues<double> { 15, 15, 20, 47, 8, 78, 6 };
             _viewModel.Labels = new[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
             _viewModel.PieValuesCash = new ChartValues<double> { 5.0 };
@@ -321,23 +322,7 @@ namespace CWalletDEV
             Setting.ShowDialog();
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            // Call the database connection method from DbConnector class
-            DbConnector dbConnector = new DbConnector();
-            MySqlConnection connection = dbConnector.ConnectToDbWithSshTunnel();
-
-            if (connection != null && connection.State == ConnectionState.Open)
-            {
-                statusTextBlock.Text = "Connected to the database!";
-                // Perform database operations using 'connection' object
-                // For example: execute queries, fetch data, etc.
-            }
-            else
-            {
-                statusTextBlock.Text = "Failed to connect to the database!";
-            }
-        }
+       
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
