@@ -35,6 +35,7 @@ namespace CWalletDEV
                 if (Date_Pick.SelectedDate.HasValue)
                 {
                     DateTime dueDate = Date_Pick.SelectedDate.Value;
+                    dbConnector.AddPlannedPayment(name, worth, dueDate);
                     this.Close();
                 }
                 else

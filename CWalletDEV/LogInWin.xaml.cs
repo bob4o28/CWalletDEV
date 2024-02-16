@@ -42,7 +42,6 @@ namespace CWalletDEV
             {
                 dbConnector.AddUserID(userEmail, password);
                 // Credentials are correct, allow the user to access the application
-                MessageBox.Show("Login successful. Welcome to the app!");
                 // Navigate to the main application window
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
@@ -51,7 +50,6 @@ namespace CWalletDEV
             else
             {
                 WrongCredentialsLabel.Content = "Wrong username or password";
-                MessageBox.Show("Invalid username or password. Please try again.");
             }
         }
 

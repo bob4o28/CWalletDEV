@@ -64,7 +64,6 @@ namespace CWalletDEV
                 }
             }
         }
-        public int UserId { get; private set; }
 
         public bool AddUserID(string userEmail, string password)
         {
@@ -92,5 +91,45 @@ namespace CWalletDEV
             }
             return false;  // Return false if no matching user is found or conversion failed
         }
+
+        public static int UserId { get; private set; }
+
+        public void SetUserId(string userEmail)
+        {
+            using (MySqlConnection conn = ConnectToDbWithSshTunnel())
+            {
+                if (conn == null || conn.State != ConnectionState.Open)
+                    return;
+
+                string query = "SELECT Id FROM Users WHERE Email = @UserEmail";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@UserEmail", userEmail);
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                        UserId = Convert.ToInt32(result);
+                }
+            }
+        }
+
+        public void AddPlannedPayment(string nameOfPP, decimal worthOfPP, DateTime dueDate)
+        {
+            using (MySqlConnection conn = ConnectToDbWithSshTunnel())
+            {
+                if (conn == null || conn.State != ConnectionState.Open)
+                    return;
+                DbConnector dbConnector = new DbConnector();
+                string query = "INSERT INTO PlannedPayments (IdUsers, NameOfPP, WorthOfPP, DueDatte) VALUES (@UserId, @NameOfPP, @WorthOfPP, @DueDatte)";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@UserId", UserId);
+                    cmd.Parameters.AddWithValue("@NameOfPP", nameOfPP);
+                    cmd.Parameters.AddWithValue("@WorthOfPP", worthOfPP);
+                    cmd.Parameters.AddWithValue("@DueDatte", dueDate);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
     }
 }
