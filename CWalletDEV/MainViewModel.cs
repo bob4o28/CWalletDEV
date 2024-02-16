@@ -42,9 +42,9 @@ public class MainViewModel : INotifyPropertyChanged
 
     public MainViewModel()
     {
-        ChartValues = new ChartValues<double> { 5.0, 3.0, 2.0, 7.0, 4.0, 78.0, 4.0 };
-        Labels = new[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" , "Saturday", "Sunday"};
-        PieValuesCash = new ChartValues<double> { 100.0 };
+        //ChartValues = new ChartValues<double> { 5.0, 3.0, 2.0, 7.0, 4.0, 78.0, 4.0 };
+        //Labels = new[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" , "Saturday", "Sunday"};
+        //PieValuesCash = new ChartValues<double> { 100.0 };
     }
 
     public event PropertyChangedEventHandler PropertyChanged;
@@ -54,6 +54,11 @@ public class MainViewModel : INotifyPropertyChanged
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 
+
+
+
+
+    
 
 
 }

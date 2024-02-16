@@ -92,7 +92,7 @@ namespace CWalletDEV
         //    return false;  // Return false if no matching user is found or conversion failed
         //}
 
-        public static int UserId { get; private set; }
+        public int UserId;
 
         public void SetUserId(string userEmail)
         {
@@ -131,5 +131,10 @@ namespace CWalletDEV
             }
         }
 
+
+        public void MainWinStartUp()
+        {
+           
+        }
     }
 }

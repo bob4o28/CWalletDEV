@@ -7,6 +7,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -31,12 +32,40 @@ namespace CWalletDEV
         public string SidebarPos = "Open";
 
         private MainViewModel _viewModel;
+        private DbConnector _dbConnector;
+        public int CurUser;
         public MainWindow()
         {
             InitializeComponent();
             _viewModel = new MainViewModel();
             this.DataContext = _viewModel;
+            
 
+            //
+            _viewModel.PieValuesCash = new ChartValues<double> { 5.0 };
+            _viewModel.ChartValues = new ChartValues<double> { };
+            _viewModel.Labels = new string[] { };
+             using (MySqlConnection conn = _dbConnector.ConnectToDbWithSshTunnel())
+            {
+                if (conn == null || conn.State != ConnectionState.Open)
+                    return;
+
+                string query = "SELECT Sum, Date FROM MoneyHolders WHERE UserID = @MoneyUserID ORDER BY Date DESC LIMIT 7";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@MoneyUserID", _dbConnector.UserId);
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    { int i = 0;
+                        while (reader.Read())
+                        {
+                            _viewModel.ChartValues.Add(reader.GetDouble(0)); // Assuming Sum is at index 0
+                            _viewModel.Labels[i]=(reader.GetString(1)); // Assuming Date is at index 1
+                            i++;
+                        }
+                    }
+                    return;  // Return true if there is a matching username and password
+                }
+            }
         }
 
         //Menu button events
@@ -161,6 +190,7 @@ namespace CWalletDEV
             //// Assign values to the properties
             //_viewModel.AreaChartValues = new ChartValues<double> { 15, 15, 20, 47, 8, 78, 6 };
             //_viewModel.DaysOfWeel = new[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
+            
         }
 
         private void btnCash_MouseUp(object sender, MouseButtonEventArgs e)
@@ -280,10 +310,12 @@ namespace CWalletDEV
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             // Assign values to the properties
+            //_viewModel.ChartValues = new ChartValues<double> { 15, 15, 20, 47, 8, 78, 6 };
+            //_viewModel.Labels = new[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
+            
 
-            _viewModel.ChartValues = new ChartValues<double> { 15, 15, 20, 47, 8, 78, 6 };
-            _viewModel.Labels = new[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
-            _viewModel.PieValuesCash = new ChartValues<double> { 5.0 };
+            
+
         }
 
         private void btnSavings_MouseUp(object sender, MouseButtonEventArgs e)
