@@ -31,7 +31,6 @@ namespace CWalletDEV
             signUpWin.Show();
             this.Close();
         }
-
         public void btnLogIn_Click(object sender, RoutedEventArgs e)
         {
             DbConnector dbConnector = new DbConnector();
@@ -40,9 +39,10 @@ namespace CWalletDEV
 
             if (dbConnector.CheckLogin(userEmail, password))
             {
-                dbConnector.AddUserID(userEmail, password);
+                dbConnector.SetUserId(userEmail);
                 // Credentials are correct, allow the user to access the application
                 // Navigate to the main application window
+
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
                 this.Close(); // Close the login window

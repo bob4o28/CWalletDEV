@@ -28,8 +28,8 @@ public class MainViewModel : INotifyPropertyChanged
 
 
     //Pie chart DataBinding Values identify
-    private LiveCharts.ChartValues<double> _pieValuesCash;
-    public LiveCharts.ChartValues<double> PieValuesCash
+    private ChartValues<double> _pieValuesCash;
+    public ChartValues<double> PieValuesCash
     {
         get { return _pieValuesCash; }
         set
