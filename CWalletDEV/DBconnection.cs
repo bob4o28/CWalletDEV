@@ -121,7 +121,7 @@ namespace CWalletDEV
             }
         }
 
-        public void BasicRecordAdd(string Value, string Currency, DateTime chosenDate)
+        public void BasicRecordAdd(string Value, DateTime chosenDate, string Colomn)
         {
             using (MySqlConnection conn = ConnectToDbWithSshTunnel())
             {
@@ -139,7 +139,7 @@ namespace CWalletDEV
                     if (dateExists > 0)
                     {
                         // If the date exists, update the Cash column
-                        string updateQuery = "UPDATE MoneyHolders SET Cash = @Value WHERE UserID = @UserId AND Date = @ChosenDate";
+                        string updateQuery = "UPDATE MoneyHolders SET " + Colomn + " = @Value WHERE UserID = @UserId AND Date = @ChosenDate";
                         using (MySqlCommand updateCmd = new MySqlCommand(updateQuery, conn))
                         {
                             updateCmd.Parameters.AddWithValue("@UserId", UserId);
@@ -151,7 +151,7 @@ namespace CWalletDEV
                     else
                     {
                         // If the date does not exist, insert a new row
-                        string insertQuery = "INSERT INTO MoneyHolders (UserID, Date, Cash) VALUES (@UserId, @ChosenDate, @Value)";
+                        string insertQuery = "INSERT INTO MoneyHolders (UserID, Date, " + Colomn + ") VALUES (@UserId, @ChosenDate, @Value)";
                         using (MySqlCommand insertCmd = new MySqlCommand(insertQuery, conn))
                         {
                             insertCmd.Parameters.AddWithValue("@UserId", UserId);

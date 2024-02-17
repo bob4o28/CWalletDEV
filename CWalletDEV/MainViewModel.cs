@@ -131,6 +131,29 @@ public class MainViewModel : INotifyPropertyChanged
     }
 
 
+    private ChartValues<double> _areaChartSavings;
+
+    public ChartValues<double> AreaChartSavings
+    {
+        get { return _areaChartSavings; }
+        set
+        {
+            _areaChartSavings = value;
+            OnPropertyChanged("AreaChartSavings");
+        }
+    }
+    private List<string> _labelsSavings;
+    public List<string> LabelsSavings
+    {
+        get { return _labelsSavings; }
+        set
+        {
+            _labelsSavings = value;
+            OnPropertyChanged("LabelsSavings");
+        }
+    }
+
+
     public event PropertyChangedEventHandler PropertyChanged;
 
     protected virtual void OnPropertyChanged(string propertyName = null)

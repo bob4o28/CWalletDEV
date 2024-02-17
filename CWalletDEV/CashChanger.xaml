@@ -30,7 +30,7 @@
 
         <Label x:Name="LblCurrency" Content="Currency:" HorizontalAlignment="Left" Height="52" Margin="46,522,0,0" VerticalAlignment="Top" Width="185" FontSize="36" FontFamily="Lucida Bright"/>
 
-        <ComboBox x:Name="CurrencyCombo" HorizontalAlignment="Left" Height="50" Margin="46,580,0,0" VerticalAlignment="Top" Width="233">
+        <ComboBox x:Name="CurrencyComboCash" HorizontalAlignment="Left" Height="50" Margin="46,580,0,0" VerticalAlignment="Top" Width="233">
             <ComboBoxItem Content="BGN"/>
             <ComboBoxItem Content="EUR"/>
             <ComboBoxItem Content="USD"/>

@@ -118,13 +118,23 @@ namespace CWalletDEV
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if (CashDatePick.SelectedDate.HasValue)
+            {
+                DateTime selectedDate = CashDatePick.SelectedDate.Value;
+                dbConnector.BasicRecordAdd(txtCash.Text, selectedDate , "Cash");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Please select date for the record you want to set.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                CashDatePick.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#7FD20B0B"));
+            }
 
-            this.DialogResult = true;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            this.DialogResult = false;
+            this.Close();
         }
     }
 }
