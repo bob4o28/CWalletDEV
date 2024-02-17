@@ -34,6 +34,7 @@ namespace CWalletDEV
         private MainViewModel _viewModel;
         public int CurUser;
         public int Days;
+        private string CurMoney;
         public MainWindow()
         {
             InitializeComponent();
@@ -42,18 +43,28 @@ namespace CWalletDEV
             DbConnector dbConnector = new DbConnector();
 
             // Initialize your ChartValues and Labels
-            _viewModel.PieValuesCash = new ChartValues<double> {};
-            _viewModel.ChartValues = new ChartValues<double> {};
-            _viewModel.Labels = new List<string> {};  // Use a List instead of an array
+            //PieCart
+            _viewModel.PieValuesCash = new ChartValues<double> { };
+            _viewModel.PieValuesBank = new ChartValues<double> { };
+            _viewModel.PieValuesDebit = new ChartValues<double> { };
+            _viewModel.PieValuesCredit = new ChartValues<double> { };
+            _viewModel.PieValuesSavings = new ChartValues<double> { };
+            _viewModel.PieValuesCrypto = new ChartValues<double> { };
+            //AreaChart
+            _viewModel.ChartValues = new ChartValues<double> { };
+            _viewModel.Labels = new List<string> { };
+            //Test for the current user
             CurUser = DbConnector.UserId;
             
+            //Days to display at the main chart by select of the user.
+            Days = 7;
 
             using (MySqlConnection conn = dbConnector.ConnectToDbWithSshTunnel())
             {
                 if (conn == null || conn.State != ConnectionState.Open)
                     return;
 
-                string query = "SELECT Sum, Date, UserID FROM MoneyHolders WHERE UserID = @MoneyUserID ORDER BY Date DESC LIMIT 7";
+                string query = "SELECT Date, Sum FROM MoneyHolders WHERE UserID = @MoneyUserID ORDER BY Date DESC LIMIT " + Days.ToString();
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@MoneyUserID", DbConnector.UserId);
@@ -63,9 +74,48 @@ namespace CWalletDEV
                         
                         while (reader.Read())
                         {
-                            _viewModel.ChartValues.Add(reader.GetDouble(0)); // Assuming Sum is at index 0
-                            DateTime dateValue = reader.GetDateTime(1); // Assuming Date is at index 1
+                            //Filling the Area chart's Lists with data.
+                            //The indexes are for the placement of the Filed into the Selected table preview, for example 1 is for second.
+                            DateTime dateValue = reader.GetDateTime(0);
                             _viewModel.Labels.Add(dateValue.ToString("dd.MM.yyyy"));
+                            _viewModel.ChartValues.Add(reader.GetDouble(1));
+                        }
+                        _viewModel.Labels.Reverse();
+                        List<double> temp = new List<double>(_viewModel.ChartValues.Cast<double>());
+                        temp.Reverse();
+                        _viewModel.ChartValues.Clear();
+                        foreach (var item in temp)
+                        {
+                            _viewModel.ChartValues.Add(item);
+                        }
+
+                        CurMoney = temp.Last().ToString();
+                        lblCurMoney.Content = lblCurMoney.Content + CurMoney;
+
+
+
+                    }
+                }
+
+
+                string query1 = "SELECT Cash, Bank, DebitCard, CreditCard, Savings, Crypto FROM MoneyHolders WHERE UserID = @MoneyUserID ORDER BY Date DESC LIMIT 1";
+                using (MySqlCommand cmd = new MySqlCommand(query1, conn))
+                {
+                    cmd.Parameters.AddWithValue("@MoneyUserID", DbConnector.UserId);
+
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+
+                        while (reader.Read())
+                        {
+                            
+                            //Filling the Pie chart's Lists with data.
+                            _viewModel.PieValuesCash.Add(reader.GetDouble(0));
+                            _viewModel.PieValuesBank.Add(reader.GetDouble(1));
+                            _viewModel.PieValuesDebit.Add(reader.GetDouble(2));
+                            _viewModel.PieValuesCredit.Add(reader.GetDouble(3));
+                            _viewModel.PieValuesSavings.Add(reader.GetDouble(4));
+                            _viewModel.PieValuesCrypto.Add(reader.GetDouble(5));
                         }
 
 

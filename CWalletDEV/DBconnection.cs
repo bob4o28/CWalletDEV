@@ -65,33 +65,6 @@ namespace CWalletDEV
             }
         }
 
-        //public bool AddUserID(string userEmail, string password)
-        //{
-        //    using (MySqlConnection conn = ConnectToDbWithSshTunnel())
-        //    {
-        //        if (conn == null || conn.State != ConnectionState.Open)
-        //            return false;
-
-        //        string query = "SELECT idUsers FROM Users WHERE Email = @UserEmail AND Password = @Password";
-        //        using (MySqlCommand cmd = new MySqlCommand(query, conn))
-        //        {
-        //            cmd.Parameters.AddWithValue("@UserEmail", userEmail);
-        //            cmd.Parameters.AddWithValue("@Password", password);
-        //            object result = cmd.ExecuteScalar();
-        //            if (result != null)
-        //            {
-        //                int id;
-        //                if (Int32.TryParse(result.ToString(), out id))
-        //                {
-        //                    UserId = id;
-        //                    return true;
-        //                }
-        //            }
-        //        }
-        //    }
-        //    return false;  // Return false if no matching user is found or conversion failed
-        //}
-
         public static int UserId;
 
         public void SetUserId(string userEmail)

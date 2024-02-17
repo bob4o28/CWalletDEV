@@ -52,7 +52,7 @@ public class MainViewModel : INotifyPropertyChanged
         get { return _pieValuesBank; }
         set
         {
-            _pieValuesCash = value;
+            _pieValuesBank = value;
             OnPropertyChanged("PieValuesBank");
         }
     }
@@ -62,8 +62,8 @@ public class MainViewModel : INotifyPropertyChanged
         get { return _pieValuesDebit; }
         set
         {
-            _pieValuesCash = value;
-            OnPropertyChanged("PieValuesCash");
+            _pieValuesDebit = value;
+            OnPropertyChanged("PieValuesDebit");
         }
     }
 
@@ -72,8 +72,8 @@ public class MainViewModel : INotifyPropertyChanged
         get { return _pieValuesCredit; }
         set
         {
-            _pieValuesCash = value;
-            OnPropertyChanged("PieValuesCash");
+            _pieValuesCredit = value;
+            OnPropertyChanged("PieValuesCredit");
         }
     }
 
@@ -82,8 +82,8 @@ public class MainViewModel : INotifyPropertyChanged
         get { return _pieValuesSavings; }
         set
         {
-            _pieValuesCash = value;
-            OnPropertyChanged("PieValuesCash");
+            _pieValuesSavings = value;
+            OnPropertyChanged("PieValuesSavings");
         }
     }
 
@@ -92,10 +92,11 @@ public class MainViewModel : INotifyPropertyChanged
         get { return _pieValuesCrypto; }
         set
         {
-            _pieValuesCash = value;
-            OnPropertyChanged("PieValuesCash");
+            _pieValuesCrypto = value;
+            OnPropertyChanged("PieValuesCrypto");
         }
     }
+
 
     public MainViewModel()
     {

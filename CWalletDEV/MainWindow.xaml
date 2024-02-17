@@ -506,36 +506,26 @@
             </TextBlock.RenderTransform></TextBlock>
 
         <!--Donut Chart-->
-        <lvc:PieChart x:Name="MainPieChart" Margin="342,16,533,328" InnerRadius="86">
-            <lvc:PieChart.Series>
-                <lvc:PieSeries Title="Cash" Values="{Binding PieValuesCash}" Fill="#FF8AC97E"/>
-                <lvc:PieSeries Title="Savings" Values="{Binding PieValuesSavings}" Fill="#FFF9EFA3"/>
-                <lvc:PieSeries Title="DebitCard" Values="{Binding PieValuesDebit}" Fill="#FF90E0EF" />
-                <lvc:PieSeries Title="CreditCard" Values="{Binding PieValuesCredit}" Fill="#FFF0AA78" />
-                <lvc:PieSeries Title="Bank" Values="{Binding PieValuesBank}" Fill="#A4B8FA" />
-                <lvc:PieSeries Title="Crypto" Values="{Binding PieValuesCrypto}" Fill="#D17957"/>
-            </lvc:PieChart.Series>
-        </lvc:PieChart>
 
         <!--Buttons-->
-        <Rectangle x:Name="CashRec" HorizontalAlignment="Left" Height="76" Margin="860,92,0,0" VerticalAlignment="Top" Width="150" Fill="#FF8AC97E" RadiusX="15" RadiusY="15"/>
-        <TextBlock x:Name="btnCash" HorizontalAlignment="Left" Margin="860,93,0,0" Text="Cash" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseUp="btnCash_MouseUp" MouseEnter="btnCash_MouseEnter" MouseLeave="btnCash_MouseLeave"/>
+        <Rectangle x:Name="CashRec" HorizontalAlignment="Left" Height="76" Margin="860,53,0,0" VerticalAlignment="Top" Width="150" Fill="#FF8AC97E" RadiusX="15" RadiusY="15"/>
+        <TextBlock x:Name="btnCash" HorizontalAlignment="Left" Margin="860,54,0,0" Text="Cash" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseUp="btnCash_MouseUp" MouseEnter="btnCash_MouseEnter" MouseLeave="btnCash_MouseLeave"/>
 
 
-        <Rectangle x:Name="SavingRec" HorizontalAlignment="Left" Height="76" Margin="1034,92,0,0" VerticalAlignment="Top" Width="150" Fill="#FFF9EFA3" RadiusX="15" RadiusY="15"/>
-        <TextBlock x:Name="btnSavings" HorizontalAlignment="Left" Margin="1034,93,0,0" Text="Savings" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnSavings_MouseEnter" MouseLeave="btnSavings_MouseLeave" MouseUp="btnSavings_MouseUp"/>
+        <Rectangle x:Name="SavingRec" HorizontalAlignment="Left" Height="76" Margin="1034,53,0,0" VerticalAlignment="Top" Width="150" Fill="#FFF9EFA3" RadiusX="15" RadiusY="15"/>
+        <TextBlock x:Name="btnSavings" HorizontalAlignment="Left" Margin="1034,54,0,0" Text="Savings" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnSavings_MouseEnter" MouseLeave="btnSavings_MouseLeave" MouseUp="btnSavings_MouseUp"/>
 
-        <Rectangle x:Name="DebitRec" HorizontalAlignment="Left" Height="76" Margin="860,185,0,0" VerticalAlignment="Top" Width="150" Fill="#FF90E0EF" RadiusX="15" RadiusY="15"/>
-        <TextBlock x:Name="btnDebit" HorizontalAlignment="Left" Margin="860,186,0,0" Text="Debit" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnDebit_MouseEnter" MouseLeave="btnDebit_MouseLeave" MouseUp="btnDebit_MouseUp"/>
+        <Rectangle x:Name="DebitRec" HorizontalAlignment="Left" Height="76" Margin="860,146,0,0" VerticalAlignment="Top" Width="150" Fill="#FF90E0EF" RadiusX="15" RadiusY="15"/>
+        <TextBlock x:Name="btnDebit" HorizontalAlignment="Left" Margin="860,147,0,0" Text="Debit" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnDebit_MouseEnter" MouseLeave="btnDebit_MouseLeave" MouseUp="btnDebit_MouseUp"/>
 
-        <Rectangle x:Name="CreditRec" HorizontalAlignment="Left" Height="76" Margin="1034,185,0,0" VerticalAlignment="Top" Width="150" Fill="#FFF0AA78" RadiusX="15" RadiusY="15"/>
-        <TextBlock x:Name="btnCredit" HorizontalAlignment="Left" Margin="1034,186,0,0" Text="Credit" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnCredit_MouseEnter" MouseLeave="btnCredit_MouseLeave" MouseUp="btnCredit_MouseUp"/>
+        <Rectangle x:Name="CreditRec" HorizontalAlignment="Left" Height="76" Margin="1034,146,0,0" VerticalAlignment="Top" Width="150" Fill="#FFF0AA78" RadiusX="15" RadiusY="15"/>
+        <TextBlock x:Name="btnCredit" HorizontalAlignment="Left" Margin="1034,147,0,0" Text="Credit" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnCredit_MouseEnter" MouseLeave="btnCredit_MouseLeave" MouseUp="btnCredit_MouseUp"/>
 
-        <Rectangle x:Name="BankRec" HorizontalAlignment="Left" Height="76" Margin="860,279,0,0" VerticalAlignment="Top" Width="150" Fill="#FFA4B8FA" RadiusX="15" RadiusY="15"/>
-        <TextBlock x:Name="btnBank" HorizontalAlignment="Left" Margin="860,280,0,0" Text="Bank" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnBank_MouseEnter" MouseLeave="btnBank_MouseLeave" MouseUp="btnBank_MouseUp"/>
+        <Rectangle x:Name="BankRec" HorizontalAlignment="Left" Height="76" Margin="860,240,0,0" VerticalAlignment="Top" Width="150" Fill="#FFA4B8FA" RadiusX="15" RadiusY="15"/>
+        <TextBlock x:Name="btnBank" HorizontalAlignment="Left" Margin="860,241,0,0" Text="Bank" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnBank_MouseEnter" MouseLeave="btnBank_MouseLeave" MouseUp="btnBank_MouseUp"/>
 
-        <Rectangle x:Name="CryptoRec" HorizontalAlignment="Left" Height="76" Margin="1034,279,0,0" VerticalAlignment="Top" Width="150" Fill="#FFD17957" RadiusX="15" RadiusY="15"/>
-        <TextBlock x:Name="btnCrypto" HorizontalAlignment="Left" Margin="1034,280,0,0" Text="Crypto" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnCrypto_MouseEnter" MouseLeave="btnCrypto_MouseLeave" MouseUp="btnCrypto_MouseUp"/>
+        <Rectangle x:Name="CryptoRec" HorizontalAlignment="Left" Height="76" Margin="1034,240,0,0" VerticalAlignment="Top" Width="150" Fill="#FFD17957" RadiusX="15" RadiusY="15"/>
+        <TextBlock x:Name="btnCrypto" HorizontalAlignment="Left" Margin="1034,241,0,0" Text="Crypto" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnCrypto_MouseEnter" MouseLeave="btnCrypto_MouseLeave" MouseUp="btnCrypto_MouseUp"/>
 
 
 
@@ -558,9 +548,20 @@
         </lvc:CartesianChart>
 
 
-        <Button Content="Button" HorizontalAlignment="Left" Margin="817,62,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
-        <Label Content="{Binding UserId}" Margin="669,38,491,565"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="790,64,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+        <Label x:Name="lblCurMoney" Content="Total money for the last recorded day: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="455,346,0,0"/>
+        <lvc:PieChart x:Name="MainPieChart" Margin="345,28,530,315" InnerRadius="86">
 
+            <lvc:PieChart.Series>
+                <lvc:PieSeries Title="Cash" Values="{Binding PieValuesCash}" Fill="#FF8AC97E"/>
+                <lvc:PieSeries Title="Savings" Values="{Binding PieValuesSavings}" Fill="#FFF9EFA3"/>
+                <lvc:PieSeries Title="DebitCard" Values="{Binding PieValuesDebit}" Fill="#FF90E0EF" />
+                <lvc:PieSeries Title="CreditCard" Values="{Binding PieValuesCredit}" Fill="#FFF0AA78" />
+                <lvc:PieSeries Title="Bank" Values="{Binding PieValuesBank}" Fill="#A4B8FA" />
+                <lvc:PieSeries Title="Crypto" Values="{Binding PieValuesCrypto}" Fill="#D17957"/>
+            </lvc:PieChart.Series>
+
+        </lvc:PieChart>
     </Grid>
 </Window>
             
