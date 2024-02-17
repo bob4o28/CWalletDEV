@@ -120,6 +120,49 @@ namespace CWalletDEV
             }
         }
 
+        public void BasicRecordAdd(string Value, string Currency, DateTime chosenDate)
+        {
+            using (MySqlConnection conn = ConnectToDbWithSshTunnel())
+            {
+                if (conn == null || conn.State != ConnectionState.Open)
+                    return;
+
+                // Check if a row with the chosen date exists
+                string checkQuery = "SELECT COUNT(*) FROM MoneyHolders WHERE UserID = @UserId AND Date = @ChosenDate";
+                using (MySqlCommand checkCmd = new MySqlCommand(checkQuery, conn))
+                {
+                    checkCmd.Parameters.AddWithValue("@UserId", UserId);
+                    checkCmd.Parameters.AddWithValue("@ChosenDate", chosenDate);
+                    int dateExists = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+                    if (dateExists > 0)
+                    {
+                        // If the date exists, update the Cash column
+                        string updateQuery = "UPDATE MoneyHolders SET Cash = @Value WHERE UserID = @UserId AND Date = @ChosenDate";
+                        using (MySqlCommand updateCmd = new MySqlCommand(updateQuery, conn))
+                        {
+                            updateCmd.Parameters.AddWithValue("@UserId", UserId);
+                            updateCmd.Parameters.AddWithValue("@ChosenDate", chosenDate);
+                            updateCmd.Parameters.AddWithValue("@Value", Value);
+                            updateCmd.ExecuteNonQuery();
+                        }
+                    }
+                    else
+                    {
+                        // If the date does not exist, insert a new row
+                        string insertQuery = "INSERT INTO MoneyHolders (UserID, Date, Cash) VALUES (@UserId, @ChosenDate, @Value)";
+                        using (MySqlCommand insertCmd = new MySqlCommand(insertQuery, conn))
+                        {
+                            insertCmd.Parameters.AddWithValue("@UserId", UserId);
+                            insertCmd.Parameters.AddWithValue("@ChosenDate", chosenDate);
+                            insertCmd.Parameters.AddWithValue("@Value", Value);
+                            insertCmd.ExecuteNonQuery();
+                        }
+                    }
+                }
+            }
+        }
+
 
         public void MainWinStartUp()
         {

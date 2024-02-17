@@ -33,6 +33,9 @@ namespace CWalletDEV
             _viewModel = new MainViewModel();
             this.DataContext = _viewModel;
             //Getting latest data
+            //AreaChart
+            _viewModel.AreaChartCash = new ChartValues<double> { };
+            _viewModel.LabelsCash = new List<string> { };
             using (MySqlConnection conn = dbConnector.ConnectToDbWithSshTunnel())
             {
                 if (conn == null || conn.State != ConnectionState.Open)
@@ -115,6 +118,7 @@ namespace CWalletDEV
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
             this.DialogResult = true;
         }
 
