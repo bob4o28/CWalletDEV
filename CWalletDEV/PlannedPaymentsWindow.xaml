@@ -27,6 +27,6 @@
         </Button>
 
         <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" CanUserAddRows="False" IsReadOnly="True" Margin="0,91,0,10" />
-        <Button Content="Go back&#xD;&#xA;" HorizontalAlignment="Left" Height="56" Margin="594,14,0,0" VerticalAlignment="Top" Width="179" Click="Button_Click"/>
+        <Button Content="Go back" HorizontalAlignment="Left" Height="56" Margin="594,14,0,0" VerticalAlignment="Top" Width="179" Click="Button_Click"/>
     </Grid>
 </Window>
