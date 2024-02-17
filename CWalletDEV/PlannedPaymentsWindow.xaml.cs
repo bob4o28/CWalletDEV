@@ -1,5 +1,8 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,12 +25,38 @@ namespace CWalletDEV
         public PlannedPaymentsWindow()
         {
             InitializeComponent();
+            LoadData();
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             AddPlannedPaymentWin addPlannedPaymentWin = new AddPlannedPaymentWin();
             addPlannedPaymentWin.ShowDialog();
+        }
+
+        private void LoadData()
+        {
+            DataTable dt = GetDataTable(); // Your method to get data from the database
+            dataGrid.ItemsSource = dt.DefaultView;
+        }
+
+        private DataTable GetDataTable()
+        {
+            DbConnector dbConnector1 = new DbConnector();
+            DataTable dt = new DataTable();
+            using (MySqlConnection conn = dbConnector1.ConnectToDbWithSshTunnel())
+            {
+                string query = "Select IdPlannedPayemnts, NameOfPP, WorthOfPP, DueDatte FROM cwallet.PlannedPayments WHERE IdUsers = @PPUser";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@PPUser", DbConnector.UserId);
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        dt.Load(reader);
+                    }
+                }
+            }
+            return dt;
         }
     }
 }

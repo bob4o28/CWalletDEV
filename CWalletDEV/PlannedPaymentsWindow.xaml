@@ -25,5 +25,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
+
+        <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" CanUserAddRows="False" IsReadOnly="True" Margin="0,91,0,10" />
     </Grid>
 </Window>

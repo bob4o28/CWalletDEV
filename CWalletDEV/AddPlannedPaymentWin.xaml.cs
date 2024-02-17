@@ -29,8 +29,14 @@ namespace CWalletDEV
 
                 DbConnector dbConnector = new DbConnector();
                 string name = Name.Text;
-                decimal worth = decimal.Parse(Worth.Text);
-          
+            decimal worth = 0;
+            try
+            {
+                worth = decimal.Parse(Worth.Text);
+            }
+            catch {
+                NoInputLabel.Content = "Please give a worth to your planned payment!";
+            }
                 // Your DatePicker control is named 'DatePick'
                 if (Date_Pick.SelectedDate.HasValue && name != null && worth != null)
                 {
@@ -42,6 +48,11 @@ namespace CWalletDEV
                 {
                     NoInputLabel.Content = "The name, the worth or the date are not set!";
                 }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -17,13 +17,15 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <DockPanel HorizontalAlignment="Center" LastChildFill="False" Grid.RowSpan="3" Width="59" Background="#FFC5F0F4" Margin="0,0,0,-27"/>
-        
+        <DockPanel HorizontalAlignment="Center" LastChildFill="False" Grid.RowSpan="3" Width="59" Background="#FFC5F0F4" Margin="0,0,0,-27">
+            <DockPanel LastChildFill="False" Width="60" Height="312"/>
+        </DockPanel>
+        <DockPanel Grid.Column="1" HorizontalAlignment="Center" Height="31" LastChildFill="False" Grid.RowSpan="3" VerticalAlignment="Top" Width="741" Background="#FFB67352" />
         <Label Content="Name" Grid.Row="2" Grid.Column="0" Margin="0,45,0,229"/>
-        <TextBox x:Name="Name" Grid.Row="2" Grid.ColumnSpan="2" Margin="59,31,0,215"/>
+        <TextBox x:Name="Name" Grid.Row="2" Grid.ColumnSpan="2" Margin="59,31,0,215" FontSize="22"/>
 
         <Label Content="Worth" Grid.Row="2" Grid.Column="0" RenderTransformOrigin="0.42,1.278" Margin="0,128,0,154"/>
-        <TextBox x:Name="Worth" Grid.Row="2" Grid.ColumnSpan="2" Margin="59,112,0,132" RenderTransformOrigin="0.5,0.5">
+        <TextBox x:Name="Worth" Grid.Row="2" Grid.ColumnSpan="2" Margin="59,112,0,132" RenderTransformOrigin="0.5,0.5" FontSize="22">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -35,11 +37,13 @@
         </TextBox>
 
         <Label Content="Date Pick" Grid.Row="2" Grid.Column="0" Margin="0,202,0,74"/>
-        <DatePicker x:Name="Date_Pick" Grid.Row="2" Grid.ColumnSpan="2" Margin="59,202,0,74"/>
-        <Label Grid.Column="1" Content="Add Payment" HorizontalAlignment="Left" Height="26" Margin="299,0,0,0" VerticalAlignment="Top" Width="84" Grid.Row="2"/>
+        <DatePicker x:Name="Date_Pick" Grid.Row="2" Margin="59,202,0,94" Grid.ColumnSpan="2"/>
+        <Label Grid.Column="1" Content="Add Payment" HorizontalAlignment="Left" Height="26" Margin="320,0,0,0" VerticalAlignment="Top" Width="79" Grid.Row="2"/>
         <Button Grid.Column="1" Content="Save" HorizontalAlignment="Left" Height="52" Margin="482,254,0,0" VerticalAlignment="Top" Width="95" Grid.Row="2" Click="Button_Click"/>
-        <Button Grid.Column="1" Content="Cancel" HorizontalAlignment="Left" Height="52" Margin="605,254,0,0" VerticalAlignment="Top" Width="95" Grid.Row="2"/>
+        <Button Grid.Column="1" Content="Cancel" HorizontalAlignment="Left" Height="52" Margin="605,254,0,0" VerticalAlignment="Top" Width="95" Grid.Row="2" Click="Button_Click_1"/>
         <Label x:Name="NoInputLabel" Grid.Column="1" Content="" HorizontalAlignment="Left" Height="50" Margin="10,254,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="321"/>
-        
+        <Label Grid.Column="1" Content="Add Payment" HorizontalAlignment="Left" Height="26" Margin="320,0,0,0" VerticalAlignment="Top" Width="89" Grid.Row="2"/>
+
+
     </Grid>
 </Window>
