@@ -92,7 +92,11 @@ namespace CWalletDEV
                         {
                             CurMoney = temp.Last().ToString();
                         }
-                        catch { CurMoney = "0"; }
+                        catch 
+                        { 
+                            CurMoney = "0";
+                            
+                        }
                         lblCurMoney.Content += CurMoney;
 
 
