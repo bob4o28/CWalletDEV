@@ -15,7 +15,7 @@ public class MainViewModel : INotifyPropertyChanged
             OnPropertyChanged("ChartValues");
         }
     }
-
+    private List<string> _labels;
     public List<string> Labels
     {
         get { return _labels; }
@@ -27,9 +27,15 @@ public class MainViewModel : INotifyPropertyChanged
     }
 
 
-    //Pie chart DataBinding Values identify
+ 
+
+   //Pie chart DataBinding Values identify
     private ChartValues<double> _pieValuesCash;
-    private List<string> _labels;
+    private ChartValues<double> _pieValuesBank;
+    private ChartValues<double> _pieValuesDebit;
+    private ChartValues<double> _pieValuesCredit;
+    private ChartValues<double> _pieValuesSavings;
+    private ChartValues<double> _pieValuesCrypto;
 
     public ChartValues<double> PieValuesCash
     {
@@ -41,6 +47,55 @@ public class MainViewModel : INotifyPropertyChanged
         }
     }
 
+    public ChartValues<double> PieValuesBank
+    {
+        get { return _pieValuesBank; }
+        set
+        {
+            _pieValuesCash = value;
+            OnPropertyChanged("PieValuesBank");
+        }
+    }
+
+    public ChartValues<double> PieValuesDebit
+    {
+        get { return _pieValuesDebit; }
+        set
+        {
+            _pieValuesCash = value;
+            OnPropertyChanged("PieValuesCash");
+        }
+    }
+
+    public ChartValues<double> PieValuesCredit
+    {
+        get { return _pieValuesCredit; }
+        set
+        {
+            _pieValuesCash = value;
+            OnPropertyChanged("PieValuesCash");
+        }
+    }
+
+    public ChartValues<double> PieValuesSavings
+    {
+        get { return _pieValuesSavings; }
+        set
+        {
+            _pieValuesCash = value;
+            OnPropertyChanged("PieValuesCash");
+        }
+    }
+
+    public ChartValues<double> PieValuesCrypto
+    {
+        get { return _pieValuesCrypto; }
+        set
+        {
+            _pieValuesCash = value;
+            OnPropertyChanged("PieValuesCash");
+        }
+    }
 
     public MainViewModel()
     {
@@ -55,12 +110,6 @@ public class MainViewModel : INotifyPropertyChanged
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
-
-
-
-
-
-    
 
 
 }

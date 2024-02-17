@@ -509,11 +509,11 @@
         <lvc:PieChart x:Name="MainPieChart" Margin="342,16,533,328" InnerRadius="86">
             <lvc:PieChart.Series>
                 <lvc:PieSeries Title="Cash" Values="{Binding PieValuesCash}" Fill="#FF8AC97E"/>
-                <lvc:PieSeries Title="Savings" Values="41" Fill="#FFF9EFA3"/>
-                <lvc:PieSeries Title="DebitCard" Values="64" Fill="#FF90E0EF" />
-                <lvc:PieSeries Title="CreditCard" Values="73" Fill="#FFF0AA78" />
-                <lvc:PieSeries Title="Bank" Values="91" Fill="#A4B8FA" />
-                <lvc:PieSeries Title="Crypto" Values="30" Fill="#D17957"/>
+                <lvc:PieSeries Title="Savings" Values="{Binding PieValuesSavings}" Fill="#FFF9EFA3"/>
+                <lvc:PieSeries Title="DebitCard" Values="{Binding PieValuesDebit}" Fill="#FF90E0EF" />
+                <lvc:PieSeries Title="CreditCard" Values="{Binding PieValuesCredit}" Fill="#FFF0AA78" />
+                <lvc:PieSeries Title="Bank" Values="{Binding PieValuesBank}" Fill="#A4B8FA" />
+                <lvc:PieSeries Title="Crypto" Values="{Binding PieValuesCrypto}" Fill="#D17957"/>
             </lvc:PieChart.Series>
         </lvc:PieChart>
 
