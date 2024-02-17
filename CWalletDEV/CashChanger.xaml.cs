@@ -51,16 +51,16 @@ namespace CWalletDEV
                             //Filling the Area chart's Lists with data.
                             //The indexes are for the placement of the Filed into the Selected table preview, for example 1 is for second.
                             DateTime dateValue = reader.GetDateTime(0);
-                            _viewModel.Labels.Add(dateValue.ToString("dd.MM.yyyy"));
-                            _viewModel.ChartValues.Add(reader.GetDouble(1));
+                            _viewModel.LabelsCash.Add(dateValue.ToString("dd.MM.yyyy"));
+                            _viewModel.AreaChartCash.Add(reader.GetDouble(1));
                         }
-                        _viewModel.Labels.Reverse();
-                        List<double> temp = new List<double>(_viewModel.ChartValues.Cast<double>());
+                        _viewModel.LabelsCash.Reverse();
+                        List<double> temp = new List<double>(_viewModel.AreaChartCash.Cast<double>());
                         temp.Reverse();
-                        _viewModel.ChartValues.Clear();
+                        _viewModel.AreaChartCash.Clear();
                         foreach (var item in temp)
                         {
-                            _viewModel.ChartValues.Add(item);
+                            _viewModel.AreaChartCash.Add(item);
                         }
 
 
