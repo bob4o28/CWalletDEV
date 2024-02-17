@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CWalletDEV" 
-        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" 
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         mc:Ignorable="d"
         Title="MainWindow" Height="672" Width="1245"
         WindowStartupLocation="CenterScreen"
@@ -543,11 +543,11 @@
 
         <lvc:CartesianChart Margin="324,402,61,29" Foreground="#FF676767">
             <lvc:CartesianChart.Series>
-                <lvc:LineSeries x:Name="MainAreaChart" Title="Week Data" Values="{Binding ChartValues}" PointGeometrySize="10" StrokeThickness="2" Stroke="#FF5E8257" Foreground="{x:Null}">
+                <lvc:LineSeries x:Name="MainAreaChart" Title="Week Data" Values="{Binding ChartValues}" PointGeometrySize="10" StrokeThickness="2" Stroke="#FF7B1606" Foreground="{x:Null}">
                     <lvc:LineSeries.Fill>
                         <LinearGradientBrush EndPoint="0.5,4" StartPoint="0.5,0">
-                            <GradientStop Color="#FF8AC97E"/>
-                            <GradientStop Color="#19C3C3C3" Offset="2"/>
+                            <GradientStop Color="#FFE63912"/>
+                            <GradientStop Color="#19D82020" Offset="0.4"/>
                         </LinearGradientBrush>
                     </lvc:LineSeries.Fill>
                 </lvc:LineSeries>

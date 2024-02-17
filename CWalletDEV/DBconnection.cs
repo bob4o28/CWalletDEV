@@ -92,7 +92,7 @@ namespace CWalletDEV
         //    return false;  // Return false if no matching user is found or conversion failed
         //}
 
-        public int UserId;
+        public static int UserId;
 
         public void SetUserId(string userEmail)
         {

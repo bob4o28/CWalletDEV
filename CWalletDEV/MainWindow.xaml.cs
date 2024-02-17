@@ -42,9 +42,9 @@ namespace CWalletDEV
 
             // Initialize your ChartValues and Labels
             _viewModel.PieValuesCash = new ChartValues<double> { 5.0 };
-            _viewModel.ChartValues = new ChartValues<double>();
-            _viewModel.Labels = new List<string>();  // Use a List instead of an array
-
+            _viewModel.ChartValues = new ChartValues<double> {};
+            _viewModel.Labels = new List<string> {};  // Use a List instead of an array
+            CurUser = DbConnector.UserId;
             //using (MySqlConnection conn = dbConnector.ConnectToDbWithSshTunnel())
             //{
             //    if (conn == null || conn.State != ConnectionState.Open)
@@ -71,23 +71,22 @@ namespace CWalletDEV
                 if (conn == null || conn.State != ConnectionState.Open)
                     return;
 
-                string query = "SELECT Sum, Date FROM MoneyHolders WHERE UserID = @MoneyUserID ORDER BY Date DESC LIMIT 7";
+                string query = "SELECT Sum, Date, UserID FROM MoneyHolders WHERE UserID = @MoneyUserID ORDER BY Date DESC LIMIT 7";
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@MoneyUserID", dbConnector.UserId);
+                    cmd.Parameters.AddWithValue("@MoneyUserID", DbConnector.UserId);
 
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
-                        _viewModel.ChartValues = new ChartValues<double>();
-                        _viewModel.Labels = new List<string>();
-
+                        
                         while (reader.Read())
                         {
                             _viewModel.ChartValues.Add(reader.GetDouble(0)); // Assuming Sum is at index 0
-                            _viewModel.Labels.Add(reader.GetString(1)); // Assuming Date is at index 1
+                            DateTime dateValue = reader.GetDateTime(1); // Assuming Date is at index 1
+                            _viewModel.Labels.Add(dateValue.ToString("dd.MM.yyyy"));
                         }
 
-                        
+
 
                     }
                 }
