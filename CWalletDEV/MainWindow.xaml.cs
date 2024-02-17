@@ -90,7 +90,7 @@ namespace CWalletDEV
                         }
 
                         CurMoney = temp.Last().ToString();
-                        lblCurMoney.Content = lblCurMoney.Content + CurMoney;
+                        lblCurMoney.Content += CurMoney;
 
 
 

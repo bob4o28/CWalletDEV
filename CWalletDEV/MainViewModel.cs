@@ -105,6 +105,32 @@ public class MainViewModel : INotifyPropertyChanged
         //PieValuesCash = new ChartValues<double> { 100.0 };
     }
 
+
+
+    //Cash win DataBinding
+    private ChartValues<double> _areaChartCash;
+
+    public ChartValues<double> AreaChartCash
+    {
+        get { return _areaChartCash; }
+        set
+        {
+            _areaChartCash = value;
+            OnPropertyChanged("AreaChartCash");
+        }
+    }
+    private List<string> _labelsCash;
+    public List<string> LabelsCash
+    {
+        get { return _labelsCash; }
+        set
+        {
+            _labelsCash = value;
+            OnPropertyChanged("Labels");
+        }
+    }
+
+
     public event PropertyChangedEventHandler PropertyChanged;
 
     protected virtual void OnPropertyChanged(string propertyName = null)

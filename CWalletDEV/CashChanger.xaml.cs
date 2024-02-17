@@ -1,6 +1,9 @@
 ﻿using LiveCharts;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,14 +25,50 @@ namespace CWalletDEV
     public partial class CashChanger : Window
     {
         private MainViewModel _viewModel;
+        DbConnector dbConnector = new DbConnector();
+        MainWindow mainWindow = new MainWindow();
         public CashChanger()
         {
             InitializeComponent();
             _viewModel = new MainViewModel();
             this.DataContext = _viewModel;
-            _viewModel.ChartValues = new ChartValues<double> { 15, 15, 20, 47, 8, 78, 6 };
-            _viewModel.Labels = new List<string> { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
-            _viewModel.PieValuesCash = new ChartValues<double> { 5.0 };
+            //Getting latest data
+            using (MySqlConnection conn = dbConnector.ConnectToDbWithSshTunnel())
+            {
+                if (conn == null || conn.State != ConnectionState.Open)
+                    return;
+
+                string query = "SELECT Date, Cash FROM MoneyHolders WHERE UserID = @MoneyUserID ORDER BY Date DESC LIMIT " + mainWindow.Days.ToString();
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@MoneyUserID", DbConnector.UserId);
+
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+
+                        while (reader.Read())
+                        {
+                            //Filling the Area chart's Lists with data.
+                            //The indexes are for the placement of the Filed into the Selected table preview, for example 1 is for second.
+                            DateTime dateValue = reader.GetDateTime(0);
+                            _viewModel.Labels.Add(dateValue.ToString("dd.MM.yyyy"));
+                            _viewModel.ChartValues.Add(reader.GetDouble(1));
+                        }
+                        _viewModel.Labels.Reverse();
+                        List<double> temp = new List<double>(_viewModel.ChartValues.Cast<double>());
+                        temp.Reverse();
+                        _viewModel.ChartValues.Clear();
+                        foreach (var item in temp)
+                        {
+                            _viewModel.ChartValues.Add(item);
+                        }
+
+
+                    }
+                }
+
+
+            }
         }
 
         private void ellipseAdd_MouseEnter(object sender, MouseEventArgs e)
