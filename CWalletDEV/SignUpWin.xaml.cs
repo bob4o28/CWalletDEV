@@ -43,6 +43,7 @@ namespace CWalletDEV
             
             DbConnector dbConnector = new DbConnector();
             dbConnector.AddUser(txtUserName.Text, txtUserLastName.Text, txtUserEmail.Text, txtPassword.Text);
+            dbConnector.SetUserId(txtUserEmail.Text);
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show(); 
             this.Close(); // Close the login window
