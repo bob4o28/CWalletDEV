@@ -176,6 +176,76 @@ public class MainViewModel : INotifyPropertyChanged
         }
     }
 
+
+    private ChartValues<double> _areaChartCredit;
+
+    public ChartValues<double> AreaChartCredit
+    {
+        get { return _areaChartCredit; }
+        set
+        {
+            _areaChartCredit = value;
+            OnPropertyChanged("AreaChartCredit");
+        }
+    }
+    private List<string> _labelsCredit;
+    public List<string> LabelsCredit
+    {
+        get { return _labelsCredit; }
+        set
+        {
+            _labelsCredit = value;
+            OnPropertyChanged("LabelsCredit");
+        }
+    }
+
+
+    private ChartValues<double> _areaChartCrypto;
+
+    public ChartValues<double> AreaChartCrypto
+    {
+        get { return _areaChartCrypto; }
+        set
+        {
+            _areaChartCrypto = value;
+            OnPropertyChanged("AreaChartCredit");
+        }
+    }
+    private List<string> _labelsCrypto;
+    public List<string> LabelsCrypto
+    {
+        get { return _labelsCrypto; }
+        set
+        {
+            _labelsCrypto = value;
+            OnPropertyChanged("LabelsCrypto");
+        }
+    }
+
+
+
+    private ChartValues<double> _areaChartDebit;
+
+    public ChartValues<double> AreaChartDebit
+    {
+        get { return _areaChartDebit; }
+        set
+        {
+            _areaChartDebit = value;
+            OnPropertyChanged("AreaChartDebit");
+        }
+    }
+    private List<string> _labelsDebit;
+    public List<string> LabelsDebit
+    {
+        get { return _labelsDebit; }
+        set
+        {
+            _labelsDebit = value;
+            OnPropertyChanged("LabelsDebit");
+        }
+    }
+
     public event PropertyChangedEventHandler PropertyChanged;
 
     protected virtual void OnPropertyChanged(string propertyName = null)

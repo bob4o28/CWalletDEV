@@ -9,38 +9,10 @@
         Title="BankChanger" Height="725" Width="575" Background="#FFDFD7CB"
         WindowStartupLocation="CenterScreen">
     <Window.Resources>
-        <Storyboard x:Key="AddEnter">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetName="ellipseAdd" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
-                <EasingColorKeyFrame KeyTime="00:00:00" Value="#00757575"/>
-                <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#4C757575"/>
-            </ColorAnimationUsingKeyFrames>
-        </Storyboard>
-        <Storyboard x:Key="AddLeave">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetName="ellipseAdd" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
-                <EasingColorKeyFrame KeyTime="00:00:00" Value="#4C757575"/>
-                <EasingColorKeyFrame KeyTime="00:00:00.1000000" Value="#00757575"/>
-            </ColorAnimationUsingKeyFrames>
-        </Storyboard>
-        <Storyboard x:Key="AddFirstPress">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetName="ellipseAdd" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
-                <EasingColorKeyFrame KeyTime="00:00:00" Value="#4C757575"/>
-                <EasingColorKeyFrame KeyTime="00:00:00.2000000" Value="#4C757575"/>
-            </ColorAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="image" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
-                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-45"/>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-        <Storyboard x:Key="AddSecondPress">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetName="ellipseAdd" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
-                <EasingColorKeyFrame KeyTime="00:00:00" Value="#4C757575"/>
-                <EasingColorKeyFrame KeyTime="00:00:00.2000000" Value="#4C757575"/>
-            </ColorAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="image" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
-                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-45"/>
-                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
+        <Storyboard x:Key="AddEnter"/>
+        <Storyboard x:Key="AddLeave"/>
+        <Storyboard x:Key="AddFirstPress"/>
+        <Storyboard x:Key="AddSecondPress"/>
     </Window.Resources>
     <Grid Background="#FFDFD7CB">
         <Grid.ColumnDefinitions>
@@ -58,11 +30,11 @@
 
         <Label x:Name="LblCurrency" Content="Currency:" HorizontalAlignment="Left" Height="52" Margin="46,522,0,0" VerticalAlignment="Top" Width="185" FontSize="36" FontFamily="Lucida Bright"/>
 
-        <ComboBox HorizontalAlignment="Left" Height="50" Margin="46,580,0,0" VerticalAlignment="Top" Width="233">
+        <ComboBox x:Name="CurrencyComboDebit" HorizontalAlignment="Left" Height="50" Margin="46,580,0,0" VerticalAlignment="Top" Width="233">
             <ComboBoxItem Content="BGN"/>
             <ComboBoxItem Content="EUR"/>
         </ComboBox>
-        <TextBox HorizontalAlignment="Left" Height="50" Margin="46,464,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233"/>
+        <TextBox x:Name="txtDebit" HorizontalAlignment="Left" Height="50" Margin="46,464,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233"/>
         <Button Content="Save" HorizontalAlignment="Left" Height="40" Margin="307,643,0,0" VerticalAlignment="Top" Width="108" Click="Button_Click">
             <Button.Resources>
                 <Style TargetType="Border">
@@ -80,7 +52,7 @@
 
         <lvc:CartesianChart Margin="24,180,25,301" Foreground="#FF676767">
             <lvc:CartesianChart.Series>
-                <lvc:LineSeries Title="Week Data" Values="{Binding ChartValues}" PointGeometrySize="10" StrokeThickness="2" Stroke="#FF5E8257" Foreground="{x:Null}">
+                <lvc:LineSeries Title="Week Data" Values="{Binding AreaChartDebit}" PointGeometrySize="10" StrokeThickness="2" Stroke="#FF577182" Foreground="{x:Null}">
                     <lvc:LineSeries.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#FF90E0EF"/>
@@ -90,20 +62,11 @@
                 </lvc:LineSeries>
             </lvc:CartesianChart.Series>
             <lvc:CartesianChart.AxisX>
-                <lvc:Axis Title="Days of Week" Labels="{Binding Labels}"/>
+                <lvc:Axis Title="Days of Week" Labels="{Binding LabelsDebit}"/>
             </lvc:CartesianChart.AxisX>
         </lvc:CartesianChart>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="33" Margin="290,473,0,0" VerticalAlignment="Top" Width="32" Source="/Group 2.png" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Ellipse x:Name="ellipseAdd" HorizontalAlignment="Left" Height="44" Margin="284,467,0,0" Stroke="Black" VerticalAlignment="Top" Width="44" StrokeThickness="2" Fill="Transparent" MouseEnter="ellipseAdd_MouseEnter" MouseLeave="ellipseAdd_MouseLeave" MouseUp="ellipseAdd_MouseUp"/>
+        <DatePicker x:Name="DebitDatePick" HorizontalAlignment="Left" Margin="288,489,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Background="{x:Null}" Width="113"/>
+        <Label Content="Select a record date:*" HorizontalAlignment="Left" Margin="288,463,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
