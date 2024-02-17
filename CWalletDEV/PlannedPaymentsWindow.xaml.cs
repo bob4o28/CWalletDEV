@@ -58,5 +58,12 @@ namespace CWalletDEV
             }
             return dt;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+        }
     }
 }
