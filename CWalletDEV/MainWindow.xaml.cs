@@ -258,11 +258,7 @@ namespace CWalletDEV
 
         }
 
-        private void btnCash_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            CashChanger CashChanger = new CashChanger();
-            CashChanger.ShowDialog();
-        }
+        
 
         private void btnCash_MouseEnter(object sender, MouseEventArgs e)
         {
@@ -377,46 +373,59 @@ namespace CWalletDEV
             // Assign values to the properties
             //_viewModel.ChartValues = new ChartValues<double> { 15, 15, 20, 47, 8, 78, 6 };
             //_viewModel.Labels = new[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
+            // Create a new instance of the main window
+        }
 
-
-
-
+        private void btnCash_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            CashChanger dialogCash = new CashChanger();
+            dialogCash.Closed += (s, args) => RefreshMainWindow();
+            dialogCash.ShowDialog();
         }
 
         private void btnSavings_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            SavingsChanger SavingsChanger = new SavingsChanger();
-            SavingsChanger.ShowDialog();
+            // Create and show the dialog window
+            SavingsChanger dialog = new SavingsChanger();
+            dialog.Closed += (s, args) => RefreshMainWindow();
+            dialog.ShowDialog();
+
+
         }
 
         private void btnDebit_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            DebitCardChanger DebitChanger = new DebitCardChanger();
-            DebitChanger.ShowDialog();
+            DebitCardChanger dialogDebit = new DebitCardChanger();
+            dialogDebit.Closed += (s, args) => RefreshMainWindow();
+            dialogDebit.ShowDialog();
         }
 
         private void btnCredit_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            CreditCardChanger CreditCardChanger = new CreditCardChanger();
-            CreditCardChanger.ShowDialog();
+            CreditCardChanger dialogCredit = new CreditCardChanger();
+            dialogCredit.Closed += (s, args) => RefreshMainWindow();
+            dialogCredit.ShowDialog();
         }
 
         private void btnBank_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            BankChanger BankChanger = new BankChanger();
-            BankChanger.ShowDialog();
+            BankChanger dialogBank = new BankChanger();
+            dialogBank.Closed += (s, args) => RefreshMainWindow();
+            dialogBank.ShowDialog();
         }
 
         private void btnCrypto_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            CryptoChanger CryptoChanger = new CryptoChanger();
-            CryptoChanger.ShowDialog();
+            CryptoChanger dialogCrypto = new CryptoChanger();
+            dialogCrypto.Closed += (s, args) => RefreshMainWindow();
+            dialogCrypto.ShowDialog();
         }
 
         private void TxtSettings_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            SettingsWin Setting = new SettingsWin();
-            Setting.ShowDialog();
+            SettingsWin dialogSetting = new SettingsWin();
+            dialogSetting.Closed += (s, args) => RefreshMainWindow();
+            dialogSetting.ShowDialog();
         }
 
 
@@ -433,5 +442,21 @@ namespace CWalletDEV
             plannedPaymentsWindow.Show();
             this.Close();
         }
+
+        private void RefreshMainWindow()
+        {
+            // Create a new instance of the main window
+            MainWindow newWindow = new MainWindow();
+
+            // Set the new window as the main window
+            Application.Current.MainWindow = newWindow;
+
+            // Show the new window
+            newWindow.Show();
+
+            // Close the current window
+            this.Close();
+        }
+
     }
 }

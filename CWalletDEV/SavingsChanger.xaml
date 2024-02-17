@@ -52,7 +52,7 @@
 
         <lvc:CartesianChart Margin="24,180,25,301" Foreground="#FF676767">
             <lvc:CartesianChart.Series>
-                <lvc:LineSeries Title="Week Data" Values="{Binding AreaChartSavings}" PointGeometrySize="10" StrokeThickness="2" Stroke="#FF5E8257" Foreground="{x:Null}">
+                <lvc:LineSeries Title="Week Data" Values="{Binding AreaChartSavings}" PointGeometrySize="10" StrokeThickness="2" Stroke="#FF827C57" Foreground="{x:Null}">
                     <lvc:LineSeries.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#FFF9EFA3"/>

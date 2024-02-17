@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CWalletDEV"
         mc:Ignorable="d"
-        Title="SignUpWin" Height="689" Width="526">
+        Title="SignUpWin" Height="689" Width="526" WindowStartupLocation="CenterScreen">
     <Grid Background="#FFDFD7CB" Height="679" VerticalAlignment="Top">
         <Image Margin="85,34,85,0" Source="/LblSignUp.png" Stretch="Fill" VerticalAlignment="Top" Height="126"/>
         <TextBox x:Name="txtUserName" Margin="28,206,286,449" TextWrapping="Wrap" TextChanged="TextBox_TextChanged"/>
