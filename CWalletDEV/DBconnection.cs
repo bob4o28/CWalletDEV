@@ -47,24 +47,6 @@ namespace CWalletDEV
             }
         }
 
-        public bool CheckLogin(string userEmail, string password)
-        {
-            using (MySqlConnection conn = ConnectToDbWithSshTunnel())
-            {
-                if (conn == null || conn.State != ConnectionState.Open)
-                    return false;
-
-                string query = "SELECT COUNT(*) FROM Users WHERE Email = @UserEmail AND Password = @Password";
-                using (MySqlCommand cmd = new MySqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@UserEmail", userEmail);
-                    cmd.Parameters.AddWithValue("@Password", password);
-                    int count = Convert.ToInt32(cmd.ExecuteScalar());
-                    return count > 0;  // Return true if there is a matching username and password
-                }
-            }
-        }
-
         public static int UserId;
 
         public void SetUserId(string userEmail)
@@ -85,6 +67,25 @@ namespace CWalletDEV
             }
         }
 
+        public bool CheckLogin(string userEmail, string password)
+        {
+            using (MySqlConnection conn = ConnectToDbWithSshTunnel())
+            {
+                if (conn == null || conn.State != ConnectionState.Open)
+                    return false;
+
+                string query = "SELECT COUNT(*) FROM Users WHERE Email = @UserEmail AND Password = @Password";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@UserEmail", userEmail);
+                    cmd.Parameters.AddWithValue("@Password", password);
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    return count > 0;  // Return true if there is a matching username and password
+                }
+            }
+        }
+
+       
         public void AddPlannedPayment(string nameOfPP, decimal worthOfPP, DateTime dueDate)
         {
             using (MySqlConnection conn = ConnectToDbWithSshTunnel())
