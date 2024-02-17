@@ -52,7 +52,7 @@
 
         <lvc:CartesianChart Margin="24,180,25,301" Foreground="#FF676767">
             <lvc:CartesianChart.Series>
-                <lvc:LineSeries Title="Week Data" Values="{Binding ChartValues}" PointGeometrySize="10" StrokeThickness="2" Stroke="#FF5E8257" Foreground="{x:Null}">
+                <lvc:LineSeries Title="Week Data" Values="{Binding AreaChartBank}" PointGeometrySize="10" StrokeThickness="2" Stroke="#FF5E8257" Foreground="{x:Null}">
                     <lvc:LineSeries.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#FFA4B8FA"/>
@@ -62,7 +62,7 @@
                 </lvc:LineSeries>
             </lvc:CartesianChart.Series>
             <lvc:CartesianChart.AxisX>
-                <lvc:Axis Title="Days of Week" Labels="{Binding Labels}"/>
+                <lvc:Axis Title="Days of Week" Labels="{Binding LabelsBank}"/>
             </lvc:CartesianChart.AxisX>
         </lvc:CartesianChart>
         <DatePicker x:Name="BankDatePick" HorizontalAlignment="Left" Margin="288,489,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Background="{x:Null}" Width="113"/>

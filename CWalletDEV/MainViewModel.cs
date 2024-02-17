@@ -154,6 +154,28 @@ public class MainViewModel : INotifyPropertyChanged
     }
 
 
+    private ChartValues<double> _areaChartBank;
+
+    public ChartValues<double> AreaChartBank
+    {
+        get { return _areaChartBank; }
+        set
+        {
+            _areaChartBank = value;
+            OnPropertyChanged("AreaChartBank");
+        }
+    }
+    private List<string> _labelsBank;
+    public List<string> LabelsBank
+    {
+        get { return _labelsBank; }
+        set
+        {
+            _labelsBank = value;
+            OnPropertyChanged("LabelsBank");
+        }
+    }
+
     public event PropertyChangedEventHandler PropertyChanged;
 
     protected virtual void OnPropertyChanged(string propertyName = null)
