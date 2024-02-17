@@ -549,9 +549,7 @@
         <Label x:Name="lblCurMoney" Content="Total money for the last recorded day: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="345,345,0,0"/>
 
         <Button Content="Button" HorizontalAlignment="Left" Margin="790,64,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
-        <Label x:Name="lblCurMoney" Content="Total money for the last recorded day: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="455,346,0,0"/>
         <lvc:PieChart x:Name="MainPieChart" Margin="345,28,530,315" InnerRadius="86">
-
             <lvc:PieChart.Series>
                 <lvc:PieSeries Title="Cash" Values="{Binding PieValuesCash}" Fill="#FF8AC97E"/>
                 <lvc:PieSeries Title="Savings" Values="{Binding PieValuesSavings}" Fill="#FFF9EFA3"/>

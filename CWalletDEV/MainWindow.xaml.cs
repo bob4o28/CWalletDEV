@@ -88,8 +88,11 @@ namespace CWalletDEV
                         {
                             _viewModel.ChartValues.Add(item);
                         }
-
-                        CurMoney = temp.Last().ToString();
+                        try
+                        {
+                            CurMoney = temp.Last().ToString();
+                        }
+                        catch { CurMoney = "0"; }
                         lblCurMoney.Content += CurMoney;
 
 
