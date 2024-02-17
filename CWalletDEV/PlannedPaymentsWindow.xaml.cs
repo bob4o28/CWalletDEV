@@ -65,5 +65,17 @@ namespace CWalletDEV
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+                // Refresh logic here
+                // For example, if you want to fully refresh the window, you can create a new one and close the current one
+                PlannedPaymentsWindow plannedPaymentsWindow = new PlannedPaymentsWindow();
+                Application.Current.MainWindow = plannedPaymentsWindow;
+                plannedPaymentsWindow.Show();
+                this.Close();
+
+        }
     }
 }
