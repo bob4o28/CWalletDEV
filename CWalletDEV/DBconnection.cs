@@ -104,22 +104,22 @@ namespace CWalletDEV
             }
         }
 
-        public void AddPlannedPayment(int AddUserID)
+        public void FirstUserStart()
         {
             using (MySqlConnection conn = ConnectToDbWithSshTunnel())
             {
                 if (conn == null || conn.State != ConnectionState.Open)
                     return;
-                DbConnector dbConnector = new DbConnector();
                 string query = "INSERT INTO MoneyHolders (UserID, Date) VALUES (@UserId, @CurDate)";
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@UserId", AddUserID);
+                    cmd.Parameters.AddWithValue("@UserId", UserId);
                     cmd.Parameters.AddWithValue("@CurDate", DateTime.Now);
                     cmd.ExecuteNonQuery();
                 }
             }
         }
+
 
         public void MainWinStartUp()
         {

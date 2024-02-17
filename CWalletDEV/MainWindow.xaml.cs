@@ -95,7 +95,7 @@ namespace CWalletDEV
                         catch 
                         { 
                             CurMoney = "0";
-                            
+                            dbConnector.FirstUserStart();
                         }
                         lblCurMoney.Content += CurMoney;
 
