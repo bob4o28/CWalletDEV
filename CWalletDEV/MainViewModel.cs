@@ -27,9 +27,9 @@ public class MainViewModel : INotifyPropertyChanged
     }
 
 
- 
 
-   //Pie chart DataBinding Values identify
+
+    //Pie chart DataBinding Values identify
     private ChartValues<double> _pieValuesCash;
     private ChartValues<double> _pieValuesBank;
     private ChartValues<double> _pieValuesDebit;
@@ -104,6 +104,32 @@ public class MainViewModel : INotifyPropertyChanged
         //Labels = new[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" , "Saturday", "Sunday"};
         //PieValuesCash = new ChartValues<double> { 100.0 };
     }
+
+
+
+    //Cash win DataBinding
+    private ChartValues<double> _areaChartCash;
+
+    public ChartValues<double> AreaChartCash
+    {
+        get { return _areaChartCash; }
+        set
+        {
+            _areaChartCash = value;
+            OnPropertyChanged("AreaChartCash");
+        }
+    }
+    private List<string> _labelsCash;
+    public List<string> LabelsCash
+    {
+        get { return _labelsCash; }
+        set
+        {
+            _labelsCash = value;
+            OnPropertyChanged("Labels");
+        }
+    }
+
 
     public event PropertyChangedEventHandler PropertyChanged;
 

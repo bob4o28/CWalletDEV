@@ -55,7 +55,7 @@ namespace CWalletDEV
             _viewModel.Labels = new List<string> { };
             //Test for the current user
             CurUser = DbConnector.UserId;
-            
+
             //Days to display at the main chart by select of the user.
             Days = 7;
 
@@ -71,7 +71,7 @@ namespace CWalletDEV
 
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
-                        
+
                         while (reader.Read())
                         {
                             //Filling the Area chart's Lists with data.
@@ -90,7 +90,7 @@ namespace CWalletDEV
                         }
 
                         CurMoney = temp.Last().ToString();
-                        lblCurMoney.Content = lblCurMoney.Content + CurMoney;
+                        lblCurMoney.Content += CurMoney;
 
 
 
@@ -108,7 +108,7 @@ namespace CWalletDEV
 
                         while (reader.Read())
                         {
-                            
+
                             //Filling the Pie chart's Lists with data.
                             _viewModel.PieValuesCash.Add(reader.GetDouble(0));
                             _viewModel.PieValuesBank.Add(reader.GetDouble(1));
@@ -129,7 +129,7 @@ namespace CWalletDEV
         //Menu button events
         private void TxtMenu_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            if(SidebarPos=="Open")
+            if (SidebarPos == "Open")
             {
                 Storyboard storyboard = this.FindResource("SidebarShrink") as Storyboard;
                 if (storyboard != null)
@@ -248,7 +248,7 @@ namespace CWalletDEV
             //// Assign values to the properties
             //_viewModel.AreaChartValues = new ChartValues<double> { 15, 15, 20, 47, 8, 78, 6 };
             //_viewModel.DaysOfWeel = new[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
-            
+
         }
 
         private void btnCash_MouseUp(object sender, MouseButtonEventArgs e)
@@ -370,9 +370,9 @@ namespace CWalletDEV
             // Assign values to the properties
             //_viewModel.ChartValues = new ChartValues<double> { 15, 15, 20, 47, 8, 78, 6 };
             //_viewModel.Labels = new[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
-            
 
-            
+
+
 
         }
 
@@ -387,7 +387,7 @@ namespace CWalletDEV
             DebitCardChanger DebitChanger = new DebitCardChanger();
             DebitChanger.ShowDialog();
         }
-        
+
         private void btnCredit_MouseUp(object sender, MouseButtonEventArgs e)
         {
             CreditCardChanger CreditCardChanger = new CreditCardChanger();
@@ -412,7 +412,7 @@ namespace CWalletDEV
             Setting.ShowDialog();
         }
 
-       
+
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
