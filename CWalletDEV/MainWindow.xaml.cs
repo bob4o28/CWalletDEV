@@ -380,7 +380,7 @@ namespace CWalletDEV
         {
             CashChanger dialogCash = new CashChanger();
             dialogCash.Closed += (s, args) => RefreshMainWindow();
-            dialogCash.ShowDialog();
+            dialogCash.Show();
         }
 
         private void btnSavings_MouseUp(object sender, MouseButtonEventArgs e)
@@ -388,7 +388,7 @@ namespace CWalletDEV
             // Create and show the dialog window
             SavingsChanger dialog = new SavingsChanger();
             dialog.Closed += (s, args) => RefreshMainWindow();
-            dialog.ShowDialog();
+            dialog.Show();
 
 
         }
@@ -397,43 +397,35 @@ namespace CWalletDEV
         {
             DebitCardChanger dialogDebit = new DebitCardChanger();
             dialogDebit.Closed += (s, args) => RefreshMainWindow();
-            dialogDebit.ShowDialog();
+            dialogDebit.Show();
         }
 
         private void btnCredit_MouseUp(object sender, MouseButtonEventArgs e)
         {
             CreditCardChanger dialogCredit = new CreditCardChanger();
             dialogCredit.Closed += (s, args) => RefreshMainWindow();
-            dialogCredit.ShowDialog();
+            dialogCredit.Show();
         }
 
         private void btnBank_MouseUp(object sender, MouseButtonEventArgs e)
         {
             BankChanger dialogBank = new BankChanger();
             dialogBank.Closed += (s, args) => RefreshMainWindow();
-            dialogBank.ShowDialog();
+            dialogBank.Show();
         }
 
         private void btnCrypto_MouseUp(object sender, MouseButtonEventArgs e)
         {
             CryptoChanger dialogCrypto = new CryptoChanger();
             dialogCrypto.Closed += (s, args) => RefreshMainWindow();
-            dialogCrypto.ShowDialog();
+            dialogCrypto.Show();
         }
 
         private void TxtSettings_MouseUp(object sender, MouseButtonEventArgs e)
         {
             SettingsWin dialogSetting = new SettingsWin();
             dialogSetting.Closed += (s, args) => RefreshMainWindow();
-            dialogSetting.ShowDialog();
-        }
-
-
-
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-            SignUpWin signUpWin = new SignUpWin();
-            signUpWin.ShowDialog();
+            dialogSetting.Show();
         }
 
         private void TxtPlannedPay_MouseUp(object sender, MouseButtonEventArgs e)
