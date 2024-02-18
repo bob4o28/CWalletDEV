@@ -30,8 +30,9 @@ namespace CWalletDEV
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            AddPlannedPaymentWin addPlannedPaymentWin = new AddPlannedPaymentWin();
-            addPlannedPaymentWin.ShowDialog();
+            AddPlannedPaymentWin dialogPP = new AddPlannedPaymentWin();
+            dialogPP.Closed += (s, args) => RefreshPPWindow();
+            dialogPP.Show();
         }
 
         private void LoadData()
@@ -70,13 +71,24 @@ namespace CWalletDEV
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
 
-                // Refresh logic here
-                // For example, if you want to fully refresh the window, you can create a new one and close the current one
-                PlannedPaymentsWindow plannedPaymentsWindow = new PlannedPaymentsWindow();
-                Application.Current.MainWindow = plannedPaymentsWindow;
-                plannedPaymentsWindow.Show();
-                this.Close();
+            // Refresh logic here
+            // For example, if you want to fully refresh the window, you can create a new one and close the current one
+            
+        }
 
+        private void RefreshPPWindow()
+        {
+            // Create a new instance of the main window
+            PlannedPaymentsWindow plannedPaymentsWindow = new PlannedPaymentsWindow();
+
+            // Set the new window as the main window
+            Application.Current.MainWindow = plannedPaymentsWindow;
+
+            // Show the new window
+            plannedPaymentsWindow.Show();
+
+            // Close the current window
+            this.Close();
         }
     }
 }
