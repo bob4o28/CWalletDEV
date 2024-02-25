@@ -35,14 +35,14 @@
             <ComboBoxItem Content="EUR"/>
         </ComboBox>
         <TextBox x:Name="txtBank" HorizontalAlignment="Left" Height="50" Margin="46,464,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233"/>
-        <Button Content="Save" HorizontalAlignment="Left" Height="40" Margin="307,643,0,0" VerticalAlignment="Top" Width="108" Click="Button_Click_1">
+        <Button Content="Save" HorizontalAlignment="Left" Height="40" Margin="307,643,0,0" VerticalAlignment="Top" Width="108" Click="Button_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Content="Cancel" HorizontalAlignment="Left" Height="40" Margin="428,643,0,0" VerticalAlignment="Top" Width="108" Click="Button_Click">
+        <Button Content="Cancel" HorizontalAlignment="Left" Height="40" Margin="428,643,0,0" VerticalAlignment="Top" Width="108" Click="Button_Click_1">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>

@@ -47,7 +47,7 @@ namespace CWalletDEV
             DataTable dt = new DataTable();
             using (MySqlConnection conn = dbConnector1.ConnectToDbWithSshTunnel())
             {
-                string query = "Select IdPlannedPayemnts, NameOfPP, WorthOfPP, DueDatte FROM cwallet.PlannedPayments WHERE IdUsers = @PPUser";
+                string query = "Select Id, Name, Worth, DueDate FROM cwallet.PlannedPayments WHERE IdUsers = @PPUser";
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@PPUser", DbConnector.UserId);
