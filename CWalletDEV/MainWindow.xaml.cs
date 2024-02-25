@@ -452,7 +452,7 @@ namespace CWalletDEV
 
         private void MainWin_Closed(object sender, EventArgs e)
         {
-            Application.Current.Shutdown();
+            //Application.Current.Shutdown();
         }
     }
 }
