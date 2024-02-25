@@ -440,7 +440,7 @@ namespace CWalletDEV
                             CurMoney = "0";
                             dbConnector.FirstUserStart();
                         }
-                        lblCurMoney.Content += CurMoney;
+                        lblCurMoney.Content = "Total money for the last recorded day: " + CurMoney;
 
 
 
