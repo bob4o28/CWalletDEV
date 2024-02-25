@@ -5,44 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CWalletDEV"
         mc:Ignorable="d"
-        Title="AddPlannedPaymentWin" Height="345" Width="800">
-    <Grid Height="335" VerticalAlignment="Top" Background="#FFECB159">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+        Title="AddPlannedPaymentWin" Height="345" Width="617">
+    <Grid Height="329" VerticalAlignment="Center" Background="#FFFFE6C1">
 
-        <DockPanel HorizontalAlignment="Center" LastChildFill="False" Grid.RowSpan="3" Width="59" Background="#FFC5F0F4" Margin="0,0,0,-27">
-            <DockPanel LastChildFill="False" Width="60" Height="312"/>
+        <DockPanel LastChildFill="False" Margin="0,0,300,0" Background="#FFE6AD67" HorizontalAlignment="Left" Width="58">
+            <DockPanel.Effect>
+                <DropShadowEffect Opacity="0.6"/>
+            </DockPanel.Effect>
+            <Label Content="Name" DockPanel.Dock="Top" Height="26" Margin="0,74,-1,0" Padding="14,5,5,5"/>
+            <Label Content="Worth" RenderTransformOrigin="0.508,0.655" DockPanel.Dock="Bottom" Height="26" Margin="0,0,0,166" Padding="14,5,5,5"/>
+            <Label Content="Date Pick" DockPanel.Dock="Bottom" Height="26" Margin="0,0,0,-150" Padding="4,5,5,5"/>
         </DockPanel>
-        <DockPanel Grid.Column="1" HorizontalAlignment="Center" Height="31" LastChildFill="False" Grid.RowSpan="3" VerticalAlignment="Top" Width="741" Background="#FFB67352" />
-        <Label Content="Name" Grid.Row="2" Grid.Column="0" Margin="0,45,0,229"/>
-        <TextBox x:Name="Name" Grid.Row="2" Grid.ColumnSpan="2" Margin="59,31,0,215" FontSize="22"/>
 
-        <Label Content="Worth" Grid.Row="2" Grid.Column="0" RenderTransformOrigin="0.42,1.278" Margin="0,128,0,154"/>
-        <TextBox x:Name="Worth" Grid.Row="2" Grid.ColumnSpan="2" Margin="59,112,0,132" RenderTransformOrigin="0.5,0.5" FontSize="22">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="-0.212"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="-0.514"/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
 
-        <Label Content="Date Pick" Grid.Row="2" Grid.Column="0" Margin="0,202,0,74"/>
-        <DatePicker x:Name="Date_Pick" Grid.Row="2" Margin="59,202,0,94" Grid.ColumnSpan="2"/>
-        <Label Grid.Column="1" Content="Add Payment" HorizontalAlignment="Left" Height="26" Margin="320,0,0,0" VerticalAlignment="Top" Width="79" Grid.Row="2"/>
-        <Button Grid.Column="1" Content="Save" HorizontalAlignment="Left" Height="52" Margin="482,254,0,0" VerticalAlignment="Top" Width="95" Grid.Row="2" Click="Button_Click"/>
-        <Button Grid.Column="1" Content="Cancel" HorizontalAlignment="Left" Height="52" Margin="605,254,0,0" VerticalAlignment="Top" Width="95" Grid.Row="2" Click="Button_Click_1"/>
-        <Label x:Name="NoInputLabel" Grid.Column="1" Content="" HorizontalAlignment="Left" Height="50" Margin="10,254,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="321"/>
-        <Label Grid.Column="1" Content="Add Payment" HorizontalAlignment="Left" Height="26" Margin="320,0,0,0" VerticalAlignment="Top" Width="89" Grid.Row="2"/>
+        <DockPanel Height="31" LastChildFill="False" VerticalAlignment="Top" Background="#FFD48B68" >
+            <DockPanel.Effect>
+                <DropShadowEffect Opacity="0.6"/>
+            </DockPanel.Effect>
+            <Label Content="Add Payment" DockPanel.Dock="Top" Height="26" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </DockPanel>
+        <TextBox x:Name="Name" Margin="69,74,271,224" FontSize="22"/>
+        <TextBox x:Name="Worth" Margin="69,132,271,165" RenderTransformOrigin="0.5,0.5" FontSize="22"/>
+        <DatePicker x:Name="Date_Pick" Margin="78,203,371,102"/>
+        <Button Content="Save" HorizontalAlignment="Left" Height="36" Margin="404,267,0,0" VerticalAlignment="Top" Width="78" Click="Button_Click" Background="#FFD3DC3B">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Content="Cancel" HorizontalAlignment="Left" Height="36" Margin="507,267,0,0" VerticalAlignment="Top" Width="77" Click="Button_Click_1" Background="#FFE08A61">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Label x:Name="NoInputLabel" Content="" HorizontalAlignment="Left" Height="46" Margin="366,72,0,0" VerticalAlignment="Top" Width="231"/>
 
 
     </Grid>
