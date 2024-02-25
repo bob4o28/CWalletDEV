@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -38,98 +39,19 @@ namespace CWalletDEV
         public MainWindow()
         {
             InitializeComponent();
+
             _viewModel = new MainViewModel();
             this.DataContext = _viewModel;
-            DbConnector dbConnector = new DbConnector();
 
-            // Initialize your ChartValues and Labels
-            //PieCart
-            _viewModel.PieValuesCash = new ChartValues<double> { };
-            _viewModel.PieValuesBank = new ChartValues<double> { };
-            _viewModel.PieValuesDebit = new ChartValues<double> { };
-            _viewModel.PieValuesCredit = new ChartValues<double> { };
-            _viewModel.PieValuesSavings = new ChartValues<double> { };
-            _viewModel.PieValuesCrypto = new ChartValues<double> { };
-            //AreaChart
-            _viewModel.ChartValues = new ChartValues<double> { };
-            _viewModel.Labels = new List<string> { };
+
+           
             //Test for the current user
             CurUser = DbConnector.UserId;
 
             //Days to display at the main chart by select of the user.
             Days = 7;
 
-            using (MySqlConnection conn = dbConnector.ConnectToDbWithSshTunnel())
-            {
-                if (conn == null || conn.State != ConnectionState.Open)
-                    return;
-
-                string query = "SELECT Date, Sum FROM MoneyHolders WHERE UserID = @MoneyUserID ORDER BY Date DESC LIMIT " + Days.ToString();
-                using (MySqlCommand cmd = new MySqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@MoneyUserID", DbConnector.UserId);
-
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
-                    {
-
-                        while (reader.Read())
-                        {
-                            //Filling the Area chart's Lists with data.
-                            //The indexes are for the placement of the Filed into the Selected table preview, for example 1 is for second.
-                            DateTime dateValue = reader.GetDateTime(0);
-                            _viewModel.Labels.Add(dateValue.ToString("dd.MM.yyyy"));
-                            _viewModel.ChartValues.Add(reader.GetDouble(1));
-                        }
-                        _viewModel.Labels.Reverse();
-                        List<double> temp = new List<double>(_viewModel.ChartValues.Cast<double>());
-                        temp.Reverse();
-                        _viewModel.ChartValues.Clear();
-                        foreach (var item in temp)
-                        {
-                            _viewModel.ChartValues.Add(item);
-                        }
-                        try
-                        {
-                            CurMoney = temp.Last().ToString();
-                        }
-                        catch 
-                        { 
-                            CurMoney = "0";
-                            dbConnector.FirstUserStart();
-                        }
-                        lblCurMoney.Content += CurMoney;
-
-
-
-                    }
-                }
-
-
-                string query1 = "SELECT Cash, Bank, DebitCard, CreditCard, Savings, Crypto FROM MoneyHolders WHERE UserID = @MoneyUserID ORDER BY Date DESC LIMIT 1";
-                using (MySqlCommand cmd = new MySqlCommand(query1, conn))
-                {
-                    cmd.Parameters.AddWithValue("@MoneyUserID", DbConnector.UserId);
-
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
-                    {
-
-                        while (reader.Read())
-                        {
-
-                            //Filling the Pie chart's Lists with data.
-                            _viewModel.PieValuesCash.Add(reader.GetDouble(0));
-                            _viewModel.PieValuesBank.Add(reader.GetDouble(1));
-                            _viewModel.PieValuesDebit.Add(reader.GetDouble(2));
-                            _viewModel.PieValuesCredit.Add(reader.GetDouble(3));
-                            _viewModel.PieValuesSavings.Add(reader.GetDouble(4));
-                            _viewModel.PieValuesCrypto.Add(reader.GetDouble(5));
-                        }
-
-
-
-                    }
-                }
-            }
+            
 
         }
 
@@ -431,28 +353,126 @@ namespace CWalletDEV
         private void TxtPlannedPay_MouseUp(object sender, MouseButtonEventArgs e)
         {
             PlannedPaymentsWindow plannedPaymentsWindow = new PlannedPaymentsWindow();
+            plannedPaymentsWindow.Owner = this;
+            this.Hide();
             plannedPaymentsWindow.Show();
-            this.Close();
+
         }
 
         private void RefreshMainWindow()
         {
-            // Create a new instance of the main window
-            MainWindow newWindow = new MainWindow();
+            //// Create a new instance of the main window
+            //MainWindow newWindow = new MainWindow();
 
-            // Set the new window as the main window
-            Application.Current.MainWindow = newWindow;
+            //// Set the new window as the main window
+            //Application.Current.MainWindow = newWindow;
 
-            // Show the new window
-            newWindow.Show();
+            //// Show the new window
+            //newWindow.Show();
 
-            // Close the current window
-            this.Close();
+            //// Close the current window
+            //this.Close();
+            MainWin_Loaded(this, new RoutedEventArgs());
         }
 
         private void MainWin_Closed(object sender, EventArgs e)
         {
+            //// Unsubscribe from events
+            //this.Closed -= MainWin_Closed;
+
+            //// Release all resources
+            //this.Content = null;
+
+            //// Explicitly call the garbage collector
+            //GC.Collect();
             //Application.Current.Shutdown();
+        }
+
+        private void MainWin_Loaded(object sender, RoutedEventArgs e)
+        {
+            // Initialize your ChartValues and Labels
+            //PieCart
+            _viewModel.PieValuesCash = new ChartValues<double> { };
+            _viewModel.PieValuesBank = new ChartValues<double> { };
+            _viewModel.PieValuesDebit = new ChartValues<double> { };
+            _viewModel.PieValuesCredit = new ChartValues<double> { };
+            _viewModel.PieValuesSavings = new ChartValues<double> { };
+            _viewModel.PieValuesCrypto = new ChartValues<double> { };
+            //AreaChart
+            _viewModel.ChartValues = new ChartValues<double> { };
+            _viewModel.Labels = new List<string> { };
+            DbConnector dbConnector = new DbConnector();
+            using (MySqlConnection conn = dbConnector.ConnectToDbWithSshTunnel())
+            {
+                if (conn == null || conn.State != ConnectionState.Open)
+                    return;
+
+                string query = "SELECT Date, Sum FROM MoneyHolders WHERE UserID = @MoneyUserID ORDER BY Date DESC LIMIT " + Days.ToString();
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@MoneyUserID", DbConnector.UserId);
+
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+
+                        while (reader.Read())
+                        {
+                            //Filling the Area chart's Lists with data.
+                            //The indexes are for the placement of the Filed into the Selected table preview, for example 1 is for second.
+                            DateTime dateValue = reader.GetDateTime(0);
+                            _viewModel.Labels.Add(dateValue.ToString("dd.MM.yyyy"));
+                            _viewModel.ChartValues.Add(reader.GetDouble(1));
+                        }
+                        _viewModel.Labels.Reverse();
+                        List<double> temp = new List<double>(_viewModel.ChartValues.Cast<double>());
+                        temp.Reverse();
+                        _viewModel.ChartValues.Clear();
+                        foreach (var item in temp)
+                        {
+                            _viewModel.ChartValues.Add(item);
+                        }
+                        try
+                        {
+                            CurMoney = temp.Last().ToString();
+                        }
+                        catch
+                        {
+                            CurMoney = "0";
+                            dbConnector.FirstUserStart();
+                        }
+                        lblCurMoney.Content += CurMoney;
+
+
+
+                    }
+                }
+
+
+                string query1 = "SELECT Cash, Bank, DebitCard, CreditCard, Savings, Crypto FROM MoneyHolders WHERE UserID = @MoneyUserID ORDER BY Date DESC LIMIT 1";
+                using (MySqlCommand cmd = new MySqlCommand(query1, conn))
+                {
+                    cmd.Parameters.AddWithValue("@MoneyUserID", DbConnector.UserId);
+
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+
+                        while (reader.Read())
+                        {
+
+                            //Filling the Pie chart's Lists with data.
+                            _viewModel.PieValuesCash.Add(reader.GetDouble(0));
+                            _viewModel.PieValuesBank.Add(reader.GetDouble(1));
+                            _viewModel.PieValuesDebit.Add(reader.GetDouble(2));
+                            _viewModel.PieValuesCredit.Add(reader.GetDouble(3));
+                            _viewModel.PieValuesSavings.Add(reader.GetDouble(4));
+                            _viewModel.PieValuesCrypto.Add(reader.GetDouble(5));
+                        }
+
+
+
+                    }
+                }
+            }
         }
     }
 }

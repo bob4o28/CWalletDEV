@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="672" Width="1245"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="NoResize" Closed="MainWin_Closed">
+        ResizeMode="NoResize" Closed="MainWin_Closed" Loaded="MainWin_Loaded">
     <Window.Resources>
 
 

@@ -7,7 +7,7 @@
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         mc:Ignorable="d"
         Title="BankChanger" Height="725" Width="575" Background="#FFDFD7CB"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen" Closed="Window_Closed">
     <Window.Resources>
         <Storyboard x:Key="AddEnter"/>
         <Storyboard x:Key="AddLeave"/>
