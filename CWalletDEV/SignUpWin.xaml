@@ -12,8 +12,32 @@
         <Label x:Name="LblName" Content="Name:" Height="36" Margin="28,170,286,473" Width="212" FontSize="24"/>
         <TextBox x:Name="txtPassword" Height="25" Margin="28,409,286,245" TextWrapping="Wrap" Width="212" TextChanged="TextBox_TextChanged"/>
         <Label x:Name="lblPassword" Content="Password:" Height="36" Margin="28,368,286,275" Width="212" FontSize="24" RenderTransformOrigin="0.5,0.5"/>
-        <Button x:Name="btnSignUp" Content="Sign Up" Margin="126,512,126,114" Click="Button_Click_1" FontSize="20" Height="53"/>
-        <Button x:Name="btnAccYes" Content="Already have an account? Log in" Height="28" Margin="102,612,102,39" Click="Button_Click"/>
+        <Button x:Name="btnSignUp" Content="Sign Up" Margin="126,512,126,114" Click="Button_Click_1" FontSize="20" Height="53">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF6890DE"/>
+                    <GradientStop Color="#FF96AFE2" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnAccYes" Content="Already have an account? Log in" Height="28" Margin="102,612,102,39" Click="Button_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF679FDE"/>
+                    <GradientStop Color="#FF9CBBDE" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
         <Label Content="(Must be strong!)" HorizontalAlignment="Left" Margin="83,439,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtUserLastName" Margin="28,270,286,383" TextWrapping="Wrap" TextChanged="TextBox_TextChanged"/>
         <Label x:Name="lblLastName" Content="Last name:" Height="36" Margin="28,234,286,409" Width="212" FontSize="24"/>

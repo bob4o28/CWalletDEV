@@ -12,8 +12,32 @@
         <TextBox x:Name="txtLoginPassword" Height="27" TextWrapping="Wrap" Margin="53,402,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="210"/>
         <Label x:Name="lblLoginPassword" Content="Password:" Height="36" Margin="53,361,0,0" Width="213" FontSize="24" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <Image x:Name="LogInLabel" Margin="110,29,110,522" Source="/LblLogIn.png" Stretch="Fill"/>
-        <Button x:Name="btnNoAcc" Content="Don't have account? Sign up" Height="28" Width="172" Click="btnNoAcc_Click" Margin="157,528,157,27"/>
-        <Button x:Name="btnLogIn" Content="Log In" Height="49" Width="106" Click="btnLogIn_Click" Margin="190,460,190,74"/>
+        <Button x:Name="btnNoAcc" Content="Don't have account? Sign up" Height="28" Width="172" Click="btnNoAcc_Click" Margin="157,528,157,27">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF527FC8"/>
+                    <GradientStop Color="#FF97B3C5" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnLogIn" Content="Log In" Height="49" Width="106" Click="btnLogIn_Click" Margin="190,460,190,74">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF668BC7"/>
+                    <GradientStop Color="#FF93B7DE" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
         <Label x:Name="WrongCredentialsLabel" Content="" Margin="116,185,116,417"/>
         <Label x:Name="lblPassword" Content="" Height="36" Margin="357,402,22,235" FontSize="24"/>
     </Grid>

@@ -385,7 +385,7 @@ namespace CWalletDEV
 
             //// Explicitly call the garbage collector
             //GC.Collect();
-            //Application.Current.Shutdown();
+            Application.Current.Shutdown();
         }
 
         private void MainWin_Loaded(object sender, RoutedEventArgs e)
