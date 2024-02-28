@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CWalletDEV"
         mc:Ignorable="d"
-        Title="LogInWin" Height="689" Width="526">
+        Title="LogInWin" Height="689" Width="526"
+        ResizeMode="NoResize">
     <Grid Background="#FFDFD7CB">
         <TextBox x:Name="txtLoginEmail" TextWrapping="Wrap" Height="27" VerticalAlignment="Center" HorizontalAlignment="Left" Width="210" Margin="53,0,0,0"/>
         <Label x:Name="lblLoginEmail" Content="Email:" Height="36" Width="214" FontSize="24" Margin="53,269,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
