@@ -185,6 +185,54 @@
                 <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-180"/>
             </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="cartesianChart" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="1.176"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="cartesianChart" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-75.636"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="MainPieChart" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-132.063"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="MainPieChart" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-4.802"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="lblCurMoney" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-103.25"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="lblCurMoney" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="7.203"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="CashRec" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-57.624"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="btnCash" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-57.624"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="DebitRec" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-57.624"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="btnDebit" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-57.624"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="BankRec" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-57.624"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="btnBank" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-57.624"/>
+            </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="SidebarOpen">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Sidebar" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
@@ -299,6 +347,52 @@
                 <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-180"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="lblCurMoney" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-168.081"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-16.818"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="MainPieChart" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-168.081"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-16.818"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="lblCurMoney" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="2.401"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="MainPieChart" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="2.401"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="cartesianChart" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="1.193"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="1.009"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="cartesianChart" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-82.84"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-3.602"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="CashRec" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-52.822"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="btnCash" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-52.822"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="DebitRec" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-52.822"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="btnDebit" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-52.822"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="BankRec" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-52.822"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="btnBank" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-52.822"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="SideBarOpended"/>
         <Storyboard x:Key="btnCashEnter">
@@ -411,7 +505,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <TextBlock x:Name="TxtMenu" HorizontalAlignment="Left" Height="70" Margin="-6,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" FontSize="24" Padding="109,21,0,0" FontFamily="Cambria Math" Background="Transparent" MouseEnter="TxtMenu_MouseEnter" MouseLeave="TxtMenu_MouseLeave" RenderTransformOrigin="0.5,0.5" Text="Menu" MouseUp="TxtMenu_MouseUp" TextAlignment="Left" LineHeight="6" UseLayoutRounding="True">
+        <TextBlock x:Name="TxtMenu" HorizontalAlignment="Left" Height="70" Margin="-6,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" FontSize="24"  Padding="109,16,0,0" FontFamily="Myanmar Text" Background="Transparent" MouseEnter="TxtMenu_MouseEnter" MouseLeave="TxtMenu_MouseLeave" RenderTransformOrigin="0.5,0.5" Text="Menu" MouseUp="TxtMenu_MouseUp" TextAlignment="Left" LineHeight="6" UseLayoutRounding="True">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -432,7 +526,7 @@
             </Rectangle.RenderTransform>
         </Rectangle>
         <Image Height="58" VerticalAlignment="Top" Width="59" Source="/Category.png" HorizontalAlignment="Left" Margin="27,180,0,0"/>
-        <TextBlock x:Name="TxtCategory" HorizontalAlignment="Left" Height="70" Margin="-6,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" FontSize="24" Padding="108,21,0,0" FontFamily="Cambria Math" Background="Transparent" MouseEnter="TxtCategory_MouseEnter" MouseLeave="TxtCategory_MouseLeave" RenderTransformOrigin="0.5,0.5" Text="Category">
+        <TextBlock x:Name="TxtCategory" HorizontalAlignment="Left" Height="70" Margin="-6,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" FontSize="24" Padding="108,17,0,0" FontFamily="Myanmar Text" Background="Transparent" MouseEnter="TxtCategory_MouseEnter" MouseLeave="TxtCategory_MouseLeave" RenderTransformOrigin="0.5,0.5" Text="Category">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -453,7 +547,7 @@
             </Rectangle.RenderTransform>
         </Rectangle>
         <Image Height="59" VerticalAlignment="Center" Width="59" Source="/Stats.png" HorizontalAlignment="Left" Margin="26,0,0,0"/>
-        <TextBlock x:Name="TxtStats" HorizontalAlignment="Left" Height="70" TextWrapping="Wrap" VerticalAlignment="Center" Width="248" FontSize="24" Padding="109,25,0,0" FontFamily="Cambria Math" Background="Transparent" MouseEnter="TxtStats_MouseEnter" MouseLeave="TxtStats_MouseLeave" RenderTransformOrigin="0.5,0.5" Margin="-6,0,0,0" Text="Statistics">
+        <TextBlock x:Name="TxtStats" HorizontalAlignment="Left" Height="70" TextWrapping="Wrap" VerticalAlignment="Center" Width="248" FontSize="24" Padding="109,17,0,0" FontFamily="Myanmar Text" Background="Transparent" MouseEnter="TxtStats_MouseEnter" MouseLeave="TxtStats_MouseLeave" RenderTransformOrigin="0.5,0.5" Margin="-6,0,0,0" Text="Statistics">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -474,7 +568,7 @@
             </Rectangle.RenderTransform>
         </Rectangle>
         <Image Height="58" VerticalAlignment="Top" Width="59" Source="/Pay.png" HorizontalAlignment="Left" Margin="26,402,0,0"/>
-        <TextBlock x:Name="TxtPlannedPay" HorizontalAlignment="Left" Height="70" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" FontSize="24" Padding="109,8,0,0" FontFamily="Cambria Math" Background="Transparent" Margin="-6,396,0,0" MouseEnter="TxtPlannedPay_MouseEnter" MouseLeave="TxtPlannedPay_MouseLeave_1" RenderTransformOrigin="0.5,0.5" Text="Planned Paymends" MouseUp="TxtPlannedPay_MouseUp">
+        <TextBlock x:Name="TxtPlannedPay" HorizontalAlignment="Left" Height="70" VerticalAlignment="Top" Width="248" FontSize="22" Padding="109,0,0,0" FontFamily="Myanmar Text" Background="Transparent" Margin="-6,396,0,0" MouseEnter="TxtPlannedPay_MouseEnter" MouseLeave="TxtPlannedPay_MouseLeave_1" RenderTransformOrigin="0.5,0.5" Text="Planned Paymends" MouseUp="TxtPlannedPay_MouseUp" TextWrapping="Wrap">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -495,7 +589,7 @@
             </Rectangle.RenderTransform>
         </Rectangle>
         <Image Height="59" VerticalAlignment="Top" Width="59" Source="/Settings.png" HorizontalAlignment="Left" Margin="26,520,0,0"/>
-        <TextBlock x:Name="TxtSettings" HorizontalAlignment="Left" Height="70" Margin="-6,512,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" FontSize="24" Padding="109,22,0,0" FontFamily="Cambria Math" Background="Transparent" MouseEnter="TxtSettings_MouseEnter" MouseLeave="TxtSettings_MouseLeave" RenderTransformOrigin="0.5,0.5" Text="Settings" MouseUp="TxtSettings_MouseUp">
+        <TextBlock x:Name="TxtSettings" HorizontalAlignment="Left" Height="70" Margin="-6,512,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" FontSize="24" Padding="109,16,0,0" FontFamily="Myanmar Text" Background="Transparent" MouseEnter="TxtSettings_MouseEnter" MouseLeave="TxtSettings_MouseLeave" RenderTransformOrigin="0.5,0.5" Text="Settings" MouseUp="TxtSettings_MouseUp">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -508,21 +602,75 @@
         <!--Donut Chart-->
 
         <!--Buttons-->
-        <Rectangle x:Name="CashRec" HorizontalAlignment="Left" Height="76" Margin="860,53,0,0" VerticalAlignment="Top" Width="150" Fill="#FF8AC97E" RadiusX="15" RadiusY="15"/>
-        <TextBlock x:Name="btnCash" HorizontalAlignment="Left" Margin="860,54,0,0" Text="Cash" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseUp="btnCash_MouseUp" MouseEnter="btnCash_MouseEnter" MouseLeave="btnCash_MouseLeave"/>
+        <Rectangle x:Name="CashRec" HorizontalAlignment="Left" Height="76" Margin="860,53,0,0" VerticalAlignment="Top" Width="150" Fill="#FF8AC97E" RadiusX="15" RadiusY="15" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <TextBlock x:Name="btnCash" HorizontalAlignment="Left" Margin="860,54,0,0" Text="Cash" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseUp="btnCash_MouseUp" MouseEnter="btnCash_MouseEnter" MouseLeave="btnCash_MouseLeave" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
 
 
         <Rectangle x:Name="SavingRec" HorizontalAlignment="Left" Height="76" Margin="1034,53,0,0" VerticalAlignment="Top" Width="150" Fill="#FFF9EFA3" RadiusX="15" RadiusY="15"/>
         <TextBlock x:Name="btnSavings" HorizontalAlignment="Left" Margin="1034,54,0,0" Text="Savings" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnSavings_MouseEnter" MouseLeave="btnSavings_MouseLeave" MouseUp="btnSavings_MouseUp"/>
 
-        <Rectangle x:Name="DebitRec" HorizontalAlignment="Left" Height="76" Margin="860,146,0,0" VerticalAlignment="Top" Width="150" Fill="#FF90E0EF" RadiusX="15" RadiusY="15"/>
-        <TextBlock x:Name="btnDebit" HorizontalAlignment="Left" Margin="860,147,0,0" Text="Debit" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnDebit_MouseEnter" MouseLeave="btnDebit_MouseLeave" MouseUp="btnDebit_MouseUp"/>
+        <Rectangle x:Name="DebitRec" HorizontalAlignment="Left" Height="76" Margin="860,146,0,0" VerticalAlignment="Top" Width="150" Fill="#FF90E0EF" RadiusX="15" RadiusY="15" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <TextBlock x:Name="btnDebit" HorizontalAlignment="Left" Margin="860,147,0,0" Text="Debit" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnDebit_MouseEnter" MouseLeave="btnDebit_MouseLeave" MouseUp="btnDebit_MouseUp" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
 
         <Rectangle x:Name="CreditRec" HorizontalAlignment="Left" Height="76" Margin="1034,146,0,0" VerticalAlignment="Top" Width="150" Fill="#FFF0AA78" RadiusX="15" RadiusY="15"/>
         <TextBlock x:Name="btnCredit" HorizontalAlignment="Left" Margin="1034,147,0,0" Text="Credit" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnCredit_MouseEnter" MouseLeave="btnCredit_MouseLeave" MouseUp="btnCredit_MouseUp"/>
 
-        <Rectangle x:Name="BankRec" HorizontalAlignment="Left" Height="76" Margin="860,240,0,0" VerticalAlignment="Top" Width="150" Fill="#FFA4B8FA" RadiusX="15" RadiusY="15"/>
-        <TextBlock x:Name="btnBank" HorizontalAlignment="Left" Margin="860,241,0,0" Text="Bank" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnBank_MouseEnter" MouseLeave="btnBank_MouseLeave" MouseUp="btnBank_MouseUp"/>
+        <Rectangle x:Name="BankRec" HorizontalAlignment="Left" Height="76" Margin="860,240,0,0" VerticalAlignment="Top" Width="150" Fill="#FFA4B8FA" RadiusX="15" RadiusY="15" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <TextBlock x:Name="btnBank" HorizontalAlignment="Left" Margin="860,241,0,0" Text="Bank" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnBank_MouseEnter" MouseLeave="btnBank_MouseLeave" MouseUp="btnBank_MouseUp" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
 
         <Rectangle x:Name="CryptoRec" HorizontalAlignment="Left" Height="76" Margin="1034,240,0,0" VerticalAlignment="Top" Width="150" Fill="#FFD17957" RadiusX="15" RadiusY="15"/>
         <TextBlock x:Name="btnCrypto" HorizontalAlignment="Left" Margin="1034,241,0,0" Text="Crypto" VerticalAlignment="Top" Height="75" Width="150" FontSize="36" FontFamily="Myanmar Text" TextAlignment="Center" TextWrapping="Wrap" Padding="0,7,0,0" MouseEnter="btnCrypto_MouseEnter" MouseLeave="btnCrypto_MouseLeave" MouseUp="btnCrypto_MouseUp"/>
@@ -531,7 +679,15 @@
 
 
 
-        <lvc:CartesianChart Margin="324,402,61,29" Foreground="#FF676767">
+        <lvc:CartesianChart x:Name="cartesianChart" Margin="324,402,61,29" Foreground="#FF676767" RenderTransformOrigin="0.5,0.5">
+            <lvc:CartesianChart.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </lvc:CartesianChart.RenderTransform>
             <lvc:CartesianChart.Series>
                 <lvc:LineSeries x:Name="MainAreaChart" Title="Week Data" Values="{Binding ChartValues}" PointGeometrySize="10" StrokeThickness="2" Stroke="#FF7B1606" Foreground="{x:Null}">
                     <lvc:LineSeries.Fill>
@@ -546,8 +702,25 @@
                 <lvc:Axis Title="Days of Week" Labels="{Binding Labels}"/>
             </lvc:CartesianChart.AxisX>
         </lvc:CartesianChart>
-        <Label x:Name="lblCurMoney" Content="Total money for the last recorded day: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="345,345,0,0"/>
-        <lvc:PieChart x:Name="MainPieChart" Margin="345,28,530,315" InnerRadius="86">
+        <Label x:Name="lblCurMoney" Content="Total money for the last recorded day: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="345,345,0,0" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <lvc:PieChart x:Name="MainPieChart" Margin="345,28,530,315" InnerRadius="86" RenderTransformOrigin="0.5,0.5">
+            <lvc:PieChart.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </lvc:PieChart.RenderTransform>
             <lvc:PieChart.Series>
                 <lvc:PieSeries Title="Cash" Values="{Binding PieValuesCash}" Fill="#FF8AC97E"/>
                 <lvc:PieSeries Title="Savings" Values="{Binding PieValuesSavings}" Fill="#FFF9EFA3"/>

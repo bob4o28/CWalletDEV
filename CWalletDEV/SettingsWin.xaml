@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CWalletDEV"
         mc:Ignorable="d"
-        Title="SettingsWin" Height="449" Width="754">
+        Title="SettingsWin" Height="449" Width="754"
+        ResizeMode="NoResize">
     <Grid Background="#FFDFD7CB">
         <Image Margin="10,10,431,315" Source="/LblSettings.png" Stretch="Fill"/>
         <Label Content="Currency" HorizontalAlignment="Left" Height="53" Margin="41,157,0,0" VerticalAlignment="Top" Width="295" FontSize="36"/>

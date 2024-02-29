@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CWalletDEV"
         mc:Ignorable="d"
-        Title="AddPlannedPaymentWin" Height="345" Width="617">
+        Title="AddPlannedPaymentWin" Height="345" Width="617"
+         WindowStartupLocation="CenterScreen"
+ ResizeMode="NoResize">
     <Grid Height="329" VerticalAlignment="Center" Background="#FFFFE6C1">
 
         <DockPanel LastChildFill="False" Margin="0,0,300,0" Background="#FFE6AD67" HorizontalAlignment="Left" Width="58">
