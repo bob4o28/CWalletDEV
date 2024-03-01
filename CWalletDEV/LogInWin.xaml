@@ -10,7 +10,9 @@
     <Grid Background="#FFDFD7CB">
         <TextBox x:Name="txtLoginEmail" TextWrapping="Wrap" Height="27" VerticalAlignment="Center" HorizontalAlignment="Left" Width="210" Margin="53,0,0,0"/>
         <Label x:Name="lblLoginEmail" Content="Email:" Height="36" Width="214" FontSize="24" Margin="53,269,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-        <TextBox x:Name="txtLoginPassword" Height="27" TextWrapping="Wrap" Margin="53,402,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="210"/>
+        <PasswordBox x:Name="passwordBox" Width="210" Height="30" Margin="53,408,0,0"
+                     VerticalAlignment="Top" HorizontalAlignment="Left"
+                     PasswordChar="●" />
         <Label x:Name="lblLoginPassword" Content="Password:" Height="36" Margin="53,361,0,0" Width="213" FontSize="24" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <Image x:Name="LogInLabel" Margin="110,29,110,522" Source="/LblLogIn.png" Stretch="Fill"/>
         <Button x:Name="btnNoAcc" Content="Don't have account? Sign up" Height="28" Width="172" Click="btnNoAcc_Click" Margin="157,528,157,27">

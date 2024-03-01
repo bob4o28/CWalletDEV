@@ -35,7 +35,7 @@ namespace CWalletDEV
         {
             DbConnector dbConnector = new DbConnector();
             string userEmail = txtLoginEmail.Text;
-            string password = txtLoginPassword.Text;
+            string password = passwordBox.Password;
 
             if (dbConnector.CheckLogin(userEmail, password))
             {
