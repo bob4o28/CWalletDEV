@@ -568,7 +568,7 @@
             </Rectangle.RenderTransform>
         </Rectangle>
         <Image Height="58" VerticalAlignment="Top" Width="59" Source="/Pay.png" HorizontalAlignment="Left" Margin="26,402,0,0"/>
-        <TextBlock x:Name="TxtPlannedPay" HorizontalAlignment="Left" Height="70" VerticalAlignment="Top" Width="248" FontSize="22" Padding="109,0,0,0" FontFamily="Myanmar Text" Background="Transparent" Margin="-6,396,0,0" MouseEnter="TxtPlannedPay_MouseEnter" MouseLeave="TxtPlannedPay_MouseLeave_1" RenderTransformOrigin="0.5,0.5" Text="Planned Paymends" MouseUp="TxtPlannedPay_MouseUp" TextWrapping="Wrap">
+        <TextBlock x:Name="TxtPlannedPay" HorizontalAlignment="Left" Height="70" VerticalAlignment="Top" Width="248" FontSize="22" Padding="109,0,0,0" FontFamily="Myanmar Text" Background="Transparent" Margin="-6,396,0,0" MouseEnter="TxtPlannedPay_MouseEnter" MouseLeave="TxtPlannedPay_MouseLeave_1" RenderTransformOrigin="0.5,0.5" MouseUp="TxtPlannedPay_MouseUp" TextWrapping="Wrap">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -576,7 +576,7 @@
                     <RotateTransform/>
                     <TranslateTransform/>
                 </TransformGroup>
-            </TextBlock.RenderTransform></TextBlock>
+            </TextBlock.RenderTransform><Run Text="Planned Payments"/><LineBreak/><Run Text="ss"/></TextBlock>
 
         <Rectangle x:Name="rectangle4" HorizontalAlignment="Left" Height="70" Margin="-6,512,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="248" Fill="#FFC2AD86" RenderTransformOrigin="0.5,0.5">
             <Rectangle.RenderTransform>

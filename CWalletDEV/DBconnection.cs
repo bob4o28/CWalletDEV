@@ -164,7 +164,21 @@ namespace CWalletDEV
             }
         }
 
-
+            public void RemoveRowFromDb(string name, decimal worth, DateTime dueDate, int idUsers)
+            {
+                using (MySqlConnection conn = ConnectToDbWithSshTunnel())
+                {
+                    string query = "DELETE FROM PlannedPayments WHERE Name = @name AND Worth = @worth AND DueDate = @dueDate AND IdUsers = @idUsers";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@name", name);
+                        cmd.Parameters.AddWithValue("@worth", worth);
+                        cmd.Parameters.AddWithValue("@dueDate", dueDate);
+                        cmd.Parameters.AddWithValue("@idUsers", idUsers);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
         public void MainWinStartUp()
         {
            

@@ -46,14 +46,48 @@ namespace CWalletDEV
             }
                 else
                 {
-                    NoInputLabel.Content = "The name, the worth or the date are not set!";
+                    NoInputLabel.Content = "The worth or the date are not set!";
                 }
         }
+        private void Button_Click_1(object sender, RoutedEventArgs e) { this.Close(); }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void DeletePlannedPayment(object sender, RoutedEventArgs e)
         {
-            
-            this.Close();
+            DbConnector dbConnector = new DbConnector();
+            string name = Name.Text;
+            decimal worth = 0;
+            try
+            {
+                worth = decimal.Parse(Worth.Text);
+            }
+            catch
+            {
+                NoInputLabel.Content = "Please give a worth to your planned payment!";
+                return; // Stop execution if worth is not provided
+            }
+
+            if (Date_Pick.SelectedDate.HasValue && !string.IsNullOrEmpty(name))
+            {
+                DateTime dueDate = Date_Pick.SelectedDate.Value;
+
+                // Set the UserId property from the public variable
+                int userId = DbConnector.UserId;
+
+                // Check if the row exists before attempting to delete
+                try
+                {
+                    dbConnector.RemoveRowFromDb(name, worth, dueDate, userId);
+                    this.Close(); // Close the window after deletion
+                }
+                catch
+                {
+                    NoInputLabel.Content = "The planned payment does not exist!";
+                }
+            }
+            else
+            {
+                NoInputLabel.Content = "The worth or the date are not set!";
+            }
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

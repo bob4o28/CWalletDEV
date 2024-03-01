@@ -29,14 +29,14 @@
         <TextBox x:Name="Name" Margin="69,74,271,224" FontSize="22"/>
         <TextBox x:Name="Worth" Margin="69,132,271,165" RenderTransformOrigin="0.5,0.5" FontSize="22"/>
         <DatePicker x:Name="Date_Pick" Margin="78,203,371,102"/>
-        <Button Content="Save" HorizontalAlignment="Left" Height="36" Margin="404,267,0,0" VerticalAlignment="Top" Width="78" Click="Button_Click" Background="#FFD3DC3B">
+        <Button Content="Save" HorizontalAlignment="Left" Height="36" Margin="311,283,0,0" VerticalAlignment="Top" Width="78" Click="Button_Click" Background="#FFD3DC3B">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Content="Cancel" HorizontalAlignment="Left" Height="36" Margin="507,267,0,0" VerticalAlignment="Top" Width="77" Click="Button_Click_1" Background="#FFE08A61">
+        <Button Content="Cancel" HorizontalAlignment="Left" Height="36" Margin="409,283,0,0" VerticalAlignment="Top" Width="77" Click="Button_Click_1" Background="#FFE08A61">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -44,6 +44,14 @@
             </Button.Resources>
         </Button>
         <Label x:Name="NoInputLabel" Content="" HorizontalAlignment="Left" Height="46" Margin="366,72,0,0" VerticalAlignment="Top" Width="231"/>
+
+        <Button x:Name="DeletePayment" Content="Delete" HorizontalAlignment="Left" Height="36" Margin="508,283,0,0" VerticalAlignment="Top" Width="76" Click="DeletePlannedPayment" Background="#FF545454">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
 
 
     </Grid>
