@@ -29,10 +29,9 @@ namespace CWalletDEV
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            AddPlannedPaymentWin addplannedPaymentsWindow = new AddPlannedPaymentWin();
-            addplannedPaymentsWindow.Owner = this;
-            this.Hide();
-            addplannedPaymentsWindow.Show();
+            AddPlannedPaymentWin dialogPPAdd = new AddPlannedPaymentWin();
+            dialogPPAdd.Closed += (s, args) => RefreshPPWindow();
+            dialogPPAdd.Show();
         }
 
         private void LoadData()

@@ -41,9 +41,9 @@ namespace CWalletDEV
                 if (Date_Pick.SelectedDate.HasValue && name != null && worth != null)
                 {
                     DateTime dueDate = Date_Pick.SelectedDate.Value;
-                    dbConnector.AddPlannedPayment(name, worth, dueDate);
+                    dbConnector.AddPlannedPayment(name, worth, dueDate); 
                     this.Close();
-                }
+            }
                 else
                 {
                     NoInputLabel.Content = "The name, the worth or the date are not set!";
@@ -54,6 +54,11 @@ namespace CWalletDEV
         {
             
             this.Close();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            
         }
     }
 }
