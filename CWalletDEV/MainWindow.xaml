@@ -702,7 +702,7 @@
                 <lvc:Axis Title="Days of Week" Labels="{Binding Labels}"/>
             </lvc:CartesianChart.AxisX>
         </lvc:CartesianChart>
-        <Label x:Name="lblCurMoney" Content="Total money for the last recorded day: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="345,345,0,0" RenderTransformOrigin="0.5,0.5">
+        <Label x:Name="lblCurMoney" Content="Today's sum: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="474,168,0,0" RenderTransformOrigin="0.5,0.5" Height="32" Width="148">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
