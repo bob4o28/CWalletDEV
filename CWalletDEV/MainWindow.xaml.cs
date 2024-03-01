@@ -24,12 +24,8 @@ using System.Windows.Shapes;
 
 namespace CWalletDEV
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
-        //Event Var
         public string SidebarPos = "Open";
 
         private MainViewModel _viewModel;
@@ -43,15 +39,9 @@ namespace CWalletDEV
             _viewModel = new MainViewModel();
             this.DataContext = _viewModel;
 
-
-           
-            //Test for the current user
             CurUser = DbConnector.UserId;
 
-            //Days to display at the main chart by select of the user.
             Days = 7;
-
-            
 
         }
 
@@ -174,9 +164,6 @@ namespace CWalletDEV
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //// Assign values to the properties
-            //_viewModel.AreaChartValues = new ChartValues<double> { 15, 15, 20, 47, 8, 78, 6 };
-            //_viewModel.DaysOfWeel = new[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
 
         }
 
@@ -292,10 +279,7 @@ namespace CWalletDEV
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            // Assign values to the properties
-            //_viewModel.ChartValues = new ChartValues<double> { 15, 15, 20, 47, 8, 78, 6 };
-            //_viewModel.Labels = new[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
-            // Create a new instance of the main window
+
         }
 
         private void btnCash_MouseUp(object sender, MouseButtonEventArgs e)
@@ -307,7 +291,7 @@ namespace CWalletDEV
 
         private void btnSavings_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            // Create and show the dialog window
+            // Pravim dialogov prozorec
             SavingsChanger dialog = new SavingsChanger();
             dialog.Closed += (s, args) => RefreshMainWindow();
             dialog.Show();
@@ -361,30 +345,11 @@ namespace CWalletDEV
 
         private void RefreshMainWindow()
         {
-            //// Create a new instance of the main window
-            //MainWindow newWindow = new MainWindow();
-
-            //// Set the new window as the main window
-            //Application.Current.MainWindow = newWindow;
-
-            //// Show the new window
-            //newWindow.Show();
-
-            //// Close the current window
-            //this.Close();
             MainWin_Loaded(this, new RoutedEventArgs());
         }
 
         private void MainWin_Closed(object sender, EventArgs e)
         {
-            //// Unsubscribe from events
-            //this.Closed -= MainWin_Closed;
-
-            //// Release all resources
-            //this.Content = null;
-
-            //// Explicitly call the garbage collector
-            //GC.Collect();
             Application.Current.Shutdown();
         }
 
