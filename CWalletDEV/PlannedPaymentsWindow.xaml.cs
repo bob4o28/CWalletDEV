@@ -25,14 +25,14 @@ namespace CWalletDEV
         public PlannedPaymentsWindow()
         {
             InitializeComponent();
-            LoadData();
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            AddPlannedPaymentWin dialogPP = new AddPlannedPaymentWin();
-            dialogPP.Closed += (s, args) => RefreshPPWindow();
-            dialogPP.Show();
+            AddPlannedPaymentWin addplannedPaymentsWindow = new AddPlannedPaymentWin();
+            addplannedPaymentsWindow.Owner = this;
+            this.Hide();
+            addplannedPaymentsWindow.Show();
         }
 
         private void LoadData()
@@ -78,17 +78,23 @@ namespace CWalletDEV
 
         private void RefreshPPWindow()
         {
-            // Create a new instance of the main window
-            PlannedPaymentsWindow plannedPaymentsWindow = new PlannedPaymentsWindow();
+            //// Create a new instance of the main window
+            //PlannedPaymentsWindow plannedPaymentsWindow = new PlannedPaymentsWindow();
 
-            // Set the new window as the main window
-            Application.Current.MainWindow = plannedPaymentsWindow;
+            //// Set the new window as the main window
+            //Application.Current.MainWindow = plannedPaymentsWindow;
 
-            // Show the new window
-            plannedPaymentsWindow.Show();
+            //// Show the new window
+            //plannedPaymentsWindow.Show();
 
-            // Close the current window
-            this.Close();
+            //// Close the current window
+            //this.Close();
+            Window_Loaded(this, new RoutedEventArgs());
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadData();
         }
     }
 }

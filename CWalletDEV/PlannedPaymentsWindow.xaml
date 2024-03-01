@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:CWalletDEV"
         mc:Ignorable="d"
         Title="PlannedPaymentsWindow" Height="450" Width="800"
-    ResizeMode="NoResize">
+    ResizeMode="NoResize" Loaded="Window_Loaded">
     <Grid Background="#FFFFF6E4">
         <Rectangle x:Name="rectangle" HorizontalAlignment="Left" Height="60" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="298" RadiusX="25" RadiusY="25" Fill="#FFC2AD86">
             <Rectangle.Effect>
