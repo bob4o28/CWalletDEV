@@ -93,7 +93,7 @@ namespace CWalletDEV
                 if (conn == null || conn.State != ConnectionState.Open)
                     return;
                 DbConnector dbConnector = new DbConnector();
-                string query = "INSERT INTO PlannedPayments (IdUsers, NameOfPP, WorthOfPP, DueDatte) VALUES (@UserId, @NameOfPP, @WorthOfPP, @DueDatte)";
+                string query = "INSERT INTO PlannedPayments (Id, Name, Worth, DueDate) VALUES (@UserId, @NameOfPP, @WorthOfPP, @DueDatte)";
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@UserId", UserId);
