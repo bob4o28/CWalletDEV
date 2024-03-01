@@ -9,11 +9,11 @@
         ResizeMode="NoResize">
     <Grid Background="#FFDFD7CB" Height="679" VerticalAlignment="Top">
         <Image Margin="85,34,85,0" Source="/LblSignUp.png" Stretch="Fill" VerticalAlignment="Top" Height="126"/>
-        <TextBox x:Name="txtUserName" Margin="28,206,286,449" TextWrapping="Wrap" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="txtUserName" Margin="28,206,286,449" TextWrapping="Wrap" TextChanged="TextBox_TextChanged" TabIndex="0"/>
         <Label x:Name="LblName" Content="Name:" Height="36" Margin="28,170,286,473" Width="212" FontSize="24"/>
-        <TextBox x:Name="txtPassword" Height="25" Margin="28,409,286,245" TextWrapping="Wrap" Width="212" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="txtPassword" Height="25" Margin="28,409,286,245" TextWrapping="Wrap" Width="212" TextChanged="TextBox_TextChanged" TabIndex="3"/>
         <Label x:Name="lblPassword" Content="Password:" Height="36" Margin="28,368,286,275" Width="212" FontSize="24" RenderTransformOrigin="0.5,0.5"/>
-        <Button x:Name="btnSignUp" Content="Sign Up" Margin="126,512,126,114" Click="Button_Click_1" FontSize="20" Height="53">
+        <Button x:Name="btnSignUp" Content="Sign Up" Margin="126,512,126,114" Click="Button_Click_1" FontSize="20" Height="53" TabIndex="4">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -26,7 +26,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="btnAccYes" Content="Already have an account? Log in" Height="28" Margin="102,612,102,39" Click="Button_Click">
+        <Button x:Name="btnAccYes" Content="Already have an account? Log in" Height="28" Margin="102,612,102,39" Click="Button_Click" TabIndex="5">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -40,9 +40,9 @@
             </Button.Background>
         </Button>
         <Label Content="(Must be strong!)" HorizontalAlignment="Left" Margin="83,439,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtUserLastName" Margin="28,270,286,383" TextWrapping="Wrap" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="txtUserLastName" Margin="28,270,286,383" TextWrapping="Wrap" TextChanged="TextBox_TextChanged" TabIndex="1"/>
         <Label x:Name="lblLastName" Content="Last name:" Height="36" Margin="28,234,286,409" Width="212" FontSize="24"/>
-        <TextBox x:Name="txtUserEmail" Margin="28,337,286,316" TextWrapping="Wrap" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="txtUserEmail" Margin="28,337,286,316" TextWrapping="Wrap" TextChanged="TextBox_TextChanged" TabIndex="2"/>
         <Label x:Name="lblEmail" Content="Email:" Height="36" Margin="28,301,286,342" Width="212" FontSize="24"/>
         <Label Content="Your own first name." HorizontalAlignment="Left" Margin="254,200,0,0" VerticalAlignment="Top"/>
         <Label Content="Your own last name." HorizontalAlignment="Left" Margin="254,265,0,0" VerticalAlignment="Top"/>
